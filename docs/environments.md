@@ -17,7 +17,8 @@
 
 <span dir="ltr">Catkin</span> و<span dir="ltr">AIML</span> جزء من المنهج. نحتفظ بمسار <span dir="ltr">ROS 1</span> التعليمي المناسب لهما. انتهى الدعم الرسمي لـ<span dir="ltr">ROS Noetic</span> في 31 مايو 2025 حسب [إعلان <span dir="ltr">ROS</span>](https://discourse.openrobotics.org/t/ros-noetic-end-of-life-may-31-2025/43160)، لذلك يوثق كبيئة منهج قديمة وليس كخيار حديث مدعوم.
 
-مسار <span dir="ltr">ROS 1</span> على <span dir="ltr">Pi 5</span> لم يعتمد. فصل تشغيل <span dir="ltr">ROS</span> عن منفذ <span dir="ltr">GPIO</span> أو استخدام حاوية احتمالات تحتاج تجارب، خصوصًا للصوت والأجهزة. لا نعمم أوامر <span dir="ltr">Catkin</span> على نظام أحدث، ولا نستبدل المنهج تلقائيًا بـ<span dir="ltr">ROS 2</span>.
+يوفر [دليل الحاوية](../environments/noetic-container/README.md) مسار <span dir="ltr">ROS 1</span> على <span dir="ltr">Pi 5</span> مع إبقاء <span dir="ltr">GPIO</span> والصوت على النظام الأصلي. البديل مضيف <span dir="ltr">ROS</span> منفصل ونفق <span dir="ltr">SSH.</span> وصف البناء والكود متوفران، لكن التشغيل على <span dir="ltr">Pi 5</span> و<span dir="ltr">Pi 4</span> فعليًا لم يختبر بعد. اختبارات الحاسب لا تثبت توافق الأطراف أو أداء الرسوميات على الرازبيري.
+
 
 ## معنى التوافق
 
@@ -38,7 +39,7 @@ Pi 4 and Pi 5 are both instructor and learner boards. Every lab targets both wit
 
 The linked Ubuntu release notes establish Pi 4 support on 20.04; Canonical's matrix lists both boards on 24.04. Native Ubuntu 20.04 is not the Pi 5 path. The proposed OS is not a claim about the installed OS or application compatibility. No installer changes a board OS here.
 
-Retain Catkin and AIML course coverage. Noetic reached official end of life on May 31, 2025, per the linked ROS announcement, and is a legacy course environment. A ROS 1 path on Pi 5 is not validated. Containers or separating ROS execution from GPIO remain possibilities to test. Do not assume Catkin works on a newer OS or silently substitute ROS 2.
+Retain Catkin and AIML course coverage. Noetic reached official end of life on May 31, 2025, per the linked ROS announcement, and is a legacy course environment. The provided container/native-agent path and separate-host SSH alternative are documented, but physical Pi execution remains unvalidated. Do not assume Catkin works on a newer OS or silently substitute ROS 2.
 
 Targeted means intended support without a recorded run. Verified requires actual hardware, OS, versions, and results. Blocked records a failure and next step. Not applicable means that function is not used, without implying GPIO support. JSON null values indicate unselected settings.
 

@@ -2,20 +2,36 @@
 
 # إعداد <span dir="ltr">Raspberry Pi 4</span>
 
-المسار المستهدف: <span dir="ltr">Ubuntu 20.04 arm64</span> لمواءمة المقرر. لم يتم تشغيل تجارب المشروع على الجهاز.
+المسار المستهدف <span dir="ltr">Ubuntu 20.04 arm64.</span> لا يصف ذلك نظام جهازك الحالي؛ افحصه أولا. لم تنفذ اختبارات قطع المشروع على هذا الجهاز بعد.
 
-1. تحقق من موديل اللوحة والنظام ومعمارية 64 بت قبل تثبيت المتطلبات.
-2. للتجربة النصية اتبع البيئة الافتراضية في الدليل الرئيسي؛ لا تحتاج <span dir="ltr">ROS</span> أو صوتًا أو <span dir="ltr">GPIO</span>.
-3. للتجربة الفعلية سجل [القطع](../../hardware/README.md)، ثم حدد المكتبات والتوصيل داخل التمرين.
-4. أكمل [مثال الإعداد](environment.example.json) محليًا. الملف وصف للبيئة وليس إعدادًا يقرأه البرنامج الحالي.
-5. سجل التشغيل في [التحقق](../../validation/README.md). مسار <span dir="ltr">ROS 1</span> يحتاج توثيق تثبيت مستقل والتحقق من توفر الحزم.
+استخدم [دليل البدء](../../course/getting-started.md) لتثبيت <span dir="ltr">Noetic</span> وتهيئة <span dir="ltr">Catkin</span> مباشرة على النظام. لا تستخدم بيئة <span dir="ltr">Python</span> مختلفة للبناء. تمرين الرازبيري يوضح <span dir="ltr">RPi.GPIO</span> كمسار <span dir="ltr">GPIO</span> للرابع، مع فحص المكتبة والصلاحيات على الجهاز الحقيقي.
+
+<div dir="ltr">
+
+```bash
+python3 tools/diagnose.py
+cat /etc/os-release
+uname -m
+```
+
+</div>
+
+راجع [تمرين الرازبيري](../../labs/06-embedded-systems/03-raspberry-pi/README.md)، و[القطع](../../hardware/README.md)، ثم أكمل [قالب الإعداد](environment.example.json) وسجل نتائجك في [التحقق](../../validation/README.md). <span dir="ltr">JSON</span> توثيق ولا يغير الإعداد تلقائيا. اختبر الصوت و<span dir="ltr">GPIO</span> و<span dir="ltr">ROS</span> كلا على حدة.
 
 </div>
 
 <div dir="ltr" lang="en">
 
-## English
+# Raspberry Pi 4 setup
 
-Target: arm64 Ubuntu 20.04 for course alignment. Hardware validation is pending. Confirm board, OS, and architecture. The text demo needs only the root README's virtual environment setup. Physical labs must identify actual parts, libraries, and wiring. Complete the linked JSON example locally; the current code does not load it. Record runs using the validation guide. The legacy ROS 1 path needs verified installation instructions and package availability.
+Target: Ubuntu 20.04 arm64. This is not a claim about your installed OS, and physical project testing remains pending. Use the getting started guide for native Noetic/Catkin installation. Build with the system Python. The Pi lesson documents RPi.GPIO on Pi 4; validate its library and permissions on actual hardware.
+
+```bash
+python3 tools/diagnose.py
+cat /etc/os-release
+uname -m
+```
+
+Follow the [Pi lesson](../../labs/06-embedded-systems/03-raspberry-pi/README.md) and [hardware guide](../../hardware/README.md), complete the [profile template](environment.example.json), and record [validation](../../validation/README.md). JSON documents intended/observed settings and does not configure the system. Validate ROS, GPIO and audio separately.
 
 </div>

@@ -1,0 +1,10 @@
+<launch>
+  <arg name="model"/>
+  <arg name="wav" default=""/>
+  <arg name="duration" default="8.0"/>
+  <node pkg="course_conversation" type="speech_node.py" name="arabic_speech" output="screen">
+    <param name="model" value="$(arg model)"/>
+    <param name="wav" value="$(arg wav)"/>
+    <param name="duration" value="$(arg duration)" type="double"/>
+  </node>
+</launch>

@@ -2,7 +2,7 @@
 
 # مصفوفة تحقق البنود والتمارين
 
-الأرقام مراجع الخطة، وليست عدد الأسابيع. لم تختبر تجارب المستودع على اللوحتين بعد؛ التجربة النصية الخاصة بالرازبيري اختبرت محليًا على الحاسب فقط.
+الأرقام مراجع الخطة، وليست عدد الأسابيع. لم تختبر تجارب المستودع على اللوحتين بعد. نتائج الحاسب ومحاكاة ROS وGazebo وتجميع المتحكمات موثقة في [سجلات التشغيل](README.md)، ولا تستبدل تحقق الجهازين.
 
 | بند الخطة | البند أو التمرين | المضيف أو المسار على <span dir="ltr">Pi 4</span> | المضيف أو المسار على <span dir="ltr">Pi 5</span> |
 | --- | --- | --- | --- |
@@ -45,6 +45,6 @@
 
 # Syllabus item validation matrix
 
-Rows are syllabus references, not weekly counts. Neither board has recorded project runs; only the Pi text preparation was checked on a local computer. The columns describe Pi execution paths or hosts when used; they do not imply every item requires a Pi. Record not applicable with a reason for unused hardware. For another connected board, capture host, target device, OS, link protocol, parts, date, versions and outcome. Use the linked run guide. Extension results are separate records and do not replace course lab validation.
+Rows are syllabus references, not weekly counts. Neither board has recorded physical project runs. Desktop ROS/Gazebo and firmware compilation evidence is linked in the validation guide and does not substitute for device tests. The columns describe Pi execution paths or hosts when used; they do not imply every item requires a Pi. Record not applicable with a reason for unused hardware. For another connected board, capture host, target device, OS, link protocol, parts, date, versions and outcome. Use the linked run guide. Extension results are separate records and do not replace course lab validation.
 
 </div>

@@ -2,21 +2,36 @@
 
 # إعداد <span dir="ltr">Raspberry Pi 5</span>
 
-المسار المقترح: <span dir="ltr">Ubuntu 24.04 arm64</span>. النظام المثبت غير معروف ولم تختبر تجارب المشروع على الجهاز.
+المسار المستهدف <span dir="ltr">Ubuntu 24.04 arm64.</span> لا يصف ذلك نظام جهازك الحالي؛ افحصه أولا. لم تنفذ اختبارات قطع المشروع على هذا الجهاز بعد.
 
-1. سجل موديل اللوحة والنظام الفعلي؛ لا تستخدم خطوات <span dir="ltr">Ubuntu 20.04</span> المباشرة على <span dir="ltr">Pi 5</span>.
-2. للتجربة النصية اتبع البيئة الافتراضية في الدليل الرئيسي؛ لا تحتاج <span dir="ltr">ROS</span> أو صوتًا أو <span dir="ltr">GPIO</span>.
-3. اختر المايك ومخرج الصوت ومكتبة <span dir="ltr">GPIO</span> بعد التحقق من دعم الجهاز والنظام، وسجل القطع والإصدارات.
-4. أكمل [مثال الإعداد](environment.example.json) محليًا. لا توجد أطراف أو أجهزة صوت محددة مسبقًا؛ البرنامج الحالي لا يقرأ الملف.
-5. اختبر مسار <span dir="ltr">ROS</span> مستقلًا. تشغيل <span dir="ltr">Ubuntu 24.04</span> لا يثبت تشغيل <span dir="ltr">ROS 1</span> أو <span dir="ltr">Catkin</span>. لا توجد حاوية <span dir="ltr">ROS</span> معتمدة.
-6. سجل النتائج والفروق عن <span dir="ltr">Pi 4</span> في [التحقق](../../validation/README.md).
+استخدم [الحاوية](../noetic-container/README.md) أو مضيف <span dir="ltr">ROS</span> منفصلا. يعمل وكيل <span dir="ltr">GPIO</span> على النظام الأصلي باستخدام <span dir="ltr">lgpio</span>؛ لا تستخدم <span dir="ltr">RPi.GPIO</span> على الخامس. حدد رقم <span dir="ltr">gpiochip</span> الفعلي من <span dir="ltr">gpiodetect</span> بدل افتراض رقم ثابت. تفاصيل الأوامر في تمرين الرازبيري.
+
+<div dir="ltr">
+
+```bash
+python3 tools/diagnose.py
+cat /etc/os-release
+uname -m
+```
+
+</div>
+
+راجع [تمرين الرازبيري](../../labs/06-embedded-systems/03-raspberry-pi/README.md)، و[القطع](../../hardware/README.md)، ثم أكمل [قالب الإعداد](environment.example.json) وسجل نتائجك في [التحقق](../../validation/README.md). <span dir="ltr">JSON</span> توثيق ولا يغير الإعداد تلقائيا. اختبر الصوت و<span dir="ltr">GPIO</span> و<span dir="ltr">ROS</span> كلا على حدة.
 
 </div>
 
 <div dir="ltr" lang="en">
 
-## English
+# Raspberry Pi 5 setup
 
-Proposed target: arm64 Ubuntu 24.04. The installed OS is unknown and hardware validation is pending. Record the actual board and OS; native Ubuntu 20.04 instructions do not apply. The text demo uses the root README setup without audio, GPIO, or ROS. Select compatible audio devices and a GPIO library, and record models and versions. Complete the JSON example locally; pins and audio devices are unselected and the demo does not load it. Validate ROS separately: OS support does not prove ROS 1 or Catkin support, and no ROS container is validated. Record results and differences from Pi 4.
+Target: Ubuntu 24.04 arm64. This is not a claim about your installed OS, and physical project testing remains pending. Use the Noetic container or a separate ROS host. Run the native GPIO agent using lgpio; do not use RPi.GPIO on Pi 5. Identify the real gpiochip using gpiodetect rather than assuming its number. The Pi lab gives commands.
+
+```bash
+python3 tools/diagnose.py
+cat /etc/os-release
+uname -m
+```
+
+Follow the [Pi lesson](../../labs/06-embedded-systems/03-raspberry-pi/README.md) and [hardware guide](../../hardware/README.md), complete the [profile template](environment.example.json), and record [validation](../../validation/README.md). JSON documents intended/observed settings and does not configure the system. Validate ROS, GPIO and audio separately.
 
 </div>

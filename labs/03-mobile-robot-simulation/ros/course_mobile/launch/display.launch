@@ -1,0 +1,7 @@
+<launch>
+  <arg name="rviz" default="true"/>
+  <param name="robot_description" textfile="$(find course_mobile)/urdf/mobile.urdf"/>
+  <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"/>
+  <node if="$(arg rviz)" pkg="rviz" type="rviz" name="rviz" args="-d $(find course_mobile)/rviz/mobile.rviz"/>
+</launch>

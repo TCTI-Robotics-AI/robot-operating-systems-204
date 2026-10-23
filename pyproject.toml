@@ -4,10 +4,20 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "robot-operating-systems-204"
-version = "0.3.0"
+version = "0.4.0"
 description = "Bilingual Robot Operating Systems course labs for Raspberry Pi 4 and 5"
 requires-python = ">=3.8"
 dependencies = []
 
+[project.optional-dependencies]
+conversation = ["python-aiml==0.9.3"]
+serial = ["pyserial==3.5"]
+speech = ["vosk==0.3.45", "sounddevice==0.5.1"]
+gpio = ["gpiozero==2.0; python_version < '3.9'", "gpiozero==2.0.1; python_version >= '3.9'"]
+
+[project.scripts]
+course204-agent = "course204.agent:main"
+course204-device = "course204.network_client:main"
+
 [tool.setuptools.packages.find]
-where = ["labs/06-embedded-systems/03-raspberry-pi/src"]
+where = ["labs/06-embedded-systems/03-raspberry-pi/src", "shared/ros/course_common/src"]

@@ -4,7 +4,7 @@
 
 **أسابيع الخطة:** 14–16.
 
-الوحدة تحتوي على أربعة تمارين ربط مستقلة، موزعة على ثلاثة أسابيع. يحتوي تمرين الرازبيري على التجربة النصية الحالية؛ بقية الربط الفعلي لم ينفذ.
+الوحدة تحتوي على أربعة تمارين ربط مستقلة، موزعة على ثلاثة أسابيع. تتوفر الآن برامج الربط وخطواتها، ويحتفظ تمرين الرازبيري بالتجربة النصية التمهيدية. اختبارات القطع الفعلية تحتاج سجلات منفصلة.
 
 | بند الخطة | الموضوع | النوع |
 | --- | --- | --- |
@@ -21,7 +21,7 @@
 
 # Embedded systems control
 
-**Course weeks:** 14–16. This unit contains four distinct integration exercises across three weeks. The Pi exercise includes the existing text demo; physical integration is not implemented.
+**Course weeks:** 14–16. This unit contains four distinct integration exercises across three weeks. The Pi exercise retains text preparation. Integration drivers, firmware and procedures are provided; physical hardware runs remain pending.
 
 The table links each exact syllabus reference to its own directory and distinguishes reading, introductory and practical items. Weekly assessments are a separate count. Use the linked course index and lab template for details.
 

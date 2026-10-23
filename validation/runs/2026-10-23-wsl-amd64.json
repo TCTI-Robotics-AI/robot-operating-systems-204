@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-23",
+  "environment": "WSL Ubuntu 20.04 amd64 / ROS Noetic / Gazebo Classic 11",
+  "physical_hardware_tested": false,
+  "checks": [
+    {
+      "check": "ros_topic_and_service",
+      "status": "passed",
+      "detail": "Repeated topic messages and true/false service calls succeeded",
+      "elapsed_seconds": 3.38
+    },
+    {
+      "check": "ros_conversation_mock_device",
+      "status": "passed",
+      "detail": "AIML service, topic interaction and mock lamp on/off; negated phrase did not execute",
+      "elapsed_seconds": 3.82
+    },
+    {
+      "check": "ros_network_device_bridge",
+      "status": "passed",
+      "detail": "ROS service reached real TCP loopback agent and confirmed mock output state",
+      "elapsed_seconds": 3.58
+    },
+    {
+      "check": "gazebo_mobile_motion_and_stop",
+      "status": "passed",
+      "detail": {
+        "travel_m": 0.2911,
+        "stopped_linear_m_s": 0.0002
+      },
+      "elapsed_seconds": 19.88
+    },
+    {
+      "check": "gazebo_arm_position_control",
+      "status": "passed",
+      "detail": {
+        "elbow_joint": -0.4027,
+        "gripper_joint": 0.0201,
+        "shoulder_joint": 0.2549,
+        "wrist_joint": 0.1951
+      },
+      "elapsed_seconds": 17.42,
+      "earlier_failure": "Simulated joints did not reach commanded positions",
+      "correction": "Reduced derivative gains for small simulated joint inertias; independent rerun passed.",
+      "evidence_file": "2026-10-23-arm-amd64.json"
+    }
+  ],
+  "not_tested": [
+    "Pi 4",
+    "Pi 5",
+    "Arduino USB",
+    "STM32 USB or Wi-Fi",
+    "Odroid",
+    "microphone and Arabic Vosk recognition accuracy",
+    "RViz/Gazebo interactive GUI"
+  ],
+  "report_type": "Combined evidence: initial four passing integration checks plus corrected independent arm rerun",
+  "local_dependency_setup": "Existing Noetic/Gazebo installation; missing effort controller packages unpacked into a user cache, Python dependencies in a user cache. No system installation script or Docker build was exercised."
+}

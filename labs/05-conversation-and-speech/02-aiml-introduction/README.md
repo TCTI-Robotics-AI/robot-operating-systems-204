@@ -1,41 +1,89 @@
 <div dir="rtl" lang="ar">
 
-# لغة المحادثة ومكتبتها
+# لغة <span dir="ltr">AIML</span> ومكتبة المحادثة
 
-**مرجع الخطة:** <code dir="ltr">11.3</code> · **النوع:** تمهيدي · **الحالة:** مخطط، غير منفذ.
+**مرجع الخطة:** <code dir="ltr">11.3</code> · **الحالة:** الشرح والكود متوفران؛ حالة التشغيل محددة في سجل التحقق.
 
-## الهدف
+## الهدف والفكرة
 
-تنفيذ أو شرح موضوع البند المحدد أعلاه من الخطة. هذا المجلد يحجز مكان الشرح والكود الخاص بهذا البند؛ لا يقدم أوامر تشغيل مكتملة حاليًا.
+تصف <span dir="ltr">AIML</span> نمط السؤال وقالب الرد داخل <span dir="ltr">category.</span> يطابق المفسر الحقيقي الأنماط بعد تطبيع العربية؛ يزيل التشكيل ويوحد بعض صور الألف. هذه محادثة قائمة على قواعد وليست نموذجا لغويا. الحزمة <span dir="ltr">python-aiml</span> امتداد متوافق مع <span dir="ltr">PyAIML</span>، مثبت بإصدار محدد.
 
-## القطع والبرامج
+## المتطلبات والخطوات
 
-حدد جهاز الصوت والمايك والسماعة عند استخدام الصوت، وإصدارات المكتبات والنموذج أو محرك التعرف. البنود النصية لا تحتاج أجهزة صوت.
+أكمل [دليل البدء](../../../course/getting-started.md) وابن الحزم أولا. نفذ الأوامر من جذر المستودع، وافتح طرفية جديدة لكل برنامج مستمر، ثم حمل بيئة منطقة العمل فيها. أوقف المحاكاة السابقة قبل تشغيل نموذج آخر.
 
-يحدد دور <span dir="ltr">ROS</span> وإصداره في خطوات التنفيذ؛ أمثلة <span dir="ltr">Catkin</span> الخاصة بالمنهج تبقى موثقة كمسار مستقل.
+<div dir="ltr">
 
-## إعداد الجهازين والتحقق
+```bash
+python3 tools/chat.py "السلام عليكم"
+python3 tools/chat.py "ما اسمك"
+python3 tools/chat.py "عبارة غير معروفة"
+```
 
-راجع [بيئات التشغيل](../../../environments/README.md) ثم وثق الفروق بين <span dir="ltr">Pi 4</span> و<span dir="ltr">Pi 5</span> عند استخدامهما. لا يعني دعم نظام التشغيل نجاح الصوت أو <span dir="ltr">GPIO</span> أو <span dir="ltr">ROS</span>. الأجهزة غير المستخدمة تسجل كغير منطبقة مع السبب.
+</div>
 
-استكمل هذا التمرين وفق [القالب](../../../docs/lesson-template.md)، مع قائمة القطع والتوصيل والإصدارات والأوامر والنتائج والأخطاء وتمرين المتدرب، ثم سجل النتائج في [التحقق](../../../validation/README.md).
+## النتيجة المتوقعة والتحقق
 
-[العودة إلى الوحدة](../README.md).
+تعاد القوالب المناسبة أو الرد الافتراضي. يوجد ملف الأنماط داخل حزمة المحادثة ويمكن قراءته وتعديله.
+
+سجل نتيجة جهازك وإصداراته في [سجل التحقق](../../../validation/README.md). نتائج الحاسب المحلي في [التقرير](../../../validation/runs/2026-10-23-wsl-amd64.json) تخص بيئة الاختبار فقط؛ تشغيل الرازبيري بنوعيه والقطع الفعلية يحتاج سجلا مستقلا.
+
+## عند ظهور مشكلة
+
+إذا لم توجد الحزمة، حمل <code dir="ltr">~/course204_ws/devel/setup.bash</code> وافحص <code dir="ltr">rospack find</code> باسم الحزمة. إذا لم يتصل عميل بخدمة، تحقق من تشغيل الخادم ومن تطابق <code dir="ltr">ROS_MASTER_URI</code>. عند اختبار العتاد، تحقق من الموديل والتوصيل والمنفذ قبل إعادة إرسال الأمر. راجع رسائل الطرفية قبل اعتبار العملية ناجحة.
+
+## تطبيق المتدرب والتسليم
+
+أضف تحية جديدة وردا لها، واختبر الكتابة بالتشكيل وبدونه. لا تضف فعل جهاز ضمن قالب الرد. أرفق الأوامر والنتائج وتفسيرها، والإصدارات وسجل التحقق. لا تسجل نتيجة متوقعة على أنها مشاهدة فعلية.
+
+## المراجع والملفات
+
+- [Course conversation package](../ros/course_conversation/)
+- [Python AIML interpreter](https://github.com/paulovn/python-aiml)
+
+[الوحدة](../README.md) · [فهرس المقرر](../../../course/exercises-index.md).
 
 </div>
 
 <div dir="ltr" lang="en">
 
-# AIML and PyAIML
+# AIML and its Python interpreter
 
-**Syllabus reference:** `11.3` · **Type:** Introductory · **Status:** Planned, not implemented.
+**Syllabus reference:** `11.3` · **Status:** Instructions and source provided; runtime evidence is recorded separately.
 
-This directory owns the explanation and future code for the exact syllabus item above. It does not yet contain a complete runnable procedure.
+## Objective and concept
 
-Identify microphone and playback devices when used, library versions, and recognition engine. Text only steps do not require audio hardware.
+AIML categories pair input patterns with response templates. A real interpreter matches patterns after Arabic normalization of diacritics and selected Alef forms. This is rule-based dialogue, not an LLM. The pinned python-aiml package provides a PyAIML-compatible interpreter.
 
-Specify ROS requirements and version in the implementation. Keep course Catkin examples in their documented legacy path. Embedded interface exercises require ROS integration; when a Pi 4 or Pi 5 is the host, document and validate its setup separately. A board not used by an exercise is recorded as not applicable with an explanation.
+## Requirements and procedure
 
-Use the linked environment guide, lab template and validation guide to complete hardware, wiring, versions, commands, expected results, troubleshooting and learner exercises. OS support alone does not establish audio, GPIO or ROS compatibility. Return to the linked unit for context.
+Complete the [getting started guide](../../../course/getting-started.md) and build the packages first. Run repository-relative commands from the repository root. Use a separate terminal for each long-running process and source the workspace in every ROS terminal. Stop the previous simulation before launching another model.
+
+```bash
+python3 tools/chat.py "السلام عليكم"
+python3 tools/chat.py "ما اسمك"
+python3 tools/chat.py "عبارة غير معروفة"
+```
+
+## Expected result and validation
+
+Known patterns return their templates; unknown input returns the fallback. Inspect/edit the package AIML source.
+
+Record your board, versions and observed results in the [validation guide](../../../validation/README.md). The [local report](../../../validation/runs/2026-10-23-wsl-amd64.json) covers only its stated environment. Pi 4, Pi 5 and physical device runs require separate records.
+
+## Troubleshooting
+
+If a package is missing, source `~/course204_ws/devel/setup.bash` and check `rospack find PACKAGE`. For service connection failures, start the server and compare `ROS_MASTER_URI` settings. For hardware, verify the board, wiring and device path before retrying. Read terminal errors before reporting success.
+
+## Learner task and submission
+
+Add a greeting category and test diacritized/plain spelling. Keep actuator execution outside response templates. Submit commands, observations, explanations, software versions and the run record. Do not present expected output as observed evidence.
+
+## Sources and files
+
+- [Course conversation package](../ros/course_conversation/)
+- [Python AIML interpreter](https://github.com/paulovn/python-aiml)
+
+[Unit](../README.md) · [Course index](../../../course/exercises-index.md).
 
 </div>

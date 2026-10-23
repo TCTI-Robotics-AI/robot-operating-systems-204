@@ -1,4 +1,10 @@
 .venv/
+.venv*/
+.workspaces/
+.pio/
+*.bag
+*.wav
+.pytest_cache/
 venv/
 __pycache__/
 *.py[cod]
@@ -16,6 +22,7 @@ log/
 *.key
 recordings/
 models/
+secrets.h
 .idea/
 .vscode/
 .DS_Store

@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-23",
+  "test": "PlatformIO firmware compilation only",
+  "physical_hardware_tested": false,
+  "checks": [
+    {
+      "board": "Arduino UNO R3",
+      "path": "labs/06-embedded-systems/01-arduino/firmware",
+      "status": "passed",
+      "source_sha256": "3bb3eaeb156658a9b55395aa5cc7397d85208bb50e5caa91e367d2b276fef3fe",
+      "memory": [
+        "RAM:   [=         ]  14.2% (used 290 bytes from 2048 bytes)",
+        "Flash: [=         ]  13.9% (used 4496 bytes from 32256 bytes)"
+      ],
+      "packages": [
+        " - framework-arduino-avr @ 5.2.0 ",
+        " - toolchain-atmelavr @ 1.70300.191015 (7.3.0)"
+      ]
+    },
+    {
+      "board": "STM32 NUCLEO-F446RE",
+      "path": "labs/06-embedded-systems/02-stm32/firmware",
+      "status": "passed",
+      "source_sha256": "0d9b9ce95b22b57b13f9392ce5cfb3eba7d9ee3ae13b5f1df42a7314801a985c",
+      "memory": [
+        "RAM:   [          ]   1.2% (used 1544 bytes from 131072 bytes)",
+        "Flash: [          ]   3.9% (used 20196 bytes from 524288 bytes)"
+      ],
+      "packages": [
+        " - framework-arduinoststm32 @ 4.21200.0 (2.12.0) ",
+        " - framework-cmsis @ 2.60300.0 (6.3.0) ",
+        " - framework-cmsis-dsp @ 1.16.2 ",
+        " - toolchain-gccarmnoneeabi @ 1.120301.0 (12.3.1)"
+      ]
+    },
+    {
+      "board": "STM32 B-L475E-IOT01A",
+      "path": "labs/06-embedded-systems/02-stm32/wifi-firmware",
+      "status": "passed",
+      "source_sha256": "e2fc471fd9fa0e5b8507d35afc6f5dc462a988a76ca82084e1b39632f30b3b29",
+      "memory": [
+        "RAM:   [          ]   2.0% (used 2008 bytes from 98304 bytes)",
+        "Flash: [          ]   3.7% (used 38752 bytes from 1048576 bytes)"
+      ],
+      "packages": [
+        " - framework-arduinoststm32 @ 4.21200.0 (2.12.0) ",
+        " - framework-cmsis @ 2.60300.0 (6.3.0) ",
+        " - framework-cmsis-dsp @ 1.16.2 ",
+        " - toolchain-gccarmnoneeabi @ 1.120301.0 (12.3.1)"
+      ]
+    }
+  ]
+}

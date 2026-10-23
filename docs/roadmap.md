@@ -1,29 +1,30 @@
 <div dir="rtl" lang="ar">
 
-# خطة تنفيذ المقرر وتوسعاته
+# حالة تنفيذ المقرر
 
-| المرحلة | المخرج | الحالة |
-| --- | --- | --- |
-| تنظيم المنهج | ست وحدات وفهرس يربط البنود التفصيلية بالخطة | متوفر |
-| الأنظمة المدمجة | أربعة مجلدات مستقلة لتمارين الربط | أدلة نطاق متوفرة؛ التنفيذ الفعلي قادم |
-| تجربة تمهيدية | التحكم النصي بلمبة افتراضية داخل تمرين الرازبيري | منفذة محليًا على الحاسب |
-| تجهيز الأجهزة | تثبيت اختيار النظام والقطع والإعدادات لكل لوحة | قيد التخطيط |
-| تنفيذ المقرر | إعداد كل بند وفق مرجعه وتوثيق خطواته واختباره | قادم |
-| التوسعات | النموذج اللغوي والرد عبر واتساب والتحكم المنزلي بالصوت | قادمة |
-| التحقق والإتاحة | سجلات الجهازين وتجربة الدليل مع المتدربين | قادم |
+يتوفر الآن شرح عربي وإنجليزي للبنود التفصيلية الثمانية والعشرين، وست حزم <span dir="ltr">Catkin</span>، ونموذجا متنقل وذراع، ومحادثة <span dir="ltr">AIML</span>، ومسار <span dir="ltr">Vosk</span>، وأربعة تمارين ربط للأنظمة المدمجة. وجود الكود لا يعني أن القطع اختبرت فعليا.
 
-ترتيب التنفيذ حسب التدريس والقطع المتوفرة. المرجع للتغطية هو [فهرس البنود](../course/exercises-index.md). وجود مجلد أو دليل نطاق لا يعني تنفيذ التجربة.
+| المخرج | الحالة |
+| --- | --- |
+| خريطة الخطة وفهرس البنود والعروض الأسبوعية | متوفرة |
+| شروح البنود والكود وأوامر التنفيذ والتسليم | متوفرة |
+| نتائج <span dir="ltr">ROS</span> ومحاكاة <span dir="ltr">Gazebo</span> على الحاسب | راجع سجل التشغيل الفعلي |
+| تجميع برامج <span dir="ltr">Arduino</span> و<span dir="ltr">STM32</span> | راجع سجل التجميع |
+| تشغيل <span dir="ltr">Pi 4</span> و<span dir="ltr">Pi 5</span> واللوحات والواي فاي والمايك | يحتاج أجهزة وسجلات فعلية |
+| <span dir="ltr">WhatsApp</span> والنموذج اللغوي وتوسعات التحكم المنزلي | توسعات مستقلة مخططة |
 
-اكتمال التمرين يتطلب شرحًا باللغتين، وربطه برقم البند، ومتطلباته السابقة، وقطعًا وموديلات وقيمًا محددة، وإعدادات وأوامر ونتائج وأخطاء وتمرينًا إضافيًا وسجل تحقق فعلي لكل مسار مستخدم. الأجهزة غير المستخدمة تسجل كغير منطبقة مع السبب. المستودع خاص حاليًا.
+الخطوة التالية تجربة المتدربين للدليل، وتسجيل نتائج كل جهاز دون تعميم نتائج الحاسب. [الفهرس](../course/exercises-index.md) يربط الشرح بالخطة، و[التحقق](../validation/README.md) يحدد حدود الأدلة.
 
 </div>
 
 <div dir="ltr" lang="en">
 
-# Course and extension implementation roadmap
+# Course implementation status
 
-Six units, the detailed syllabus index and four embedded integration directories are organized. The Pi text lamp preparation runs locally; physical integration remains planned. Next steps confirm board OS and parts, implement syllabus items by reference, and then build extensions for models, WhatsApp and voice home automation. Finish with actual board runs and learner walkthroughs.
+All 28 detailed syllabus items now have Arabic/English explanations, procedures and learner tasks. Six Catkin packages provide mobile/arm models, AIML conversation, a Vosk path and four embedded integration lessons. Source availability does not imply physical validation.
 
-The detailed item index governs coverage. A directory or scope guide is not implementation. Completion requires both languages, syllabus mapping, prerequisites, selected hardware and values, setup, commands, results, troubleshooting, an exercise, and actual validation for every used environment. Record unused hardware as not applicable with a reason. The repository remains private.
+The syllabus map, detailed index and weekly presentations are available. Consult validation records for actual desktop ROS/Gazebo runs and firmware compilation. Pi 4/Pi 5, physical boards, radio and microphone tests need hardware records. WhatsApp, language-model and home-automation extensions remain separately planned. Next, walk through the guides with learners and record per-device evidence.
+
+[Index](../course/exercises-index.md) · [Validation](../validation/README.md).
 
 </div>

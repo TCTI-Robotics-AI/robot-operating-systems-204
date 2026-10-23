@@ -1,47 +1,49 @@
 <div dir="rtl" lang="ar">
 
-# الأجهزة والقطع والتوصيل
+# القطع المرجعية والتوصيل
 
-كل تمرين فعلي يجب أن يحدد القطع وعددها وموديلها وقيمها والتوصيل قبل اعتباره جاهزًا للمتدربين. هذه احتياجات مبدئية؛ القطع غير المجربة لا توصف بأنها معتمدة.
+هذه اختيارات مرجعية لإعداد التمارين وليست قائمة مشتريات إلزامية. لم تختبر القطع فعليا في سجلات المشروع بعد. يمكن البدء بالمحاكاة دون شراء اللوحات. [تمارين الربط](../labs/06-embedded-systems/README.md) توضح البرنامج والتوصيل لكل مسار.
 
-| الاستخدام | الاحتياج لكل محطة | الحالة |
-| --- | --- | --- |
-| تشغيل اللوحة | <span dir="ltr">Pi 4</span> أو <span dir="ltr">Pi 5</span> واحدة، مزود طاقة مناسب لموديلها، تخزين بالنظام، شبكة | تسجل الموديلات والسعة الفعلية |
-| التجربة النصية | <span dir="ltr">Python 3.8</span> أو أحدث على حاسب أو لوحة | لا تحتاج قطعًا إضافية |
-| الصوت العربي | مايك متوافق واحد؛ مخرج صوت وسماعة للرد المسموع | الموديلات والتعريف ومعدل التسجيل لم تحدد |
-| <span dir="ltr">LED</span> | لوحة تجارب، <span dir="ltr">LED</span> واحدة، مقاومة مناسبة واحدة، أسلاك | المقاومة وأطراف <span dir="ltr">GPIO</span> لم تعتمد |
-| <span dir="ltr">Arduino</span> و<span dir="ltr">STM32</span> | اللوحة المقصودة وكابل بيانات مناسب | الموديلات والبروتوكول لم تحدد |
-| <span dir="ltr">Odroid</span> | اللوحة ومزود الطاقة وكابل الربط | يحدد في درس الربط |
-| المحاكاة | جهاز يناسب المحاكاة المختارة | متطلبات الأداء تقاس عند التنفيذ |
-| <span dir="ltr">WhatsApp</span> والنموذج اللغوي | حساب وخدمة واتصال حسب المزود | المزود لم يعتمد؛ لا يحتاج <span dir="ltr">GPIO</span> بحد ذاته |
+| التمرين | اللوحة والقطع | وسيلة ربط <span dir="ltr">ROS</span> | الملاحظة |
+| --- | --- | --- | --- |
+| <span dir="ltr">Arduino</span> | <span dir="ltr">UNO R3</span> بمعالج <span dir="ltr">ATmega328P</span> وكابل بيانات <span dir="ltr">USB-B</span> | جسر تسلسلي وتأكيد الطلب | يستخدم <span dir="ltr">LED</span> المدمج <span dir="ltr">D13</span> |
+| <span dir="ltr">STM32</span> عبر <span dir="ltr">USB</span> | <span dir="ltr">NUCLEO-F446RE</span> وكابل بيانات مطابق لموصل <span dir="ltr">ST-LINK</span> في إصدار اللوحة | <span dir="ltr">USART2</span> عبر <span dir="ltr">ST-LINK VCP</span> | لا تحتوي واي فاي مدمجا |
+| <span dir="ltr">STM32</span> لاسلكيا | <span dir="ltr">B-L475E-IOT01A</span> وكابل <span dir="ltr">ST-LINK</span> وشبكة مختبر خاصة | <span dir="ltr">TCP</span> عبر وحدة <span dir="ltr">Wi-Fi</span> المدمجة | بديل ضمن التمرين نفسه، لا يلزم شراء اللوحتين |
+| <span dir="ltr">Raspberry Pi</span> | <span dir="ltr">Pi 4</span> أو <span dir="ltr">Pi 5</span>، طاقة وتخزين وتبريد مناسب للموديل، <span dir="ltr">LED</span> أحمر ومقاومة <span dir="ltr">330</span> أوم وربع واط ولوحة تجارب وثلاث وصلات | <span dir="ltr">GPIO</span> مباشر أو وكيل أصلي مرتبط بـ<span dir="ltr">ROS</span> | <span dir="ltr">BCM17</span> وطرف <span dir="ltr">GND</span> |
+| <span dir="ltr">Odroid</span> | <span dir="ltr">ODROID-C4</span>، طاقة وتخزين معتمدان حسب دليل اللوحة، شبكة و<span dir="ltr">SSH</span> | وكيل محلي ونفق <span dir="ltr">SSH</span> | معلومات النظام حقيقية؛ الخرج افتراضي |
+| الصوت | ميكروفون <span dir="ltr">USB</span> متوافق مع <span dir="ltr">Linux</span> وسماعة أو مخرج صوت متوافق | <span dir="ltr">Vosk</span> و<span dir="ltr">espeak-ng</span> | اختر الموديل بعد اختبار نظام الجهاز |
 
-## بيانات كل جهاز
+## توصيل <span dir="ltr">LED</span> إلى الرازبيري
 
-سجل موديل <span dir="ltr">Pi</span> والرام والنظام والنواة، ومواصفات مزود الطاقة والتخزين والتبريد، وموديل كل جهاز صوت وواجهته. لا تفترض أن مزود الطاقة أو مكتبة <span dir="ltr">GPIO</span> يتبادلان بين اللوحتين دون تحقق.
+افصل الطاقة. وصل الطرف الفيزيائي <span dir="ltr">11</span> أي <span dir="ltr">BCM17</span> إلى مقاومة <span dir="ltr">330</span> أوم، ثم إلى الرجل الطويلة الموجبة للمؤشر. وصل الرجل السالبة إلى الطرف الفيزيائي <span dir="ltr">6</span> أي <span dir="ltr">GND.</span> الجهد المنطقي <span dir="ltr">3.3</span> فولت؛ لا تضف <span dir="ltr">5</span> فولت إلى <span dir="ltr">GPIO.</span> تقدير التيار لمؤشر هبوطه <span dir="ltr">2</span> فولت هو نحو <span dir="ltr">4</span> ملي أمبير. راجع مواصفات المؤشر الحقيقي قبل التنفيذ. هذا التوصيل لمؤشر منخفض الجهد، وليس لمبة كهرباء منزلية.
 
-لكل توصيل سجل الإشارة ورقم <span dir="ltr">BCM</span> والطرف الفيزيائي والأرضي والجهد وقيم المقاومة والمكونات الوسيطة ومخططًا واضحًا. لا تعطى أطراف تنفيذية قبل اعتماد الدائرة. يبدأ تمرين اللمبة بـ<span dir="ltr">LED</span> منخفضة الجهد؛ اللمبة المنزلية تحتاج درسًا وتجهيزات مستقلة.
+لوحتا <span dir="ltr">Arduino</span> و<span dir="ltr">STM32</span> تستخدمان المؤشر المدمج في التجربة الأساسية، فلا توصل مؤشرا خارجيا دون إضافة مقاومته وتوثيق أطرافه. منافذ <span dir="ltr">STM32</span> ليست افتراضيا آمنة لكل جهد؛ راجع ورقة الموديل.
 
-أكمل [قالب القطع](inventory.example.json) واربط نسخته بسجل تشغيل التمرين. قيمة <span dir="ltr">null</span> تعني غير محدد.
+## وصف الإصدارات
+
+سجل اسم اللوحة الكامل وإصدارها ومبرمجها وموصل الكابل وموديل مصدر الطاقة وجهده وتياره. في <span dir="ltr">JSON</span> تعني <span dir="ltr">null</span> أن القيمة غير مسجلة. [قالب الجرد](inventory.example.json) يبقى قالبا للتعبئة ولا يمثل إعدادا اكتشفه البرنامج تلقائيا.
+
+المراجع: [Arduino UNO](https://docs.arduino.cc/hardware/uno-rev3/)، [STM32 F446RE](https://www.st.com/en/evaluation-tools/nucleo-f446re.html)، [لوحة Wi-Fi](https://www.st.com/resource/en/data_brief/b-l475e-iot01a.pdf)، [Odroid C4](https://wiki.odroid.com/odroid-c4/odroid-c4)، [أطراف Raspberry Pi](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio).
 
 </div>
 
 <div dir="ltr" lang="en">
 
-## English
+# Reference hardware and wiring
 
-Every physical lab must specify quantities, models, component values, and wiring before learner release. The list above is provisional, not validated product selection.
+These are lab reference choices, not mandatory purchases or claims of physical validation. Start with software simulation before buying boards. [Embedded lessons](../labs/06-embedded-systems/README.md) give per-board procedures.
 
-| Use | Requirements per station | Status |
-| --- | --- | --- |
-| Board | One Pi 4 or Pi 5, suitable PSU, OS storage, network | Record actual models and capacity |
-| Text demo | Python 3.8 or newer on a computer or board | No extra parts |
-| Speech | One compatible microphone; output device and speaker for spoken replies | Models, drivers, and sample rate pending |
-| LED | Breadboard, one LED, one suitable resistor, wires | Resistance and GPIO pins pending |
-| Arduino and STM32 | Selected board and data cable | Model and protocol pending |
-| Odroid | Board, PSU, and link cable | Selected with its lab |
-| Simulation | Computer suitable for selected simulator | Performance requirements to be measured |
-| WhatsApp and model | Selected provider's account, service, connectivity | Provider pending; no inherent GPIO requirement |
+| Exercise | Reference hardware | ROS link | Notes |
+| --- | --- | --- | --- |
+| Arduino | UNO R3 ATmega328P, USB-B data cable | Sequence-checked serial bridge | Onboard D13 LED |
+| STM32 USB | NUCLEO-F446RE, data cable matching its ST-LINK connector revision | USART2 via ST-LINK VCP | No onboard Wi-Fi |
+| STM32 Wi-Fi | B-L475E-IOT01A, ST-LINK cable, private lab network | Onboard Wi-Fi TCP bridge | Alternative within the same exercise; both boards are not required |
+| Raspberry Pi | Pi 4 or 5; model-appropriate PSU/storage/cooling, red LED, 330-ohm quarter-watt resistor, breadboard and wires | Native GPIO or native agent to ROS | BCM17 and GND |
+| Odroid | ODROID-C4 with vendor-appropriate PSU/storage/network and SSH | Agent over SSH tunnel | Actual system telemetry, mock output |
+| Audio | Linux-compatible USB microphone and speaker/output | Vosk and optional espeak-ng | Verify exact device with the board OS |
 
-Record model, RAM, OS, kernel, PSU, storage, cooling, and audio devices and interfaces. Do not assume PSU or GPIO library interchangeability. Wiring guides specify signal, BCM number, physical pin, ground, voltage, resistor and interface components, and a diagram. No pin assignment is selected yet. Start with a low voltage LED; mains lamps require a separately equipped lab. Complete the inventory JSON template and attach it to the run record; null means unselected.
+With Pi power disconnected, wire physical pin 11 (BCM17) through 330 ohms to LED anode; cathode goes to pin 6 GND. Logic is 3.3 V, never 5 V into GPIO. A 2 V red LED draws approximately 4 mA; check the actual LED specification. This is a low-voltage indicator, not mains lighting. Arduino/STM32 use onboard indicators in the basic procedure. Any external wiring needs its own pin/voltage/resistor record.
+
+Record full board model/revision, debugger, cable connector and PSU model/voltage/current. Null in the [inventory template](inventory.example.json) means unrecorded, not auto-detected. Sources are linked in the Arabic section above.
 
 </div>

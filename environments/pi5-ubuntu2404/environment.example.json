@@ -10,20 +10,22 @@
   "actual_os": null,
   "python_version": null,
   "ros": {
-    "distribution": null,
-    "execution_method": null
+    "distribution": "noetic",
+    "execution_method": "container-or-separate-host",
+    "actual_version": null
   },
   "audio": {
     "input_device": null,
     "output_device": null,
-    "sample_rate_hz": null
+    "sample_rate_hz": 16000
   },
   "gpio": {
-    "library": null,
+    "library": "gpiozero/lgpio",
     "library_version": null,
-    "numbering_scheme": null,
-    "bcm_pin": null,
-    "physical_pin": null
+    "numbering_scheme": "BCM",
+    "bcm_pin": 17,
+    "physical_pin": 11,
+    "gpiochip": null
   },
   "hardware_inventory_record": null,
   "validation_record": null

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="course_arm">
+  <xacro:arg name="gripper" default="true"/>
+  <material name="orange"><color rgba="0.95 0.42 0.10 1"/></material>
+  <material name="grey"><color rgba="0.3 0.3 0.35 1"/></material>
+  <xacro:macro name="segment" params="name length mass width:=0.04">
+    <link name="${name}">
+      <inertial><origin xyz="0 0 ${length/2}"/><mass value="${mass}"/>
+        <inertia ixx="${mass*(width*width+length*length)/12}" ixy="0" ixz="0"
+          iyy="${mass*(width*width+length*length)/12}" iyz="0" izz="${mass*width*width/6}"/>
+      </inertial>
+      <visual><origin xyz="0 0 ${length/2}"/><geometry><box size="${width} ${width} ${length}"/></geometry><material name="orange"/></visual>
+      <collision><origin xyz="0 0 ${length/2}"/><geometry><box size="${width} ${width} ${length}"/></geometry></collision>
+    </link>
+  </xacro:macro>
+  <xacro:macro name="actuator" params="joint">
+    <transmission name="${joint}_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${joint}"><hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface></joint>
+      <actuator name="${joint}_motor"><hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface><mechanicalReduction>1</mechanicalReduction></actuator>
+    </transmission>
+  </xacro:macro>
+  <link name="world"/>
+  <link name="base_link">
+    <inertial><mass value="2"/><inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/></inertial>
+    <visual><origin xyz="0 0 0.025"/><geometry><box size="0.2 0.2 0.05"/></geometry><material name="grey"/></visual>
+    <collision><origin xyz="0 0 0.025"/><geometry><box size="0.2 0.2 0.05"/></geometry></collision>
+  </link>
+  <joint name="world_fixed" type="fixed"><parent link="world"/><child link="base_link"/></joint>
+  <xacro:segment name="upper_arm" length="0.22" mass="0.3"/>
+  <xacro:segment name="forearm" length="0.18" mass="0.2"/>
+  <xacro:segment name="wrist" length="0.08" mass="0.1"/>
+  <joint name="shoulder_joint" type="revolute"><parent link="base_link"/><child link="upper_arm"/><origin xyz="0 0 0.05"/><axis xyz="0 1 0"/><limit lower="-1.2" upper="1.2" effort="8" velocity="1"/><dynamics damping="0.2" friction="0.01"/></joint>
+  <joint name="elbow_joint" type="revolute"><parent link="upper_arm"/><child link="forearm"/><origin xyz="0 0 0.22"/><axis xyz="0 1 0"/><limit lower="-1.5" upper="1.5" effort="5" velocity="1"/><dynamics damping="0.15" friction="0.01"/></joint>
+  <joint name="wrist_joint" type="revolute"><parent link="forearm"/><child link="wrist"/><origin xyz="0 0 0.18"/><axis xyz="0 0 1"/><limit lower="-1.5" upper="1.5" effort="3" velocity="1"/><dynamics damping="0.1" friction="0.01"/></joint>
+  <xacro:actuator joint="shoulder_joint"/><xacro:actuator joint="elbow_joint"/><xacro:actuator joint="wrist_joint"/>
+  <xacro:if value="$(arg gripper)">
+    <link name="fixed_finger">
+      <inertial><origin xyz="0 0 0.03"/><mass value="0.02"/><inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/></inertial>
+      <visual><geometry><mesh filename="package://course_arm/meshes/finger.stl"/></geometry><material name="grey"/></visual>
+      <collision><origin xyz="0 0 0.03"/><geometry><box size="0.01 0.01 0.06"/></geometry></collision>
+    </link>
+    <link name="moving_finger">
+      <inertial><origin xyz="0 0 0.03"/><mass value="0.02"/><inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/></inertial>
+      <visual><geometry><mesh filename="package://course_arm/meshes/finger.stl"/></geometry><material name="grey"/></visual>
+      <collision><origin xyz="0 0 0.03"/><geometry><box size="0.01 0.01 0.06"/></geometry></collision>
+    </link>
+    <joint name="fixed_finger_joint" type="fixed"><parent link="wrist"/><child link="fixed_finger"/><origin xyz="0 -0.02 0.08"/></joint>
+    <joint name="gripper_joint" type="prismatic"><parent link="wrist"/><child link="moving_finger"/><origin xyz="0 0.005 0.08"/><axis xyz="0 1 0"/><limit lower="0" upper="0.035" effort="3" velocity="0.1"/><dynamics damping="1"/></joint>
+    <xacro:actuator joint="gripper_joint"/>
+  </xacro:if>
+  <gazebo><plugin name="ros_control" filename="libgazebo_ros_control.so"><robotNamespace>/arm</robotNamespace><robotParam>/robot_description</robotParam></plugin></gazebo>
+</robot>

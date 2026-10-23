@@ -1,0 +1,20 @@
+<launch>
+  <arg name="backend" default="mock"/>
+  <arg name="port" default="/dev/ttyACM0"/>
+  <arg name="baud" default="115200"/>
+  <arg name="host" default="127.0.0.1"/>
+  <arg name="network_port" default="8765"/>
+  <arg name="bcm" default="17"/>
+  <arg name="factory" default="lgpio"/>
+  <arg name="chip" default="-1"/>
+  <node pkg="course_devices" type="lamp_server.py" name="lamp_server" output="screen">
+    <param name="backend" value="$(arg backend)"/>
+    <param name="port" value="$(arg port)"/>
+    <param name="baud" value="$(arg baud)" type="int"/>
+    <param name="host" value="$(arg host)"/>
+    <param name="network_port" value="$(arg network_port)" type="int"/>
+    <param name="bcm" value="$(arg bcm)" type="int"/>
+    <param name="factory" value="$(arg factory)"/>
+    <param name="chip" value="$(arg chip)" type="int"/>
+  </node>
+</launch>

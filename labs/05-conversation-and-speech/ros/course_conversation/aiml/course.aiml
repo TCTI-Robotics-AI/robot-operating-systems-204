@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1" encoding="UTF-8">
+  <category><pattern>مرحبا</pattern><template>مرحبًا بك في مقرر أنظمة تشغيل الروبوتات.</template></category>
+  <category><pattern>السلام عليكم</pattern><template>وعليكم السلام.</template></category>
+  <category><pattern>ما اسمك</pattern><template>أنا مساعد مقرر الروبوتات.</template></category>
+  <category><pattern>شغل اللمبة</pattern><template>تم فهم طلب تشغيل اللمبة.</template></category>
+  <category><pattern>شغل اللمبه</pattern><template>تم فهم طلب تشغيل اللمبة.</template></category>
+  <category><pattern>طفي اللمبة</pattern><template>تم فهم طلب إطفاء اللمبة.</template></category>
+  <category><pattern>اطفئ اللمبة</pattern><template>تم فهم طلب إطفاء اللمبة.</template></category>
+  <category><pattern>*</pattern><template>لم أفهم الطلب. جرّب مرحبا أو شغل اللمبة.</template></category>
+</aiml>

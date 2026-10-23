@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="course_basics" type="talker.py" name="course_talker" output="screen"/>
+  <node pkg="course_basics" type="listener.py" name="course_listener" output="screen"/>
+  <node pkg="course_basics" type="boolean_service.py" name="boolean_service" output="screen"/>
+</launch>

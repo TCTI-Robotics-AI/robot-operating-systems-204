@@ -49,6 +49,6 @@ Weekly practical assessment count is not the number of detailed exercises. Embed
 Modern language models and WhatsApp are extensions. The AIML lesson remains part of course coverage. Pi 4 and Pi 5 adapt the course example, which names Pi 2. Source: pages 2, 4, and 5 of the local trainer course outline; see the [reference index](../references/README.md).
 
 
-Lab IDs are not week numbers. The linked applications are planned scopes except for the text demo identified in the bilingual [lab catalog](../labs/README.md), which provides current status and links for each topic.
+Lab IDs are not week numbers. The bilingual [lab catalog](../labs/README.md) links implemented teaching materials and source; actual execution evidence is recorded separately in validation reports.
 
 </div>

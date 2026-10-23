@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-23",
+  "physical_hardware_tested": false,
+  "portable_tests": [
+    {"environment": "Windows, Python 3.11", "python_tests_passed": 10, "gpiozero": "2.0.1", "python_aiml": "0.9.3", "pyserial": "3.5"},
+    {"environment": "WSL Ubuntu 20.04, Python 3.8.10", "python_tests_passed": 10, "gpiozero": "2.0", "python_aiml": "0.9.3", "pyserial": "3.5"}
+  ],
+  "checks": [
+    {"check": "C++ firmware protocol with a minimal host Arduino interface double", "status": "passed", "compiler": "g++ -std=c++17, WSL Ubuntu 20.04"},
+    {"check": "Six Catkin packages built with system Python 3.8.10", "status": "passed"},
+    {"check": "check_urdf mobile model", "status": "passed"},
+    {"check": "Xacro expansion and check_urdf arm with and without gripper", "status": "passed"},
+    {"check": "gz sdf -p mobile and both arm variants", "status": "passed"},
+    {"check": "Python wheel build and target installation on Python 3.8", "status": "passed"}
+  ],
+  "limitations": ["No physical device test", "No audio model or microphone test", "No interactive GUI test", "No Pi 5 Docker build"]
+}

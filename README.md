@@ -10,7 +10,7 @@
 
 ## المحتوى التعليمي
 
-تتوفر [عروض المقرر الأسبوعية](PPT/README.md) بصيغة <span dir="ltr">PDF</span>، موزعة على ١٦ أسبوعًا. استخدمها للشرح والمراجعة إلى جانب أدلة التمارين العملية.
+تتوفر [عروض المقرر الأسبوعية](PPT/README.md) بصيغة <span dir="ltr">PDF</span>، موزعة على ١٦ أسبوعا. استخدمها للشرح والمراجعة إلى جانب أدلة التمارين العملية.
 
 ## ابدأ هنا
 
@@ -58,33 +58,36 @@ references/
 
 ## المتوفر الآن
 
-[التجربة النصية للمبة الافتراضية](labs/06-embedded-systems/03-raspberry-pi/01-text-lamp/README.md) متوفرة كمرحلة تمهيدية ضمن تمرين الرازبيري. لا تنفذ ربطًا فعليًا مع الأجهزة أو نظام <span dir="ltr">ROS</span>. بقية الأدلة تحدد النطاق والمتطلبات، وليست تجارب منفذة.
+شروح عربية وإنجليزية للبنود الثمانية والعشرين، وست حزم <span dir="ltr">Catkin</span> قابلة للبناء: أساسيات الاتصال، وخدمات مشتركة، وروبوت متنقل، وذراع، ومحادثة، وربط أجهزة. تشمل ملفات <span dir="ltr">Gazebo</span> و<span dir="ltr">RViz</span> و<span dir="ltr">URDF</span> و<span dir="ltr">Xacro</span>، وبرامج <span dir="ltr">Arduino</span> و<span dir="ltr">STM32</span> عبر <span dir="ltr">USB</span> ومسار <span dir="ltr">STM32</span> عبر <span dir="ltr">Wi-Fi</span>، ومسار الصوت المحلي.
 
-من جذر المستودع على لينكس، باستخدام <span dir="ltr">Python 3.8</span> أو أحدث:
+ابدأ من [دليل التشغيل](course/getting-started.md)، ثم [فهرس التمارين](course/exercises-index.md). [سجلات التحقق](validation/README.md) تفصل اختبارات الحاسب وتجميع البرامج عن اختبارات <span dir="ltr">Pi</span> والقطع الفعلية التي لم تنفذ بعد.
+
+تبقى [التجربة النصية للمبة](labs/06-embedded-systems/03-raspberry-pi/01-text-lamp/README.md) متاحة دون تثبيت <span dir="ltr">ROS:</span>
 
 <div dir="ltr">
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -e .
+python -m pip install --upgrade pip
+python -m pip install .
 python -m arabic_home --command "شغل اللمبة"
-python -m arabic_home --command "طفي اللمبة"
 ```
 
 </div>
+
 
 ## مسار الجهازين
 
 | الجهاز | مسار النظام | حالة تحقق المشروع |
 | --- | --- | --- |
 | <span dir="ltr">Pi 4</span> | <span dir="ltr">Ubuntu 20.04 arm64</span> لمواءمة المنهج | لم يختبر على الجهاز |
-| <span dir="ltr">Pi 5</span> | <span dir="ltr">Ubuntu 24.04 arm64</span> كمسار مقترح | لم يختبر على الجهاز |
+| <span dir="ltr">Pi 5</span> | <span dir="ltr">Ubuntu 24.04 arm64</span> مع حاوية المنهج أو مضيف منفصل | لم يختبر على الجهاز |
 
-يستهدف الرازبيري الجهازين. عند استخدام أي منهما مضيفًا لتمرين لوحة أخرى، توثق إعدادات المضيف واللوحة المتصلة بشكل مستقل. دعم النظام لا يثبت توافق الصوت أو <span dir="ltr">GPIO</span> أو <span dir="ltr">ROS</span>. [التفاصيل والمصادر](docs/environments.md).
+يستهدف الرازبيري الجهازين. عند استخدام أي منهما مضيفا لتمرين لوحة أخرى، توثق إعدادات المضيف واللوحة المتصلة بشكل مستقل. دعم النظام لا يثبت توافق الصوت أو <span dir="ltr">GPIO</span> أو <span dir="ltr">ROS</span>. [التفاصيل والمصادر](docs/environments.md).
 
 ## العمل والمساهمة
 
-راجع [تصميم المستودع](docs/architecture.md) و[خطة التنفيذ](docs/roadmap.md) و[دليل المساهمة](CONTRIBUTING.md). استخدم [قالب التمرين](docs/lesson-template.md) و[دليل اتجاه النص](docs/writing-style.md). المستودع عام ومتاح للجميع للاطلاع على المحتوى التعليمي. يحدد صاحب المقرر ترخيص إعادة الاستخدام. ملف المنهج الأصلي محفوظ محليًا خارج المستودع لبيانات التواصل التي يحتويها.
+راجع [تصميم المستودع](docs/architecture.md) و[خطة التنفيذ](docs/roadmap.md) و[دليل المساهمة](CONTRIBUTING.md). استخدم [قالب التمرين](docs/lesson-template.md) و[دليل اتجاه النص](docs/writing-style.md). المستودع عام ومتاح للجميع للاطلاع على المحتوى التعليمي. يحدد صاحب المقرر ترخيص إعادة الاستخدام. ملف المنهج الأصلي محفوظ محليا خارج المستودع لبيانات التواصل التي يحتويها.
 
 </div>

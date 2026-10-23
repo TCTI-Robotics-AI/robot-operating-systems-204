@@ -59,3 +59,13 @@ Version 0.1.0, dated 2026-10-23, adds the repository structure, course mapping, 
 The learner target is Pi 4 with Ubuntu 20.04. The development board is Pi 5, with its OS still to be confirmed. Local Windows checks verified installation in a fresh Python environment, on and off commands, rejection of an unknown command, documentation links, and Python 3.8 syntax compatibility. Installation on Python 3.8 and execution on Raspberry Pi hardware have not been validated.
 
 </div>
+
+
+## 0.4.0 — 2026-10-23
+
+- Implemented bilingual material for all 28 syllabus items and six Catkin packages.
+- Added mobile/arm Gazebo models, URDF/Xacro/RViz assets, bounded motion commands and ros_control controllers.
+- Added actual AIML conversation, offline Vosk entry points and optional local speech output.
+- Added ROS device services and mock/GPIO/USB/TCP drivers; Arduino and STM32 firmware including a Wi-Fi board alternative.
+- Added guarded legacy installation helpers, Pi 5 container/native-agent instructions and per-device hardware requirements.
+- Recorded desktop ROS/Gazebo results and firmware build evidence; physical boards, audio and Pi deployment remain untested.

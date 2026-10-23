@@ -1,0 +1,9 @@
+<launch>
+  <arg name="execute_lamp" default="false"/>
+  <arg name="speaker" default="false"/>
+  <node pkg="course_conversation" type="talk_server.py" name="talk_server" output="screen"/>
+  <node pkg="course_conversation" type="interaction.py" name="interaction" output="screen">
+    <param name="execute_lamp" value="$(arg execute_lamp)"/>
+  </node>
+  <node if="$(arg speaker)" pkg="course_conversation" type="speak.py" name="course_speaker" output="screen"/>
+</launch>

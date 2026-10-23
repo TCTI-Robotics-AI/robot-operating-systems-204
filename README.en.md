@@ -4,7 +4,7 @@
 
 **Course code in the outline: 204 روبوت** · [العربية](README.md)
 
-The repository organizes the course into six units, each with separate directories for syllabus items and exercises. Every lab documents Arabic and English explanations, prerequisites, hardware, setup, and actual results. Extensions have their own catalog.
+The repository organizes the course into six units, each with separate directories for syllabus items and exercises. Each lab provides Arabic and English explanations, prerequisites, hardware, setup and expected results; actual evidence is recorded separately. Extensions have their own catalog.
 
 **[Explore the course website](https://tcti-robotics-ai.github.io/robot-operating-systems-204/)** · [Sharing kit](docs/share.md)
 
@@ -39,23 +39,25 @@ Keep each exercise's documentation, source, configuration, and ROS or simulation
 
 ## Available implementation
 
-The [text lamp demo](labs/06-embedded-systems/03-raspberry-pi/01-text-lamp/README.md) is preparation within the Raspberry Pi lab. It does not implement physical control or ROS integration. Other guides define planned scope rather than completed applications.
+[Start with the runnable guide](course/getting-started.md). All 28 detailed syllabus items have bilingual explanations, commands and learner tasks. Six Catkin packages implement communication, custom services, mobile/arm simulation, conversation and embedded drivers. Firmware covers Arduino UNO R3, STM32 NUCLEO-F446RE USB and B-L475E-IOT01A Wi-Fi. Vosk provides a local speech path with a separately downloaded model.
 
-From the repository root on Linux with Python 3.8 or newer:
+[Validation records](validation/README.md) distinguish actual software runs and compilation from physical board/microphone tests that remain pending.
+
+For the ROS-free [text preparation](labs/06-embedded-systems/03-raspberry-pi/01-text-lamp/README.md):
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -e .
+python -m pip install --upgrade pip
+python -m pip install .
 python -m arabic_home --command "شغل اللمبة"
-python -m arabic_home --command "طفي اللمبة"
 ```
 
-The phrases mean turn on and turn off the lamp. Output reports the simulated state. Each invocation is independent; no state is persisted and no device is accessed.
+This CLI reports a simulated state. Each invocation is independent; no device is accessed.
 
 ## Board paths
 
-Pi 4 targets arm64 Ubuntu 20.04 for course alignment. Pi 5 has a proposed arm64 Ubuntu 24.04 path. Neither has hardware validation yet. For other embedded labs, record a Pi execution host separately from its connected board. OS support alone does not establish audio, GPIO or ROS support; see the [environment decisions](docs/environments.md).
+Pi 4 targets arm64 Ubuntu 20.04 for course alignment. Pi 5 targets arm64 Ubuntu 24.04 with the legacy container or a separate ROS host. Neither has hardware validation yet. For other embedded labs, record a Pi execution host separately from its connected board. OS support alone does not establish audio, GPIO or ROS support; see the [environment decisions](docs/environments.md).
 
 Read the [architecture](docs/architecture.md), [roadmap](docs/roadmap.md), [contribution guide](CONTRIBUTING.md), [lab template](docs/lesson-template.md) and [text direction guide](docs/writing-style.md). The repository is public and its educational content is accessible to everyone. Reuse licensing remains a course owner decision. The original outline stays local due to contact details.
 
