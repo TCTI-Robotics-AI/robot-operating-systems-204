@@ -9,7 +9,7 @@
 - نقل كود اللمبة الافتراضية إلى تمرين <span dir="ltr">GPIO</span> وتحديث مسار بناء حزمة <span dir="ltr">Python</span>.
 - إضافة مسارات إعداد <span dir="ltr">Pi 4</span> و<span dir="ltr">Pi 5</span> للمدرب والمتدربين، وقوالب القطع والإعدادات وسجلات التحقق ومصفوفة التوافق.
 - تحديث التوثيق العربي والإنجليزي وربط التمارين بخطة المقرر. اختبارات <span dir="ltr">Raspberry Pi</span> الفعلية ما زالت معلقة.
-- نجاح تثبيت الحزمة المعاد تنظيمها في بيئة <span dir="ltr">Python</span> نظيفة وتشغيل أوامر التشغيل والإطفاء ورفض أمر مجهول من خارج مجلد المشروع، وفحص روابط الشرح وملفات <span dir="ltr">JSON</span> واعتماد صياغة <span dir="ltr">Python 3.8.</span>
+- نجاح تثبيت الحزمة المعاد تنظيمها في بيئة <span dir="ltr">Python</span> نظيفة وتشغيل أوامر التشغيل والإطفاء ورفض أمر مجهول من خارج مجلد المشروع، وفحص روابط الشرح وملفات <span dir="ltr">JSON</span> واعتماد صياغة <span dir="ltr">Python 3.8</span>.
 
 </div>
 
@@ -25,13 +25,13 @@ Version 0.2.0 adopts the Robot Operating Systems course identity and repository 
 
 ## 0.1.0 بتاريخ 2026-10-23
 
-سجل تاريخي للنسخة الأولى؛ توزيع الأجهزة وهيكل الملفات استبدلا في 0.2.0. <span dir="ltr">Historical entry</span>: <span dir="ltr">the board roles and file layout below were superseded by 0.2.0.</span>
+سجل تاريخي للنسخة الأولى؛ توزيع الأجهزة وهيكل الملفات استبدلا في 0.2.0. <span dir="ltr">Historical entry</span>: <span dir="ltr">the board roles and file layout below were superseded by 0.2.0</span>.
 
 - إنشاء بنية المشروع والتوثيق العربي وربط الوحدات بخطة المقرر.
 - إضافة تجربة أوامر نصية عربية لعرض حالة لمبة افتراضية دون مكتبات تشغيل خارجية.
 - تخصيص مساحات لدروس <span dir="ltr">ROS</span> والمحاكاة والصوت والأجهزة والتكاملات.
 - اعتماد <span dir="ltr">Pi 4</span> و<span dir="ltr">Ubuntu 20.04</span> كبيئة متدرب مستهدفة و<span dir="ltr">Pi 5</span> كجهاز تطوير يحتاج تحديد النظام.
-- التحقق محليًا على <span dir="ltr">Windows</span> من تشغيل أوامر التشغيل والإطفاء ورفض أمر غير معروف، ومن روابط التوثيق وصلاحية صياغة الكود لـ<span dir="ltr">Python 3.8.</span> لم يختبر التثبيت على <span dir="ltr">Python 3.8</span> أو التشغيل على أجهزة <span dir="ltr">Raspberry Pi</span> بعد.
+- التحقق محليًا على <span dir="ltr">Windows</span> من تشغيل أوامر التشغيل والإطفاء ورفض أمر غير معروف، ومن روابط التوثيق وصلاحية صياغة الكود لـ<span dir="ltr">Python 3.8</span>. لم يختبر التثبيت على <span dir="ltr">Python 3.8</span> أو التشغيل على أجهزة <span dir="ltr">Raspberry Pi</span> بعد.
 - إضافة دليل إنجليزي وأقسام إنجليزية للشروحات وقوالب المساهمة.
 - نجاح التثبيت في بيئة <span dir="ltr">Python</span> محلية جديدة على <span dir="ltr">Windows</span>.
 

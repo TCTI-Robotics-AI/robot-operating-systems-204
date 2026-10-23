@@ -5,7 +5,7 @@
 الفقرات العربية تقرأ من اليمين إلى اليسار. تعزل أسماء الأنظمة والأجهزة والمصطلحات اللاتينية وأرقام إصداراتها باتجاه من اليسار إلى اليمين، خصوصًا عندما تبدأ بها الجملة.
 
 - استخدم حاوية <span dir="ltr">HTML</span> باتجاه <code dir="ltr">rtl</code> ولغة <code dir="ltr">ar</code> للقسم العربي، واتجاه <code dir="ltr">ltr</code> ولغة <code dir="ltr">en</code> للقسم الإنجليزي.
-- أحط المصطلح اللاتيني وإصداره معًا بعنصر <code dir="ltr">span</code> باتجاه <code dir="ltr">ltr</code>، مثل <span dir="ltr">Ubuntu 20.04</span> أو <span dir="ltr">Pi 5.</span>
+- أحط المصطلح اللاتيني وإصداره معًا بعنصر <code dir="ltr">span</code> باتجاه <code dir="ltr">ltr</code>، مثل <span dir="ltr">Ubuntu 20.04</span> أو <span dir="ltr">Pi 5</span>.
 - اعرض الأوامر والمسارات وأسماء الملفات البرمجية باتجاه <code dir="ltr">ltr</code> دون تغيير النص المنسوخ.
 - أبقِ أوامر الطرفية داخل كتلة كود مستقلة باتجاه <code dir="ltr">ltr</code>. لا تضف علامات اتجاه مخفية إلى الكود أو الروابط.
 - اترك سطرًا فارغًا حول حاويات <span dir="ltr">HTML</span> حتى تبقى العناوين والقوائم والجداول قابلة للعرض على <span dir="ltr">GitHub</span>.

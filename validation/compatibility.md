@@ -2,7 +2,7 @@
 
 # مصفوفة توافق التمارين
 
-مستهدف لا يعني مختبرًا. نتائج الأجهزة أدناه غير مختبرة؛ لا توجد نتائج تشغيل فعلية على <span dir="ltr">Pi 4</span> أو <span dir="ltr">Pi 5.</span> التجربة النصية اجتازت تحققًا محليًا على <span dir="ltr">Windows</span> فقط.
+مستهدف لا يعني مختبرًا. نتائج الأجهزة أدناه غير مختبرة؛ لا توجد نتائج تشغيل فعلية على <span dir="ltr">Pi 4</span> أو <span dir="ltr">Pi 5</span>. التجربة النصية اجتازت تحققًا محليًا على <span dir="ltr">Windows</span> فقط.
 
 | التمرين / <span dir="ltr">Lab</span> | <span dir="ltr">Pi 4</span> و<span dir="ltr">Ubuntu 20.04</span> | <span dir="ltr">Pi 5</span> و<span dir="ltr">Ubuntu 24.04</span> المقترح |
 | --- | --- | --- |

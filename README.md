@@ -24,7 +24,7 @@
 | <span dir="ltr">Raspberry Pi 4</span> | <span dir="ltr">Ubuntu 20.04</span> بنظام 64 بت لمواءمة المنهج | لم يختبر على الجهاز |
 | <span dir="ltr">Raspberry Pi 5</span> | <span dir="ltr">Ubuntu 24.04</span> بنظام 64 بت كمسار مقترح مدعوم للجهاز | لم يختبر على الجهاز |
 
-<span dir="ltr">Ubuntu 20.04</span> ليس مسار تثبيت مباشر مدعومًا على <span dir="ltr">Pi 5.</span> توفر نظام مدعوم للجهاز لا يثبت توافق <span dir="ltr">ROS</span> أو المايك أو <span dir="ltr">GPIO</span>؛ توثق النتائج لكل تمرين على حدة. [التفاصيل والمصادر](docs/environments.md).
+<span dir="ltr">Ubuntu 20.04</span> ليس مسار تثبيت مباشر مدعومًا على <span dir="ltr">Pi 5</span>. توفر نظام مدعوم للجهاز لا يثبت توافق <span dir="ltr">ROS</span> أو المايك أو <span dir="ltr">GPIO</span>؛ توثق النتائج لكل تمرين على حدة. [التفاصيل والمصادر](docs/environments.md).
 
 ## تنظيم المستودع
 

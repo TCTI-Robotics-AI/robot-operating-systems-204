@@ -8,7 +8,7 @@
 
 اذكر الجهاز والنظام وإصدارات البرامج، وحدد ما لم يُختبر بعد.
 
-<span dir="ltr">State the board</span>, <span dir="ltr">OS</span>, <span dir="ltr">software versions</span>, <span dir="ltr">and anything not yet tested.</span>
+<span dir="ltr">State the board</span>, <span dir="ltr">OS</span>, <span dir="ltr">software versions</span>, <span dir="ltr">and anything not yet tested</span>.
 
 ## إعداد <span dir="ltr">Pi 4</span> والقطع والنتيجة / <span dir="ltr">Pi 4 setup</span>, <span dir="ltr">hardware and result</span>
 
