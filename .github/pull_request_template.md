@@ -1,15 +1,19 @@
-## هدف التعديل والدرس المرتبط به / Purpose and related lesson
+<div dir="rtl" lang="ar">
 
-## ما الذي تغير / Changes
+## هدف التعديل والدرس المرتبط به / <span dir="ltr">Purpose and related lesson</span>
 
-## طريقة التحقق والنتيجة / Validation and result
+## ما الذي تغير / <span dir="ltr">Changes</span>
+
+## طريقة التحقق والنتيجة / <span dir="ltr">Validation and result</span>
 
 اذكر الجهاز والنظام وإصدارات البرامج، وحدد ما لم يُختبر بعد.
 
-State the board, OS, software versions, and anything not yet tested.
+<span dir="ltr">State the board</span>, <span dir="ltr">OS</span>, <span dir="ltr">software versions</span>, <span dir="ltr">and anything not yet tested.</span>
 
-## إعداد Pi 4 والقطع والنتيجة / Pi 4 setup, hardware and result
+## إعداد <span dir="ltr">Pi 4</span> والقطع والنتيجة / <span dir="ltr">Pi 4 setup</span>, <span dir="ltr">hardware and result</span>
 
-## إعداد Pi 5 والقطع والنتيجة / Pi 5 setup, hardware and result
+## إعداد <span dir="ltr">Pi 5</span> والقطع والنتيجة / <span dir="ltr">Pi 5 setup</span>, <span dir="ltr">hardware and result</span>
 
-## روابط سجلات التحقق / Validation records
+## روابط سجلات التحقق / <span dir="ltr">Validation records</span>
+
+</div>

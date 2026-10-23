@@ -1,3 +1,5 @@
+<div dir="ltr" lang="en">
+
 # Robot Operating Systems
 
 **Course code as shown in the outline: 204 روبوت** · [العربية](README.md)
@@ -57,3 +59,5 @@ The phrases mean turn on and turn off the lamp. They display “اللمبة ا�
 Read the [roadmap](docs/roadmap.md) and [contribution guide](CONTRIBUTING.md). Every lab documents both languages, board differences, hardware, versions, and actual results. A dual board compatibility claim requires recorded runs on both boards.
 
 No reuse license has been selected. The original trainer outline stays local because it contains contact details.
+
+</div>

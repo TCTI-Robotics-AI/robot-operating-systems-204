@@ -1,25 +1,31 @@
+<div dir="rtl" lang="ar">
+
 # الأجهزة والقطع والتوصيل
 
 كل تمرين فعلي يجب أن يحدد القطع وعددها وموديلها وقيمها والتوصيل قبل اعتباره جاهزًا للمتدربين. هذه احتياجات مبدئية؛ القطع غير المجربة لا توصف بأنها معتمدة.
 
 | الاستخدام | الاحتياج لكل محطة | الحالة |
 | --- | --- | --- |
-| تشغيل اللوحة | Pi 4 أو Pi 5 واحدة، مزود طاقة مناسب لموديلها، تخزين بالنظام، شبكة | تسجل الموديلات والسعة الفعلية |
-| التجربة النصية | Python 3.8 أو أحدث على حاسب أو لوحة | لا تحتاج قطعًا إضافية |
+| تشغيل اللوحة | <span dir="ltr">Pi 4</span> أو <span dir="ltr">Pi 5</span> واحدة، مزود طاقة مناسب لموديلها، تخزين بالنظام، شبكة | تسجل الموديلات والسعة الفعلية |
+| التجربة النصية | <span dir="ltr">Python 3.8</span> أو أحدث على حاسب أو لوحة | لا تحتاج قطعًا إضافية |
 | الصوت العربي | مايك متوافق واحد؛ مخرج صوت وسماعة للرد المسموع | الموديلات والتعريف ومعدل التسجيل لم تحدد |
-| LED | لوحة تجارب، LED واحدة، مقاومة مناسبة واحدة، أسلاك | المقاومة وأطراف GPIO لم تعتمد |
-| Arduino وSTM32 | اللوحة المقصودة وكابل بيانات مناسب | الموديلات والبروتوكول لم تحدد |
-| Odroid | اللوحة ومزود الطاقة وكابل الربط | يحدد في درس الربط |
+| <span dir="ltr">LED</span> | لوحة تجارب، <span dir="ltr">LED</span> واحدة، مقاومة مناسبة واحدة، أسلاك | المقاومة وأطراف <span dir="ltr">GPIO</span> لم تعتمد |
+| <span dir="ltr">Arduino</span> و<span dir="ltr">STM32</span> | اللوحة المقصودة وكابل بيانات مناسب | الموديلات والبروتوكول لم تحدد |
+| <span dir="ltr">Odroid</span> | اللوحة ومزود الطاقة وكابل الربط | يحدد في درس الربط |
 | المحاكاة | جهاز يناسب المحاكاة المختارة | متطلبات الأداء تقاس عند التنفيذ |
-| WhatsApp والنموذج اللغوي | حساب وخدمة واتصال حسب المزود | المزود لم يعتمد؛ لا يحتاج GPIO بحد ذاته |
+| <span dir="ltr">WhatsApp</span> والنموذج اللغوي | حساب وخدمة واتصال حسب المزود | المزود لم يعتمد؛ لا يحتاج <span dir="ltr">GPIO</span> بحد ذاته |
 
 ## بيانات كل جهاز
 
-سجل موديل Pi والرام والنظام والنواة، ومواصفات مزود الطاقة والتخزين والتبريد، وموديل كل جهاز صوت وواجهته. لا تفترض أن مزود الطاقة أو مكتبة GPIO يتبادلان بين اللوحتين دون تحقق.
+سجل موديل <span dir="ltr">Pi</span> والرام والنظام والنواة، ومواصفات مزود الطاقة والتخزين والتبريد، وموديل كل جهاز صوت وواجهته. لا تفترض أن مزود الطاقة أو مكتبة <span dir="ltr">GPIO</span> يتبادلان بين اللوحتين دون تحقق.
 
-لكل توصيل سجل الإشارة ورقم BCM والطرف الفيزيائي والأرضي والجهد وقيم المقاومة والمكونات الوسيطة ومخططًا واضحًا. لا تعطى أطراف تنفيذية قبل اعتماد الدائرة. يبدأ تمرين اللمبة بـLED منخفضة الجهد؛ اللمبة المنزلية تحتاج درسًا وتجهيزات مستقلة.
+لكل توصيل سجل الإشارة ورقم <span dir="ltr">BCM</span> والطرف الفيزيائي والأرضي والجهد وقيم المقاومة والمكونات الوسيطة ومخططًا واضحًا. لا تعطى أطراف تنفيذية قبل اعتماد الدائرة. يبدأ تمرين اللمبة بـ<span dir="ltr">LED</span> منخفضة الجهد؛ اللمبة المنزلية تحتاج درسًا وتجهيزات مستقلة.
 
-أكمل [قالب القطع](inventory.example.json) واربط نسخته بسجل تشغيل التمرين. قيمة null تعني غير محدد.
+أكمل [قالب القطع](inventory.example.json) واربط نسخته بسجل تشغيل التمرين. قيمة <span dir="ltr">null</span> تعني غير محدد.
+
+</div>
+
+<div dir="ltr" lang="en">
 
 ## English
 
@@ -37,3 +43,5 @@ Every physical lab must specify quantities, models, component values, and wiring
 | WhatsApp and model | Selected provider's account, service, connectivity | Provider pending; no inherent GPIO requirement |
 
 Record model, RAM, OS, kernel, PSU, storage, cooling, and audio devices and interfaces. Do not assume PSU or GPIO library interchangeability. Wiring guides specify signal, BCM number, physical pin, ground, voltage, resistor and interface components, and a diagram. No pin assignment is selected yet. Start with a low voltage LED; mains lamps require a separately equipped lab. Complete the inventory JSON template and attach it to the run record; null means unselected.
+
+</div>

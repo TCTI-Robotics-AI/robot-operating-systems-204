@@ -6,16 +6,20 @@ labels: bug
 assignees: ''
 ---
 
-## رقم التمرين والخطوة / Lab ID and step
+<div dir="rtl" lang="ar">
 
-## الجهاز والنظام وإصدار Python وROS إن وجد / Board, OS, Python and ROS versions
+## رقم التمرين والخطوة / <span dir="ltr">Lab ID and step</span>
 
-## القطع والموديلات والطاقة والتوصيل / Parts, models, power supply and wiring
+## الجهاز والنظام وإصدار <span dir="ltr">Python</span> و<span dir="ltr">ROS</span> إن وجد / <span dir="ltr">Board</span>, <span dir="ltr">OS</span>, <span dir="ltr">Python and ROS versions</span>
 
-## إعدادات الصوت وGPIO والنتيجة على الجهاز الآخر / Audio and GPIO settings and other board result
+## القطع والموديلات والطاقة والتوصيل / <span dir="ltr">Parts</span>, <span dir="ltr">models</span>, <span dir="ltr">power supply and wiring</span>
 
-## خطوات تكرار المشكلة / Steps to reproduce
+## إعدادات الصوت و<span dir="ltr">GPIO</span> والنتيجة على الجهاز الآخر / <span dir="ltr">Audio and GPIO settings and other board result</span>
 
-## النتيجة المتوقعة والنتيجة الفعلية / Expected and actual results
+## خطوات تكرار المشكلة / <span dir="ltr">Steps to reproduce</span>
 
-## رسالة الخطأ بعد إزالة البيانات الخاصة / Error message with private information removed
+## النتيجة المتوقعة والنتيجة الفعلية / <span dir="ltr">Expected and actual results</span>
+
+## رسالة الخطأ بعد إزالة البيانات الخاصة / <span dir="ltr">Error message with private information removed</span>
+
+</div>

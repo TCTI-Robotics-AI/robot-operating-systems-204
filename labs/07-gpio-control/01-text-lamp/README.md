@@ -1,28 +1,34 @@
+<div dir="rtl" lang="ar">
+
 # التحكم النصي بلمبة افتراضية
 
 ## الهدف
 
-فهم تحويل العبارة العربية إلى طلب محدد قبل إضافة الصوت أو الأجهزة. تجربة تمهيدية لتطبيق Raspberry Pi في الأسبوع 15 ولمسار المحادثة في الأسابيع 11 إلى 13.
+فهم تحويل العبارة العربية إلى طلب محدد قبل إضافة الصوت أو الأجهزة. تجربة تمهيدية لتطبيق <span dir="ltr">Raspberry Pi</span> في الأسبوع 15 ولمسار المحادثة في الأسابيع 11 إلى 13.
 
 ## المتطلبات
 
-Python 3.8 أو أحدث. لا تحتاج Raspberry Pi أو مايك أو ROS لهذه التجربة.
+<span dir="ltr">Python 3.8</span> أو أحدث. لا تحتاج <span dir="ltr">Raspberry Pi</span> أو مايك أو <span dir="ltr">ROS</span> لهذه التجربة.
 
 ## القطع وإعداد الجهازين
 
-هذه تجربة برمجية فقط؛ لا تحتاج توصيلًا أو GPIO أو مايكًا أو خدمة خارجية. على Pi 4 اتبع [مسار Ubuntu 20.04](../../../environments/pi4-ubuntu2004/README.md)، وعلى Pi 5 اتبع [مسار Ubuntu 24.04 المقترح](../../../environments/pi5-ubuntu2404/README.md). أوامر Python نفسها بعد تجهيز البيئة، ولا توجد إعدادات صوت أو أطراف لهذه المرحلة.
+هذه تجربة برمجية فقط؛ لا تحتاج توصيلًا أو <span dir="ltr">GPIO</span> أو مايكًا أو خدمة خارجية. على <span dir="ltr">Pi 4</span> اتبع [مسار <span dir="ltr">Ubuntu 20.04</span>](../../../environments/pi4-ubuntu2004/README.md)، وعلى <span dir="ltr">Pi 5</span> اتبع [مسار <span dir="ltr">Ubuntu 24.04</span> المقترح](../../../environments/pi5-ubuntu2404/README.md). أوامر <span dir="ltr">Python</span> نفسها بعد تجهيز البيئة، ولا توجد إعدادات صوت أو أطراف لهذه المرحلة.
 
-ابدأ التثبيت والتشغيل من جذر المستودع وفق [الدليل الرئيسي](../../../README.md). كود التجربة في `labs/07-gpio-control/src/arabic_home/`. حالة الجهازين مستهدفة وغير مختبرة؛ التحقق المحلي على Windows فقط. سجل أي اختبار فعلي في [مصفوفة التوافق](../../../validation/compatibility.md).
+ابدأ التثبيت والتشغيل من جذر المستودع وفق [الدليل الرئيسي](../../../README.md). كود التجربة في <code dir="ltr">labs/07-gpio-control/src/arabic_home/</code>. حالة الجهازين مستهدفة وغير مختبرة؛ التحقق المحلي على <span dir="ltr">Windows</span> فقط. سجل أي اختبار فعلي في [مصفوفة التوافق](../../../validation/compatibility.md).
 
 ## التشغيل
 
 بعد إعداد المشروع حسب الدليل الرئيسي:
+
+<div dir="ltr">
 
 ```bash
 python -m arabic_home --command "شغّل اللمبة"
 python -m arabic_home --command "طفّي اللمبة"
 python -m arabic_home --command "افتح الباب"
 ```
+
+</div>
 
 ## النتيجة المتوقعة
 
@@ -32,12 +38,16 @@ python -m arabic_home --command "افتح الباب"
 
 ## المشاكل الشائعة
 
-- رسالة No module named arabic_home تعني الحاجة لتفعيل البيئة وتثبيت المشروع باستخدام `python -m pip install -e .` من مجلده الرئيسي.
-- عند عدم قبول عبارة، راجع العبارات المعرفة في `labs/07-gpio-control/src/arabic_home/__main__.py`.
+- رسالة <span dir="ltr">No module named arabic_home</span> تعني الحاجة لتفعيل البيئة وتثبيت المشروع باستخدام <code dir="ltr">python -m pip install -e .</code> من مجلده الرئيسي.
+- عند عدم قبول عبارة، راجع العبارات المعرفة في <code dir="ltr">labs/07-gpio-control/src/arabic_home/__main__.py</code>.
 
 ## تمرين
 
 أضف عبارة «أشعل اللمبة» إلى قاموس الأوامر، ثم تأكد من أن أمرًا غير معروف لا يتحول إلى طلب تشغيل.
+
+</div>
+
+<div dir="ltr" lang="en">
 
 ## English
 
@@ -66,3 +76,5 @@ The program removes Arabic diacritics and matches an explicit phrase dictionary.
 For `No module named arabic_home`, activate the virtual environment and run `python -m pip install -e .` from the repository root. For an unsupported phrase, inspect the command dictionary in `labs/07-gpio-control/src/arabic_home/__main__.py`.
 
 Add “أشعل اللمبة” (light the lamp) to the dictionary. Verify that an unrelated phrase still does not produce a switching request.
+
+</div>
