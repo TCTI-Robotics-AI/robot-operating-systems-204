@@ -6,6 +6,10 @@
 
 The repository organizes the course into six units, each with separate directories for syllabus items and exercises. Every lab documents Arabic and English explanations, prerequisites, hardware, setup, and actual results. Extensions have their own catalog.
 
+## Educational content
+
+[Weekly course presentations](PPT/README.md) are available as PDF files for weeks 1–16. Use them for teaching and review alongside the practical lab guides.
+
 ## Start here
 
 1. Read the [syllabus map](course/syllabus-map.md) and [detailed item index](course/exercises-index.md).
@@ -20,6 +24,7 @@ Embedded systems has four separate integration exercises: Arduino, STM32, Raspbe
 | Directory | Contents |
 | --- | --- |
 | course | Syllabus map and detailed item index |
+| PPT | Weekly course presentations in PDF format, weeks 1–16 |
 | labs | ROS fundamentals, setup, mobile simulation, arm simulation, conversation and speech, embedded systems |
 | extensions | Language models, WhatsApp, and integrated voice home automation |
 | environments | Board and OS profiles |
