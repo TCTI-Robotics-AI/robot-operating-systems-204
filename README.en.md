@@ -6,6 +6,8 @@
 
 The repository organizes the course into six units, each with separate directories for syllabus items and exercises. Every lab documents Arabic and English explanations, prerequisites, hardware, setup, and actual results. Extensions have their own catalog.
 
+**[Explore the course website](https://tcti-robotics-ai.github.io/robot-operating-systems-204/)** · [Sharing kit](docs/share.md)
+
 ## Educational content
 
 [Weekly course presentations](PPT/README.md) are available as PDF files for weeks 1–16. Use them for teaching and review alongside the practical lab guides.
