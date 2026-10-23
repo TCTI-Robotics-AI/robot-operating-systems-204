@@ -2,62 +2,56 @@
 
 # أنظمة تشغيل الروبوتات
 
-**رمز المقرر: 204 روبوت** · <span dir="ltr">Robot Operating Systems</span> · [<span dir="ltr">English</span>](README.en.md)
+**رمز المقرر: 204 روبوت** · <span dir="ltr">Robot Operating Systems</span> · [English](README.en.md)
 
-مستودع المقرر التعليمي، يجمع تمارين <span dir="ltr">Linux</span> و<span dir="ltr">ROS</span> والمحاكاة والصوت والمحادثة والتحكم بالأنظمة المدمجة. لكل تمرين شرح ومتطلبات وإعدادات ونتائج تحقق مستقلة بالعربية والإنجليزية. التحكم المنزلي بالصوت و<span dir="ltr">WhatsApp</span> تطبيقات ضمن المقرر وتوسعاته.
+مستودع المقرر التعليمي. تنتظم مادته في ست وحدات، وتحت كل وحدة مجلدات مستقلة للبنود والتمارين المذكورة في الخطة. لكل تمرين شرح عربي وإنجليزي ومتطلبات وقطع وإعدادات ونتائج تحقق. التوسعات الإضافية لها فهرس مستقل.
 
-## البداية
+## ابدأ هنا
 
-1. راجع [خريطة المقرر](docs/course-map.md) و[فهرس التمارين](labs/README.md).
-2. حدد جهازك من [دليل البيئات](environments/README.md).
-3. راجع [قائمة القطع والتوصيل](hardware/README.md).
-4. نفذ التمرين وسجل النتيجة حسب [دليل التحقق](validation/README.md).
+1. راجع [خريطة المقرر](course/syllabus-map.md) و[الفهرس التفصيلي للبنود والتمارين](course/exercises-index.md).
+2. اختر الوحدة من [فهرس الوحدات](labs/README.md)، ثم التمرين حسب مرجع الخطة.
+3. حدد جهازك ونظامه من [دليل البيئات](environments/README.md)، وراجع [القطع والتوصيل](hardware/README.md).
+4. نفذ التمرين ثم سجل النتيجة في [التحقق](validation/README.md).
 
-المتوفر الآن هو [التحكم النصي بلمبة افتراضية](labs/07-gpio-control/01-text-lamp/README.md). بقية مجلدات التمارين تحدد النطاق المطلوب، وليست تطبيقات مكتملة.
+هناك أربعة تمارين ربط للأنظمة المدمجة: أردوينو، ومتحكمات <span dir="ltr">STM32</span>، والرازبيري، و<span dir="ltr">Odroid</span>. عدد التقييمات الأسبوعية لا يساوي عدد التمارين التفصيلية.
 
-## الأجهزة والتوافق
-
-<span dir="ltr">Pi 4</span> و<span dir="ltr">Pi 5</span> جهازان مستهدفان للمدرب والمتدربين. تختلف خطوات النظام والصوت و<span dir="ltr">GPIO</span> عند الحاجة، بينما يبقى الهدف التعليمي واحدًا.
-
-| الجهاز | مسار النظام | اختبارات المشروع |
-| --- | --- | --- |
-| <span dir="ltr">Raspberry Pi 4</span> | <span dir="ltr">Ubuntu 20.04</span> بنظام 64 بت لمواءمة المنهج | لم يختبر على الجهاز |
-| <span dir="ltr">Raspberry Pi 5</span> | <span dir="ltr">Ubuntu 24.04</span> بنظام 64 بت كمسار مقترح مدعوم للجهاز | لم يختبر على الجهاز |
-
-<span dir="ltr">Ubuntu 20.04</span> ليس مسار تثبيت مباشر مدعومًا على <span dir="ltr">Pi 5</span>. توفر نظام مدعوم للجهاز لا يثبت توافق <span dir="ltr">ROS</span> أو المايك أو <span dir="ltr">GPIO</span>؛ توثق النتائج لكل تمرين على حدة. [التفاصيل والمصادر](docs/environments.md).
-
-## تنظيم المستودع
+## بنية المستودع
 
 <div dir="ltr">
 
 ```text
+course/
+  syllabus-map.md
+  exercises-index.md
 labs/
-  01-linux-and-setup/
-  02-ros-fundamentals/
+  01-ros-fundamentals/
+  02-installation-and-setup/
   03-mobile-robot-simulation/
   04-robot-arm-simulation/
-  05-arabic-speech/
-  06-conversation/
-  07-gpio-control/
-  08-embedded-interfaces/
-  09-ai-models/
-  10-whatsapp/
-  11-voice-home-automation/
+  05-conversation-and-speech/
+  06-embedded-systems/
+    01-arduino/
+    02-stm32/
+    03-raspberry-pi/
+    04-odroid/
+extensions/
+  ai-models/
+  whatsapp/
+  voice-home-automation/
 environments/
 hardware/
 validation/
 docs/
 references/
-.github/
 ```
 
 </div>
 
-الكود الحالي داخل تمرين <span dir="ltr">GPIO</span>. ملفات وحزم <span dir="ltr">ROS</span> وإعدادات المحاكاة لأي تمرين جديد توضع داخل مجلده. تستخرج المكونات المشتركة عند وجود حاجة فعلية.
+## المتوفر الآن
 
-## تجربة أولى دون أجهزة
+[التجربة النصية للمبة الافتراضية](labs/06-embedded-systems/03-raspberry-pi/01-text-lamp/README.md) متوفرة كمرحلة تمهيدية ضمن تمرين الرازبيري. لا تنفذ ربطًا فعليًا مع الأجهزة أو نظام <span dir="ltr">ROS</span>. بقية الأدلة تحدد النطاق والمتطلبات، وليست تجارب منفذة.
 
-من جذر المستودع على <span dir="ltr">Linux</span>، باستخدام <span dir="ltr">Python 3.8</span> أو أحدث:
+من جذر المستودع على لينكس، باستخدام <span dir="ltr">Python 3.8</span> أو أحدث:
 
 <div dir="ltr">
 
@@ -71,12 +65,17 @@ python -m arabic_home --command "طفي اللمبة"
 
 </div>
 
-يعرض المثال حالة لمبة افتراضية دون استخدام الصوت أو <span dir="ltr">GPIO</span> أو <span dir="ltr">ROS</span>. كل تشغيل مستقل ولا يحفظ الحالة.
+## مسار الجهازين
 
-## التطوير والمساهمة
+| الجهاز | مسار النظام | حالة تحقق المشروع |
+| --- | --- | --- |
+| <span dir="ltr">Pi 4</span> | <span dir="ltr">Ubuntu 20.04 arm64</span> لمواءمة المنهج | لم يختبر على الجهاز |
+| <span dir="ltr">Pi 5</span> | <span dir="ltr">Ubuntu 24.04 arm64</span> كمسار مقترح | لم يختبر على الجهاز |
 
-راجع [خطة التنفيذ](docs/roadmap.md) و[دليل المساهمة](CONTRIBUTING.md). لا يوصف تمرين بأنه متوافق مع الجهازين قبل تسجيل اختبار فعلي لكل منهما. التوثيق العربي والإنجليزي وبيانات القطع والإعدادات والإصدارات جزء من كل تمرين.
+يستهدف الرازبيري الجهازين. عند استخدام أي منهما مضيفًا لتمرين لوحة أخرى، توثق إعدادات المضيف واللوحة المتصلة بشكل مستقل. دعم النظام لا يثبت توافق الصوت أو <span dir="ltr">GPIO</span> أو <span dir="ltr">ROS</span>. [التفاصيل والمصادر](docs/environments.md).
 
-لم يحدد ترخيص إعادة الاستخدام بعد. ملف توصيف المقرر الأصلي محفوظ محليًا خارج <span dir="ltr">Git</span> لاحتوائه على بيانات تواصل.
+## العمل والمساهمة
+
+راجع [تصميم المستودع](docs/architecture.md) و[خطة التنفيذ](docs/roadmap.md) و[دليل المساهمة](CONTRIBUTING.md). استخدم [قالب التمرين](docs/lesson-template.md) و[دليل اتجاه النص](docs/writing-style.md). المستودع خاص حاليًا، والترخيص وإتاحة المتدربين يحددهما صاحب المقرر. ملف المنهج الأصلي محفوظ محليًا خارج المستودع لبيانات التواصل التي يحتويها.
 
 </div>

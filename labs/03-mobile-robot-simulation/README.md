@@ -2,39 +2,27 @@
 
 # محاكاة روبوت بعجلتين
 
-**الأسبوع:** 6 إلى 7 · **الحالة:** مخطط؛ لا يوجد تطبيق قابل للتشغيل بعد
+**أسابيع الخطة:** 6–7.
 
-## الهدف
+البنود أدناه محددة بمراجعها في الخطة؛ حالات التنفيذ تسجل في كل مجلد.
 
-إنشاء <span dir="ltr">URDF</span> وعرض <span dir="ltr">RViz</span> والتحويل إلى <span dir="ltr">SDF</span> والتحكم في <span dir="ltr">Gazebo</span>.
+| بند الخطة | الموضوع | النوع |
+| --- | --- | --- |
+| <code dir="ltr">6.2</code> | [أداة العرض وبناء الحزم](./01-rviz-and-packages/README.md) / <span dir="ltr">RViz and ROS packages</span> | عملي / <span dir="ltr">Practical</span> |
+| <code dir="ltr">6.3</code> | [وصف الروبوت وبناء مكوناته](./02-urdf-model/README.md) / <span dir="ltr">URDF robot model</span> | عملي / <span dir="ltr">Practical</span> |
+| <code dir="ltr">7.2</code> | [المحاكاة والتحويل بين ملفات الوصف](./03-gazebo-and-sdf/README.md) / <span dir="ltr">Gazebo and URDF to SDF conversion</span> | عملي / <span dir="ltr">Practical</span> |
+| <code dir="ltr">7.3</code> | [التحكم بالروبوت داخل المحاكاة](./04-simulated-control/README.md) / <span dir="ltr">Control in Gazebo</span> | عملي / <span dir="ltr">Practical</span> |
 
-## المتطلبات والقطع
-
-جهاز مناسب للمحاكاة؛ متطلبات الأداء وإصدارات الأدوات تقاس عند التنفيذ.
-
-**<span dir="ltr">ROS</span>:** مطلوب؛ تحدد الإصدارات المتوافقة مع المحاكاة.
-
-## إعداد الجهازين
-
-- **<span dir="ltr">Pi 4</span>:** راجع [مسار <span dir="ltr">Ubuntu 20.04</span>](../../environments/pi4-ubuntu2004/README.md). تحدد مكتبات هذا التمرين والتوصيل وأجهزة الصوت عند تنفيذه.
-- **<span dir="ltr">Pi 5</span>:** راجع [مسار <span dir="ltr">Ubuntu 24.04</span> المقترح](../../environments/pi5-ubuntu2404/README.md). لا يفترض أن إعداد <span dir="ltr">Pi 4</span> صالح للجهاز الثاني.
-
-لم يسجل اختبار فعلي لهذا التمرين على اللوحتين. تملأ مواصفات القطع والطاقة والإعدادات وأرقام الأطراف والإصدارات طبقًا لـ[قالب التمرين](../../docs/lesson-template.md)، وتسجل النتائج في [مصفوفة التوافق](../../validation/compatibility.md). لا توجد أوامر أجهزة أو تثبيت <span dir="ltr">ROS</span> معتمدة في هذا الدليل المبدئي.
+[فهرس جميع البنود](../../course/exercises-index.md) · [قالب التمرين](../../docs/lesson-template.md).
 
 </div>
 
 <div dir="ltr" lang="en">
 
-## English
+# Mobile robot simulation
 
-**Course weeks:** 6 to 7 · **Status:** Planned; no runnable implementation yet
+**Course weeks:** 6–7. Items below retain their syllabus references; each directory records its implementation status.
 
-**Objective:** URDF modeling, RViz, SDF conversion, and Gazebo control.
-
-**Hardware:** A simulation capable computer; performance requirements and tool versions to be measured.
-
-**ROS:** Required; compatible ROS and simulator versions must be selected.
-
-Use the linked Pi 4 Ubuntu 20.04 and proposed Pi 5 Ubuntu 24.04 guides. Select this lab's dependencies, audio settings, GPIO library, and wiring per board rather than assuming interchangeability. No hardware runs are recorded on either board. Follow the lab template to specify actual parts, PSU, settings, pins, and versions, then record results in the compatibility matrix. This initial guide contains no validated hardware or ROS installation commands.
+The table links each exact syllabus reference to its own directory and distinguishes reading, introductory and practical items. Weekly assessments are a separate count. Use the linked course index and lab template for details.
 
 </div>

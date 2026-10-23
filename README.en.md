@@ -2,49 +2,39 @@
 
 # Robot Operating Systems
 
-**Course code as shown in the outline: 204 روبوت** · [العربية](README.md)
+**Course code in the outline: 204 روبوت** · [العربية](README.md)
 
-This course repository contains independent labs for Linux, ROS, simulation, speech, conversation, and embedded control. Each lab has Arabic and English explanations, prerequisites, setup, hardware requirements, and validation records. Voice home automation and WhatsApp are individual applications within the wider course and its extensions.
+The repository organizes the course into six units, each with separate directories for syllabus items and exercises. Every lab documents Arabic and English explanations, prerequisites, hardware, setup, and actual results. Extensions have their own catalog.
 
 ## Start here
 
-1. Read the [course map](docs/course-map.md) and [lab catalog](labs/README.md).
-2. Choose your board in the [environment guide](environments/README.md).
-3. Check the [hardware and wiring requirements](hardware/README.md).
-4. Follow the lab and record results using the [validation guide](validation/README.md).
+1. Read the [syllabus map](course/syllabus-map.md) and [detailed item index](course/exercises-index.md).
+2. Choose a [unit](labs/README.md), then the exercise by its syllabus reference.
+3. Select an [environment](environments/README.md), and check [hardware and wiring](hardware/README.md).
+4. Follow the lab and record [validation](validation/README.md).
 
-The available implementation is [text control of a simulated lamp](labs/07-gpio-control/01-text-lamp/README.md). Other directories describe planned scope rather than completed applications.
+Embedded systems has four separate integration exercises: Arduino, STM32, Raspberry Pi and Odroid. Weekly assessment counts are not detailed exercise counts.
 
-## Hardware support
+## Layout
 
-Both Pi 4 and Pi 5 are target boards for instructors and learners. Document board specific OS, audio, and GPIO setup while retaining the same learning objective.
-
-| Board | OS track | Project hardware validation |
-| --- | --- | --- |
-| Raspberry Pi 4 | 64 bit Ubuntu 20.04 for course alignment | Pending |
-| Raspberry Pi 5 | 64 bit Ubuntu 24.04 as a proposed supported board OS | Pending |
-
-Ubuntu 20.04 is not an officially supported native Pi 5 path. OS support does not establish compatibility of ROS, microphones, or GPIO libraries. Validate each lab separately; see [environment decisions and sources](docs/environments.md).
-
-## Repository layout
-
-The numbered [labs](labs/README.md) cover setup, ROS fundamentals, mobile robot and arm simulation, Arabic speech, conversation, GPIO, embedded interfaces, AI models, WhatsApp, and integrated voice home automation.
-
-| Directory | Purpose |
+| Directory | Contents |
 | --- | --- |
-| `labs/` | Lab explanations, source, ROS packages, and simulation assets |
-| `environments/` | Board and operating system profiles |
-| `hardware/` | Parts inventory and wiring requirements |
-| `validation/` | Compatibility matrix and test records |
-| `docs/` | Course mapping, architecture, roadmap, and lab template |
-| `references/` | Source index |
-| `.github/` | Issue and pull request templates |
+| course | Syllabus map and detailed item index |
+| labs | ROS fundamentals, setup, mobile simulation, arm simulation, conversation and speech, embedded systems |
+| extensions | Language models, WhatsApp, and integrated voice home automation |
+| environments | Board and OS profiles |
+| hardware | Parts inventory and wiring requirements |
+| validation | Actual runs and compatibility matrix |
+| docs | Architecture, roadmap, lab template, writing rules |
+| references | Source index |
 
-The current source belongs to the GPIO lab. New labs keep their own assets; extract shared components when multiple implemented labs need them.
+Keep each exercise's documentation, source, configuration, and ROS or simulation assets within its directory. Keep extension applications separate from original course coverage.
 
-## Run the first demo
+## Available implementation
 
-From the repository root on Linux, using Python 3.8 or newer:
+The [text lamp demo](labs/06-embedded-systems/03-raspberry-pi/01-text-lamp/README.md) is preparation within the Raspberry Pi lab. It does not implement physical control or ROS integration. Other guides define planned scope rather than completed applications.
+
+From the repository root on Linux with Python 3.8 or newer:
 
 ```bash
 python3 -m venv .venv
@@ -54,10 +44,12 @@ python -m arabic_home --command "شغل اللمبة"
 python -m arabic_home --command "طفي اللمبة"
 ```
 
-The phrases mean turn on and turn off the lamp. They display “اللمبة الافتراضية: تعمل” (simulated lamp: on) and “اللمبة الافتراضية: مطفأة” (simulated lamp: off). Each invocation is independent. No state is saved and no audio, GPIO, or ROS is used.
+The phrases mean turn on and turn off the lamp. Output reports the simulated state. Each invocation is independent; no state is persisted and no device is accessed.
 
-Read the [roadmap](docs/roadmap.md) and [contribution guide](CONTRIBUTING.md). Every lab documents both languages, board differences, hardware, versions, and actual results. A dual board compatibility claim requires recorded runs on both boards.
+## Board paths
 
-No reuse license has been selected. The original trainer outline stays local because it contains contact details.
+Pi 4 targets arm64 Ubuntu 20.04 for course alignment. Pi 5 has a proposed arm64 Ubuntu 24.04 path. Neither has hardware validation yet. For other embedded labs, record a Pi execution host separately from its connected board. OS support alone does not establish audio, GPIO or ROS support; see the [environment decisions](docs/environments.md).
+
+Read the [architecture](docs/architecture.md), [roadmap](docs/roadmap.md), [contribution guide](CONTRIBUTING.md), [lab template](docs/lesson-template.md) and [text direction guide](docs/writing-style.md). The repository is private; learner access and licensing remain course owner decisions. The original outline stays local due to contact details.
 
 </div>

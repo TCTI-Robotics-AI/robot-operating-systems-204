@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "robot-operating-systems-204"
-version = "0.2.0"
+version = "0.3.0"
 description = "Bilingual Robot Operating Systems course labs for Raspberry Pi 4 and 5"
 requires-python = ">=3.8"
 dependencies = []
 
 [tool.setuptools.packages.find]
-where = ["labs/07-gpio-control/src"]
+where = ["labs/06-embedded-systems/03-raspberry-pi/src"]

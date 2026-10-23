@@ -2,6 +2,19 @@
 
 # سجل التغييرات
 
+## إعادة تنظيم المقرر بتاريخ 2026-10-23
+
+اعتماد ست وحدات، ومجلد مستقل لكل بند تفصيلي، وأربعة تمارين للأنظمة المدمجة. فصل التوسعات عن المنهج، ونقل كود اللمبة إلى تمرين الرازبيري، وإضافة فهرس يفرق بين التمرين والتقييم الأسبوعي. نجح فحص الروابط واللغتين وملفات الإعداد والتثبيت في بيئة نظيفة، وتشغيل التجربة من خارج مجلد المستودع. اختبارات أجهزة الرازبيري ما زالت غير منفذة. أقسام الإصدارات السابقة أدناه سجل تاريخي وقد استبدلت بنيتها بالتنظيم الحالي.
+
+<span dir="ltr">Version 0.3.0</span>: ست وحدات مع الحفاظ على الشرح باللغتين واتجاه النص، وتحديث مسارات الحزمة والروابط وسجلات المضيف واللوحة.
+
+<div dir="ltr" lang="en">
+
+Version 0.3.0 organizes six course units with separate syllabus item directories and four embedded integration labs. It moves optional applications to extensions and the lamp code to the Pi lab, adds a detailed reference index, and distinguishes weekly assessments from exercises. Package paths, links, host and target records are updated. Local checks passed for links, language containers, configuration files, clean installation and demo execution outside the repository. Pi hardware runs remain pending. Earlier version entries below are historical and their layouts are superseded.
+
+</div>
+
+
 ## 0.2.0 بتاريخ 2026-10-23
 
 - اعتماد هوية أنظمة تشغيل الروبوتات 204 روبوت واسم المستودع <span dir="ltr">robot-operating-systems-204</span>.

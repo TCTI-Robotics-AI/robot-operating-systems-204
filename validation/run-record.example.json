@@ -18,5 +18,16 @@
   "expected_result": null,
   "actual_result": null,
   "problems": [],
-  "evidence": []
+  "evidence": [],
+  "syllabus_reference": null,
+  "exercise_path": null,
+  "execution_host": {
+    "board_model": null,
+    "os": null,
+    "role": null
+  },
+  "device_under_test": {
+    "board_model": null,
+    "connection_protocol": null
+  }
 }

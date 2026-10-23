@@ -1,41 +1,36 @@
 <div dir="rtl" lang="ar">
 
-# تنظيم مستودع المقرر
+# تصميم المستودع
 
-المستودع حاوية المقرر كاملة. التمرين وحدة مستقلة لها هدف ومجلد وشرح وكود وإعدادات وتحقق. تكامل عدة تمارين يوثق كتمرين إضافي له متطلبات سابقة واضحة.
+يمثل المستودع المقرر كاملًا. تتدرج المادة من الوحدة إلى البند التفصيلي ثم خطوات التجربة. رقم البند في الخطة هو مرجع الربط، بينما يظل عدد التقييمات الأسبوعية مستقلًا عن عدد التمارين.
 
-- <code dir="ltr">labs/</code>: مرجع التمارين؛ يوضع الشرح والكود وحزم <span dir="ltr">ROS</span> والمحاكاة التابعة لتمرين معه.
-- <code dir="ltr">environments/</code>: بيئات الأجهزة والأنظمة المشتركة.
-- <code dir="ltr">hardware/</code>: قائمة القطع المشتركة. التوصيل المحدد وأرقام الأطراف داخل التمرين.
-- <code dir="ltr">validation/</code>: نتائج التوافق وسجلات التشغيل الفعلية.
-- <code dir="ltr">docs/</code>: خريطة المنهج والقرارات والقالب والخطة.
+| المستوى | موضعه | دوره |
+| --- | --- | --- |
+| المقرر | [الخريطة](../course/syllabus-map.md) و[الفهرس](../course/exercises-index.md) | تغطية المنهج وربط البنود بالمجلدات |
+| الوحدة | [الوحدات الست](../labs/README.md) | تجميع الموضوعات المتصلة |
+| البند أو التمرين | مجلد داخل الوحدة | الشرح والكود والإعدادات والتوصيلات ونتائج التنفيذ |
+| التوسعة | [التطبيقات الإضافية](../extensions/README.md) | بناء تطبيقات فوق تمارين المقرر |
+| البيئة | [دليل الأنظمة](../environments/README.md) | فروق الجهازين والإصدارات |
+| الأجهزة والتحقق | [القطع](../hardware/README.md) و[النتائج](../validation/README.md) | المكونات الفعلية والأدلة على التوافق |
 
-يوضح كل تمرين إن كان <span dir="ltr">ROS</span> مطلوبًا أو اختياريًا أو غير مستخدم، مع الإصدار وطريقة البناء. تحفظ أمثلة <span dir="ltr">Catkin</span> منفصلة عن أي مسار <span dir="ltr">ROS 2</span> مستقبلي.
+## الأنظمة المدمجة
 
-## تطبيق التحكم المنزلي بالصوت
+أربعة تمارين ربط مستقلة: أردوينو، ومتحكمات <span dir="ltr">STM32</span>، والرازبيري، و<span dir="ltr">Odroid</span>. توزع تمارين الربط الأربعة على الأسابيع 14 و15 و16.
 
-<div dir="ltr">
+كود اللمبة الافتراضية داخل تمرين الرازبيري، ويثبت فهم الأوامر النصية فقط. التطبيق التجميعي للتحكم المنزلي بالصوت داخل التوسعات، ويعتمد على تمرين الصوت وتمرين الرازبيري بعد تنفيذهما.
 
-```text
-الصوت → نص عربي → تفسير الأوامر → GPIO → نتيجة التنفيذ
-                       ↑
-                 إدخال نصي للتعلم
-```
-
-</div>
-
-التطبيق التجميعي في <code dir="ltr">labs/11-voice-home-automation/</code>. الكود الحالي يطابق عبارات محددة ويعرض حالة افتراضية داخل تمرين <span dir="ltr">GPIO</span>. نتيجة منفذ الأمر تحدد نجاح التنفيذ الفعلي. الأمر غير المعروف لا يشغّل الجهاز.
+يوثق كل تمرين دور <span dir="ltr">ROS</span> وإصداره وطريقة البناء. عند استخدام الرازبيري مضيفًا للوحة أخرى يسجل المضيف واللوحة المتصلة كل على حدة. لا تفترض قابلية نقل مكتبة أطراف أو إعداد صوت بين الجهازين دون اختبار.
 
 </div>
 
 <div dir="ltr" lang="en">
 
-## English
+# Repository architecture
 
-The repository contains the entire course. Each lab owns its objective, explanation, code, configuration, and validation. Integration across labs is a separate lab with prerequisites.
+The hierarchy is course, unit, detailed syllabus item, then procedure. Syllabus references identify coverage; weekly assessment counts remain distinct from exercise counts. The table links course coverage, six units, individual labs, extensions, board environments, hardware and validation.
 
-The labs directory owns lab source, ROS packages, and simulation assets. Environments owns shared board and OS profiles. Hardware lists common parts while precise wiring belongs to the lab. Validation records actual runs. Docs contains course decisions and templates.
+Embedded systems contains four distinct integration labs: Arduino, STM32, Raspberry Pi and Odroid across three weeks. The simulated lamp source belongs to the Pi lab and proves text interpretation only. Integrated voice home automation belongs to extensions and depends on implemented speech and Pi labs.
 
-Each lab states whether ROS is required, optional, or unused, including version and build steps. Keep Catkin examples distinct from future ROS 2 examples. The voice home automation lab will integrate speech, command interpretation, and GPIO. Only text phrase matching and simulated output exist today. Unknown input must not trigger switching; actual device results determine execution success.
+Each lab documents its ROS role, version and build method. When a Pi hosts another embedded board, record the host and connected device separately. Validate audio and GPIO settings per board rather than assuming interchangeability.
 
 </div>

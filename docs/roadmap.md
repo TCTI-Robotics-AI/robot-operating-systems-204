@@ -1,43 +1,29 @@
 <div dir="rtl" lang="ar">
 
-# خطة تطوير مستودع المقرر
+# خطة تنفيذ المقرر وتوسعاته
 
 | المرحلة | المخرج | الحالة |
 | --- | --- | --- |
-| 0 | هوية المقرر وفهرس التمارين والتوثيق باللغتين | متوفر |
-| 1 | تحديد أنظمة الجهازين والقطع وإعدادات كل جهاز | قيد التخطيط |
-| 2 | التدرج من تحكم نصي إلى <span dir="ltr">LED</span> فعلية | نصي متوفر؛ الفعلي قادم |
-| 3 | الصوت العربي ومحادثة <span dir="ltr">AIML</span> | قادم |
-| 4 | أساسيات <span dir="ltr">ROS</span> والتواصل وربط الصوت بالتحكم | قادم |
-| 5 | محاكاة روبوت بعجلتين وذراع و<span dir="ltr">RViz</span> و<span dir="ltr">Gazebo</span> | قادم |
-| 6 | <span dir="ltr">Arduino</span> و<span dir="ltr">STM32</span> و<span dir="ltr">Odroid</span> حسب توفر القطع | قادم |
-| 7 | نموذج لغوي و<span dir="ltr">WhatsApp</span> كتوسعات مستقلة | قادم |
-| 8 | تطبيق التحكم المنزلي بالصوت التجميعي | قادم |
-| 9 | اختبارات الجهازين وتجربة الدليل مع المتدربين | قادم |
+| تنظيم المنهج | ست وحدات وفهرس يربط البنود التفصيلية بالخطة | متوفر |
+| الأنظمة المدمجة | أربعة مجلدات مستقلة لتمارين الربط | أدلة نطاق متوفرة؛ التنفيذ الفعلي قادم |
+| تجربة تمهيدية | التحكم النصي بلمبة افتراضية داخل تمرين الرازبيري | منفذة محليًا على الحاسب |
+| تجهيز الأجهزة | تثبيت اختيار النظام والقطع والإعدادات لكل لوحة | قيد التخطيط |
+| تنفيذ المقرر | إعداد كل بند وفق مرجعه وتوثيق خطواته واختباره | قادم |
+| التوسعات | النموذج اللغوي والرد عبر واتساب والتحكم المنزلي بالصوت | قادمة |
+| التحقق والإتاحة | سجلات الجهازين وتجربة الدليل مع المتدربين | قادم |
 
-ترتيب التنفيذ حسب التدريس والقطع. ترتيب الفهرس ليس ادعاء اكتمال التطبيقات. المستودع منشور بصورة خاصة؛ إتاحته للمتدربين مرحلة لاحقة.
+ترتيب التنفيذ حسب التدريس والقطع المتوفرة. المرجع للتغطية هو [فهرس البنود](../course/exercises-index.md). وجود مجلد أو دليل نطاق لا يعني تنفيذ التجربة.
 
-اكتمال التمرين يتطلب العربية والإنجليزية، الارتباط بالمقرر، المتطلبات، قطعًا محددة بقيم وموديلات، إعداد الجهازين، أوامر ونتائج وأخطاء وتمرينًا إضافيًا، وسجلات تحقق فعلية. يسجل أي مسار متعذر بدل إعلان توافق غير مثبت.
+اكتمال التمرين يتطلب شرحًا باللغتين، وربطه برقم البند، ومتطلباته السابقة، وقطعًا وموديلات وقيمًا محددة، وإعدادات وأوامر ونتائج وأخطاء وتمرينًا إضافيًا وسجل تحقق فعلي لكل مسار مستخدم. الأجهزة غير المستخدمة تسجل كغير منطبقة مع السبب. المستودع خاص حاليًا.
 
 </div>
 
 <div dir="ltr" lang="en">
 
-## English
+# Course and extension implementation roadmap
 
-| Stage | Deliverable | Status |
-| --- | --- | --- |
-| 0 | Course identity, lab catalog, bilingual documentation | Available |
-| 1 | Confirm both board OS, hardware, and settings | Planning |
-| 2 | Text control to physical LED | Text available; hardware planned |
-| 3 | Arabic speech and AIML conversation | Planned |
-| 4 | ROS fundamentals, communication, voice and device integration | Planned |
-| 5 | Mobile robot, arm, RViz and Gazebo simulation | Planned |
-| 6 | Arduino, STM32 and Odroid as available | Planned |
-| 7 | Language models and WhatsApp extensions | Planned |
-| 8 | Integrated voice home automation | Planned |
-| 9 | Dual board validation and learner walkthrough | Planned |
+Six units, the detailed syllabus index and four embedded integration directories are organized. The Pi text lamp preparation runs locally; physical integration remains planned. Next steps confirm board OS and parts, implement syllabus items by reference, and then build extensions for models, WhatsApp and voice home automation. Finish with actual board runs and learner walkthroughs.
 
-Development follows teaching needs and available hardware. Catalog order is not completion status. GitHub publication is private; learner access comes later. Completion requires both languages, course mapping, prerequisites, selected parts and values, per board setup, commands and results, troubleshooting, an exercise, and recorded runs. Document blocked paths instead of claiming unverified compatibility.
+The detailed item index governs coverage. A directory or scope guide is not implementation. Completion requires both languages, syllabus mapping, prerequisites, selected hardware and values, setup, commands, results, troubleshooting, an exercise, and actual validation for every used environment. Record unused hardware as not applicable with a reason. The repository remains private.
 
 </div>
