@@ -1,0 +1,24 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+devel/
+install/
+logs/
+log/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+recordings/
+models/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+# Trainer course outline contains contact details; keep local unless reviewed for publication.
+/ملف المدرب وتوصيف المقرر التدريبي - أنظمة تشغيل الرويوت.pdf
