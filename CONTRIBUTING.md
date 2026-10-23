@@ -11,7 +11,7 @@
 - تحقق من بيئة نظيفة عند تغيير التثبيت أو المسارات.
 - استبعد المفاتيح والتسجيلات والبيانات الشخصية وملف المنهج الأصلي.
 
-المستودع خاص؛ إتاحة المساهمة للمتدربين والترخيص يحددهما صاحب المقرر لاحقًا.
+المستودع عام ومتاح للجميع للاطلاع واقتراح المساهمات. يحدد صاحب المقرر ترخيص إعادة الاستخدام.
 
 اربط التمرين ببنده في [فهرس المقرر](course/exercises-index.md). التوسعات في مجلد مستقل. سجل الجهاز المضيف واللوحة المتصلة عند الحاجة.
 
@@ -21,7 +21,7 @@
 
 ## English
 
-Propose changes through a pull request for a specific lab. Keep documentation, source, ROS packages, and simulation assets in that lab directory and use the linked template. Update Arabic and English together and follow the [text direction guide](docs/writing-style.md). State prerequisites, ROS requirements, versions, both board setup paths, actual parts, and wiring. Record tested and untested paths and update the matrix. Verify changed installation paths in a clean environment. Exclude secrets, recordings, personal data, and the original course PDF. Learner access and licensing remain course owner decisions; the repository is private.
+Propose changes through a pull request for a specific lab. Keep documentation, source, ROS packages, and simulation assets in that lab directory and use the linked template. Update Arabic and English together and follow the [text direction guide](docs/writing-style.md). State prerequisites, ROS requirements, versions, both board setup paths, actual parts, and wiring. Record tested and untested paths and update the matrix. Verify changed installation paths in a clean environment. Exclude secrets, recordings, personal data, and the original course PDF. The repository is public and open for browsing and contribution proposals. Reuse licensing remains a course owner decision.
 
 Map the exercise to its syllabus reference. Keep extensions separate and record execution host and target device independently where applicable.
 
