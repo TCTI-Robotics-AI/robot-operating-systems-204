@@ -14,7 +14,7 @@
       week.hidden = !match;
       shown += Number(match);
     }
-    count.textContent = query ? `عدد النتائج: ${arabic.format(shown)}` : '١٦ عرضًا متاحًا بصيغة PDF';
+    count.textContent = query ? `عدد النتائج: ${arabic.format(shown)}` : '١٦ عرضا متاحا بصيغة PDF';
     empty.hidden = shown !== 0;
   });
   document.querySelector('#copy-link').addEventListener('click', async () => {
