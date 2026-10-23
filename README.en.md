@@ -55,6 +55,6 @@ The phrases mean turn on and turn off the lamp. Output reports the simulated sta
 
 Pi 4 targets arm64 Ubuntu 20.04 for course alignment. Pi 5 has a proposed arm64 Ubuntu 24.04 path. Neither has hardware validation yet. For other embedded labs, record a Pi execution host separately from its connected board. OS support alone does not establish audio, GPIO or ROS support; see the [environment decisions](docs/environments.md).
 
-Read the [architecture](docs/architecture.md), [roadmap](docs/roadmap.md), [contribution guide](CONTRIBUTING.md), [lab template](docs/lesson-template.md) and [text direction guide](docs/writing-style.md). The repository is private; learner access and licensing remain course owner decisions. The original outline stays local due to contact details.
+Read the [architecture](docs/architecture.md), [roadmap](docs/roadmap.md), [contribution guide](CONTRIBUTING.md), [lab template](docs/lesson-template.md) and [text direction guide](docs/writing-style.md). The repository is public and its educational content is accessible to everyone. Reuse licensing remains a course owner decision. The original outline stays local due to contact details.
 
 </div>
