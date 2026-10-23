@@ -1,71 +1,63 @@
-# عنوان التجربة
+# قالب تمرين المقرر
 
-يكتب شرح التجربة بالعربي والإنجليزي، مع الحفاظ على نفس الخطوات والنتائج في اللغتين.
+يكتب بنفس المحتوى بالعربية والإنجليزية. القيم غير المعروفة تسجل بأنها غير محددة، ولا تنشر كإعداد جاهز.
 
-## الهدف والارتباط بالمقرر
+## تعريف التمرين
 
-المهارة التي يكتسبها المتدرب والأسبوع أو الموضوع الذي تخدمه.
+الرقم والعنوان والهدف وأسبوع المقرر والمتطلبات السابقة والحالة ومجلد الكود. هل ROS مطلوب أو اختياري أو غير مستخدم؟ ما إصداره وطريقة بنائه؟
 
-## المتطلبات
+## القطع والبرامج
 
-الجهاز والنظام والبرامج والقطع والمهارات السابقة.
+الكميات والموديلات والقيم ومواصفات الطاقة وإصدارات النظام وPython وROS والمكتبات وأدوات البناء ومزود الخدمة عند الحاجة.
 
-## الفكرة والتوصيل
+## إعداد Pi 4
 
-شرح تدفق البيانات، ومخطط التوصيل عند الحاجة مع أرقام الأطراف ونوع ترقيمها.
+النظام والمعمارية والتثبيت وتفعيل الأجهزة والصوت ومكتبة GPIO ونوع ترقيم الأطراف والتوصيل والتشغيل.
 
-## خطوات التنفيذ
+## إعداد Pi 5
 
-أوامر الإعداد والتشغيل بالترتيب، مع شرح وظيفة كل خطوة.
+المعلومات نفسها، مع كل فرق عن Pi 4. لا يعلن توافق إعداد غير مختبر.
 
-## النتيجة المتوقعة
+## التوصيل والإعدادات
 
-مثال إدخال وإخراج وطريقة التأكد من نجاح التجربة.
+مخطط بالإشارات وأرقام BCM والأطراف الفيزيائية والأرضي والجهود وقيم المكونات، وعينة إعدادات دون أسرار. للتجربة البرمجية فقط يوضح أن التوصيل غير منطبق.
 
-## المشاكل الشائعة
+## التنفيذ والنتائج
 
-أعراض واضحة مع طريقة تشخيصها وعلاجها.
-
-## تمرين المتدرب
-
-تعديل صغير يقيس فهم المهارة.
+أوامر مرتبة ومشروحة، إدخال وإخراج ومعيار نجاح، أخطاء شائعة وحلولها، وتمرين إضافي.
 
 ## سجل التحقق
 
-التاريخ والجهاز والنظام والإصدارات والنتيجة وحدود التوافق.
+رابط لسجل كل جهاز يشمل التاريخ والقطع والإصدارات والنتيجة والفروق والمشكلات. حدث المصفوفة؛ هدف الدعم ليس نتيجة اختبار.
 
-## English lesson template
+## English lab template
 
-Use the same lesson content in both languages.
+Provide equivalent Arabic and English content. Mark unknown settings unselected rather than ready to run.
 
-### Objective and course mapping
+### Identity and prerequisites
 
-State the skill and relevant course week or topic.
+ID, title, objective, course week, prerequisites, status, and source path. State whether ROS is required, optional, or unused, with version and build method.
 
-### Prerequisites
+### Hardware and software
 
-List hardware, OS, software versions, parts, and prior knowledge.
+Quantities, actual models, component values, PSU specifications, OS, Python, ROS, dependencies, build tools, and service provider if applicable.
 
-### Concept and wiring
+### Pi 4 setup
 
-Explain data flow. Include pin numbers, numbering scheme, and wiring when relevant.
+OS, architecture, installation, device enablement, audio, GPIO library, pin numbering, wiring, and execution.
 
-### Procedure
+### Pi 5 setup
 
-Provide setup and execution commands in order, explaining each step.
+Equivalent steps with each difference from Pi 4. Do not claim an untested configuration works.
 
-### Expected result
+### Wiring and settings
 
-Show sample input and output and a way to verify success.
+Diagram with signals, BCM and physical pins, ground, voltages, component values, and configuration without secrets. State not applicable for software only labs.
 
-### Troubleshooting
+### Procedure and results
 
-Describe recognizable symptoms, diagnosis, and remedies.
+Explained commands, input and output, success criteria, troubleshooting, and an exercise.
 
-### Learner exercise
+### Validation
 
-Provide a small change that demonstrates understanding.
-
-### Validation record
-
-Record the date, board, OS, versions, result, and compatibility limits.
+Link per board runs with date, parts, versions, outcome, differences, and problems. Update the matrix. Intended support is not a test result.

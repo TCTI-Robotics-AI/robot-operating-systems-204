@@ -1,25 +1,48 @@
-# ROS and Arabic Voice Home Automation Learning Project
+# Robot Operating Systems
 
-[العربية](README.md) | English
+**Course code as shown in the outline: 204 روبوت** · [العربية](README.md)
 
-An educational project for Robot Operating Systems course 204. It connects ROS fundamentals, simulation, conversation, and embedded control. The first application is switching a lamp on and off using Arabic commands.
+This course repository contains independent labs for Linux, ROS, simulation, speech, conversation, and embedded control. Each lab has Arabic and English explanations, prerequisites, setup, hardware requirements, and validation records. Voice home automation and WhatsApp are individual applications within the wider course and its extensions.
 
-## Current status
+## Start here
 
-The repository contains the initial structure and a text command demo with a simulated lamp. Speech recognition, ROS integration, physical control, and external services are planned features.
+1. Read the [course map](docs/course-map.md) and [lab catalog](labs/README.md).
+2. Choose your board in the [environment guide](environments/README.md).
+3. Check the [hardware and wiring requirements](hardware/README.md).
+4. Follow the lab and record results using the [validation guide](validation/README.md).
 
-## Target environments
+The available implementation is [text control of a simulated lamp](labs/07-gpio-control/01-text-lamp/README.md). Other directories describe planned scope rather than completed applications.
 
-| Track | Hardware | Operating system | Validation |
-| --- | --- | --- | --- |
-| Learner | Raspberry Pi 4 | Ubuntu 20.04, 64 bit | Hardware validation pending |
-| Development | Raspberry Pi 5 | A supported OS, to be confirmed | Hardware validation pending |
+## Hardware support
 
-Ubuntu 20.04 is not an officially supported native installation on Pi 5. Each hardware path needs separate validation. See [environments](docs/environments.md).
+Both Pi 4 and Pi 5 are target boards for instructors and learners. Document board specific OS, audio, and GPIO setup while retaining the same learning objective.
+
+| Board | OS track | Project hardware validation |
+| --- | --- | --- |
+| Raspberry Pi 4 | 64 bit Ubuntu 20.04 for course alignment | Pending |
+| Raspberry Pi 5 | 64 bit Ubuntu 24.04 as a proposed supported board OS | Pending |
+
+Ubuntu 20.04 is not an officially supported native Pi 5 path. OS support does not establish compatibility of ROS, microphones, or GPIO libraries. Validate each lab separately; see [environment decisions and sources](docs/environments.md).
+
+## Repository layout
+
+The numbered [labs](labs/README.md) cover setup, ROS fundamentals, mobile robot and arm simulation, Arabic speech, conversation, GPIO, embedded interfaces, AI models, WhatsApp, and integrated voice home automation.
+
+| Directory | Purpose |
+| --- | --- |
+| `labs/` | Lab explanations, source, ROS packages, and simulation assets |
+| `environments/` | Board and operating system profiles |
+| `hardware/` | Parts inventory and wiring requirements |
+| `validation/` | Compatibility matrix and test records |
+| `docs/` | Course mapping, architecture, roadmap, and lab template |
+| `references/` | Source index |
+| `.github/` | Issue and pull request templates |
+
+The current source belongs to the GPIO lab. New labs keep their own assets; extract shared components when multiple implemented labs need them.
 
 ## Run the first demo
 
-On Linux, from the repository directory, with Python 3.8 or newer:
+From the repository root on Linux, using Python 3.8 or newer:
 
 ```bash
 python3 -m venv .venv
@@ -29,25 +52,8 @@ python -m arabic_home --command "شغل اللمبة"
 python -m arabic_home --command "طفي اللمبة"
 ```
 
-The first command displays “اللمبة الافتراضية: تعمل” (simulated lamp: on); the second displays “اللمبة الافتراضية: مطفأة” (simulated lamp: off). Each invocation is independent. No state is saved and no hardware is accessed.
+The phrases mean turn on and turn off the lamp. They display “اللمبة الافتراضية: تعمل” (simulated lamp: on) and “اللمبة الافتراضية: مطفأة” (simulated lamp: off). Each invocation is independent. No state is saved and no audio, GPIO, or ROS is used.
 
-## Repository layout
+Read the [roadmap](docs/roadmap.md) and [contribution guide](CONTRIBUTING.md). Every lab documents both languages, board differences, hardware, versions, and actual results. A dual board compatibility claim requires recorded runs on both boards.
 
-| Directory | Purpose |
-| --- | --- |
-| `docs/` | Architecture, environments, course mapping, and roadmap |
-| `lessons/` | Guided experiments, expected results, and exercises |
-| `src/arabic_home/` | Command interpretation and runnable text demo |
-| `ros/` | Future ROS packages and launch files |
-| `simulation/` | Future robot descriptions and simulation examples |
-| `config/` | Environment configuration examples once selected |
-| `hardware/` | Parts and wiring instructions once confirmed |
-| `integrations/` | Optional AI model and WhatsApp integrations |
-| `references/` | Course source index |
-| `.github/` | Issue and contribution templates |
-
-## Learning materials
-
-Start with the [course map](docs/course-map.md), [roadmap](docs/roadmap.md), [architecture](docs/architecture.md), and [first lesson](lessons/01-text-lamp/README.md). These documents include Arabic and English sections. Read the [contribution guide](CONTRIBUTING.md) before proposing a change.
-
-The original course PDF remains local because it contains contact information. No reuse license has been selected yet; the project owner will decide before public release.
+No reuse license has been selected. The original trainer outline stays local because it contains contact details.

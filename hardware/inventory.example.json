@@ -1,0 +1,50 @@
+{
+  "board": {
+    "model": null,
+    "ram_gb": null
+  },
+  "power_supply": {
+    "model": null,
+    "voltage_v": null,
+    "current_a": null
+  },
+  "storage": {
+    "type": null,
+    "capacity_gb": null
+  },
+  "cooling": null,
+  "microphone": {
+    "model": null,
+    "interface": null
+  },
+  "audio_output": {
+    "model": null,
+    "interface": null
+  },
+  "led": {
+    "quantity": 1,
+    "model": null,
+    "forward_voltage_v": null,
+    "target_current_ma": null
+  },
+  "resistor": {
+    "quantity": 1,
+    "resistance_ohm": null,
+    "power_w": null
+  },
+  "breadboard": {
+    "quantity": 1,
+    "model": null
+  },
+  "wires": {
+    "quantity": null,
+    "type": null
+  },
+  "wiring": {
+    "bcm_pin": null,
+    "physical_pin": null,
+    "ground_pin": null,
+    "diagram": null
+  },
+  "status": "requirements-template-not-validated"
+}

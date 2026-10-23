@@ -3,11 +3,11 @@ requires = ["setuptools>=61,<75.4"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ros-arabic-home-learning"
-version = "0.1.0"
-description = "Educational Arabic commands and home automation project"
+name = "robot-operating-systems-204"
+version = "0.2.0"
+description = "Bilingual Robot Operating Systems course labs for Raspberry Pi 4 and 5"
 requires-python = ">=3.8"
 dependencies = []
 
 [tool.setuptools.packages.find]
-where = ["src"]
+where = ["labs/07-gpio-control/src"]

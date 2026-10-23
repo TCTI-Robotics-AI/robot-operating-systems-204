@@ -1,0 +1,30 @@
+{
+  "profile": "pi5-ubuntu2404",
+  "status": "targeted-not-tested",
+  "board": "Raspberry Pi 5",
+  "architecture": "arm64",
+  "target_os": {
+    "distribution": "Ubuntu",
+    "version": "24.04"
+  },
+  "actual_os": null,
+  "python_version": null,
+  "ros": {
+    "distribution": null,
+    "execution_method": null
+  },
+  "audio": {
+    "input_device": null,
+    "output_device": null,
+    "sample_rate_hz": null
+  },
+  "gpio": {
+    "library": null,
+    "library_version": null,
+    "numbering_scheme": null,
+    "bcm_pin": null,
+    "physical_pin": null
+  },
+  "hardware_inventory_record": null,
+  "validation_record": null
+}

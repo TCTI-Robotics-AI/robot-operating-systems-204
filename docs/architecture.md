@@ -1,41 +1,29 @@
-# تصميم المشروع
+# تنظيم مستودع المقرر
 
-الهدف فصل فهم الأوامر عن مصدرها وعن طريقة تنفيذها، حتى نستطيع شرح كل جزء وتجربته ثم ربط الأجزاء تدريجيًا.
+المستودع حاوية المقرر كاملة. التمرين وحدة مستقلة لها هدف ومجلد وشرح وكود وإعدادات وتحقق. تكامل عدة تمارين يوثق كتمرين إضافي له متطلبات سابقة واضحة.
 
-## مسار الطلب المستهدف
+- `labs/`: مرجع التمارين؛ يوضع الشرح والكود وحزم ROS والمحاكاة التابعة لتمرين معه.
+- `environments/`: بيئات الأجهزة والأنظمة المشتركة.
+- `hardware/`: قائمة القطع المشتركة. التوصيل المحدد وأرقام الأطراف داخل التمرين.
+- `validation/`: نتائج التوافق وسجلات التشغيل الفعلية.
+- `docs/`: خريطة المنهج والقرارات والقالب والخطة.
+
+يوضح كل تمرين إن كان ROS مطلوبًا أو اختياريًا أو غير مستخدم، مع الإصدار وطريقة البناء. تحفظ أمثلة Catkin منفصلة عن أي مسار ROS 2 مستقبلي.
+
+## تطبيق التحكم المنزلي بالصوت
 
 ```text
-مايك → تحويل الكلام إلى نص → فهم الأمر → تنفيذ على الجهاز → نتيجة ورد
-                            ↑
-                  إدخال نصي للتجربة
+الصوت → نص عربي → تفسير الأوامر → GPIO → نتيجة التنفيذ
+                       ↑
+                 إدخال نصي للتعلم
 ```
 
-التجربة الحالية تنفذ الإدخال النصي وفهم أوامر محددة وعرض نتيجة افتراضية فقط. لا تستخدم نموذج ذكاء اصطناعي.
-
-## حدود الأجزاء
-
-- الصوت: استقبال التسجيل وتحويله إلى نص، مع توثيق اللغة والنموذج والتكلفة والاتصال عند اختيار التقنية.
-- الأوامر: تحويل العبارات المدعومة إلى طلب تشغيل أو إطفاء واضح. العبارة غير المعروفة لا تنفذ أمرًا.
-- الأجهزة: تنفيذ الطلب باستخدام برنامج افتراضي أو موصل GPIO مناسب للجهاز، بعد تحديد التوصيلات.
-- ROS: ربط الأجزاء بعقد ورسائل وخدمات في دروس ROS، مع بقاء منطق فهم الأوامر قابلًا للتجربة مستقلًا.
-- الرد: بيان نجاح التنفيذ أو فشله؛ لا يُعلن نجاح التحكم الفعلي قبل استلام نتيجته.
-- التكاملات: مصادر إضافية للطلبات مثل WhatsApp، وتظل منفصلة عن أساس المشروع.
-
-## معايير المرحلة
-
-لكل جزء واجهة موثقة، وتجربة مستقلة، ومثال تشغيل، ونتيجة متوقعة. تختار المكتبات وإصداراتها عند تنفيذ المرحلة والتحقق من توافق بيئة المتدرب.
+التطبيق التجميعي في `labs/11-voice-home-automation/`. الكود الحالي يطابق عبارات محددة ويعرض حالة افتراضية داخل تمرين GPIO. نتيجة منفذ الأمر تحدد نجاح التنفيذ الفعلي. الأمر غير المعروف لا يشغّل الجهاز.
 
 ## English
 
-The design separates command interpretation from input sources and device execution. This lets learners study and run each component independently before integration.
+The repository contains the entire course. Each lab owns its objective, explanation, code, configuration, and validation. Integration across labs is a separate lab with prerequisites.
 
-The target flow is microphone → speech to text → command interpretation → device execution → result and response. Text input provides an alternative entry point for development. Only text input, explicit command matching, and simulated output are implemented today; the demo does not use an AI model.
+The labs directory owns lab source, ROS packages, and simulation assets. Environments owns shared board and OS profiles. Hardware lists common parts while precise wiring belongs to the lab. Validation records actual runs. Docs contains course decisions and templates.
 
-- Speech captures audio and produces text. The selected model, language support, connectivity, and cost will be documented in its lesson.
-- Commands map supported phrases to explicit on or off requests. Unknown input must not trigger device actions.
-- Device adapters will execute requests through simulation or a GPIO library validated for the board.
-- ROS lessons will connect components using nodes, messages, and services, while keeping command logic independently runnable.
-- Responses will report the execution result. Physical success must follow confirmation from the device adapter.
-- Optional integrations, including WhatsApp, will supply additional request sources independently of the core.
-
-Each implemented component needs an interface description, standalone example, expected result, and dependencies validated against the learner environment.
+Each lab states whether ROS is required, optional, or unused, including version and build steps. Keep Catkin examples distinct from future ROS 2 examples. The voice home automation lab will integrate speech, command interpretation, and GPIO. Only text phrase matching and simulated output exist today. Unknown input must not trigger switching; actual device results determine execution success.

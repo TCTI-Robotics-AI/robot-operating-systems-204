@@ -1,27 +1,16 @@
-# المساهمة في المشروع
+# المساهمة في تمارين المقرر
 
-اربط المساهمة بدرس أو مشكلة واضحة، واشرح بالعربية هدف التعديل وطريقة تجربته. حافظ على الأمثلة صغيرة وقابلة للتشغيل، وأضف الشرح مع الكود.
+اقترح التعديل عبر Pull Request مرتبط بتمرين واضح. ضع شرحه وكوده وحزم ROS أو المحاكاة الخاصة به تحت مجلده في labs، واستخدم [قالب التمرين](docs/lesson-template.md).
 
-أضف الشرح بالإنجليزية أيضًا، وحدّث النسختين معًا عند تغيير الخطوات أو النتائج.
+- حدّث العربية والإنجليزية معًا.
+- وضح المتطلبات ودور ROS والإصدارات.
+- حدد إعداد Pi 4 وإعداد Pi 5 والقطع والتوصيل لكل منهما.
+- سجل ما اختبر وما بقي غير مختبر وحدّث [المصفوفة](validation/compatibility.md).
+- تحقق من بيئة نظيفة عند تغيير التثبيت أو المسارات.
+- استبعد المفاتيح والتسجيلات والبيانات الشخصية وملف المنهج الأصلي.
 
-قبل اقتراح التعديل:
-
-1. جرّب الخطوات من بيئة جديدة إذا تغير التثبيت.
-2. اذكر الجهاز والنظام وإصدارات البرامج التي جربت عليها.
-3. حدّث نتيجة الدرس المتوقعة عند تغير السلوك.
-4. تأكد من خلو التغيير من مفاتيح الخدمات والتسجيلات والبيانات الشخصية.
-
-بعد نشر المستودع، يستطيع المتدرب اقتراح تعديله عبر Pull Request. قرار الترخيص لم يعتمد بعد.
+المستودع خاص؛ إتاحة المساهمة للمتدربين والترخيص يحددهما صاحب المقرر لاحقًا.
 
 ## English
 
-Connect each contribution to a lesson or a clear issue. Explain its purpose and how to run it in Arabic and English. Keep examples small and runnable, and include documentation with code changes.
-
-Before submitting:
-
-1. Try a fresh environment when installation steps change.
-2. Record the board, OS, and software versions used for validation.
-3. Update expected results when behavior changes.
-4. Exclude service keys, recordings, and personal data.
-
-Learners can propose changes through pull requests after publication. A reuse license has not been selected yet.
+Propose changes through a pull request for a specific lab. Keep documentation, source, ROS packages, and simulation assets in that lab directory and use the linked template. Update Arabic and English together. State prerequisites, ROS requirements, versions, both board setup paths, actual parts, and wiring. Record tested and untested paths and update the matrix. Verify changed installation paths in a clean environment. Exclude secrets, recordings, personal data, and the original course PDF. Learner access and licensing remain course owner decisions; the repository is private.

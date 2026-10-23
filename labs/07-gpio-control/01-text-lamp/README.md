@@ -8,6 +8,12 @@
 
 Python 3.8 أو أحدث. لا تحتاج Raspberry Pi أو مايك أو ROS لهذه التجربة.
 
+## القطع وإعداد الجهازين
+
+هذه تجربة برمجية فقط؛ لا تحتاج توصيلًا أو GPIO أو مايكًا أو خدمة خارجية. على Pi 4 اتبع [مسار Ubuntu 20.04](../../../environments/pi4-ubuntu2004/README.md)، وعلى Pi 5 اتبع [مسار Ubuntu 24.04 المقترح](../../../environments/pi5-ubuntu2404/README.md). أوامر Python نفسها بعد تجهيز البيئة، ولا توجد إعدادات صوت أو أطراف لهذه المرحلة.
+
+ابدأ التثبيت والتشغيل من جذر المستودع وفق [الدليل الرئيسي](../../../README.md). كود التجربة في `labs/07-gpio-control/src/arabic_home/`. حالة الجهازين مستهدفة وغير مختبرة؛ التحقق المحلي على Windows فقط. سجل أي اختبار فعلي في [مصفوفة التوافق](../../../validation/compatibility.md).
+
 ## التشغيل
 
 بعد إعداد المشروع حسب الدليل الرئيسي:
@@ -27,7 +33,7 @@ python -m arabic_home --command "افتح الباب"
 ## المشاكل الشائعة
 
 - رسالة No module named arabic_home تعني الحاجة لتفعيل البيئة وتثبيت المشروع باستخدام `python -m pip install -e .` من مجلده الرئيسي.
-- عند عدم قبول عبارة، راجع العبارات المعرفة في `src/arabic_home/__main__.py`.
+- عند عدم قبول عبارة، راجع العبارات المعرفة في `labs/07-gpio-control/src/arabic_home/__main__.py`.
 
 ## تمرين
 
@@ -40,6 +46,8 @@ python -m arabic_home --command "افتح الباب"
 Learn how an Arabic phrase becomes an explicit request before adding speech or physical devices. This introductory exercise prepares for weeks 11 to 13 on conversation and week 15 on Raspberry Pi. It requires Python 3.8 or newer; no Pi, microphone, or ROS is needed.
 
 ### Run
+
+This is a software only exercise: no wiring, GPIO, microphone, or external service. Use the linked Pi 4 Ubuntu 20.04 or proposed Pi 5 Ubuntu 24.04 profile, then run the same Python commands from the repository root. No board specific audio or pin settings apply. Both hardware runs are pending; only Windows checks exist. Record real board results in the linked matrix. The source is under `labs/07-gpio-control/src/arabic_home/`.
 
 Install the project using the main README, then run:
 
@@ -55,6 +63,6 @@ The program removes Arabic diacritics and matches an explicit phrase dictionary.
 
 ### Troubleshooting and exercise
 
-For `No module named arabic_home`, activate the virtual environment and run `python -m pip install -e .` from the repository root. For an unsupported phrase, inspect the command dictionary in `src/arabic_home/__main__.py`.
+For `No module named arabic_home`, activate the virtual environment and run `python -m pip install -e .` from the repository root. For an unsupported phrase, inspect the command dictionary in `labs/07-gpio-control/src/arabic_home/__main__.py`.
 
 Add “أشعل اللمبة” (light the lamp) to the dictionary. Verify that an unrelated phrase still does not produce a switching request.

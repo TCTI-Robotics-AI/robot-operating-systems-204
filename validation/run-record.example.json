@@ -1,0 +1,22 @@
+{
+  "status": "not-tested",
+  "lab_id": null,
+  "subexercise": null,
+  "tested_at": null,
+  "tester": null,
+  "board_model": null,
+  "ram_gb": null,
+  "os": null,
+  "architecture": null,
+  "kernel": null,
+  "python_version": null,
+  "ros_version": null,
+  "dependencies": {},
+  "hardware_inventory": null,
+  "configuration": null,
+  "commands": [],
+  "expected_result": null,
+  "actual_result": null,
+  "problems": [],
+  "evidence": []
+}

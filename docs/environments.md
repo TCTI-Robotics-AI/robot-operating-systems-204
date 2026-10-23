@@ -1,48 +1,37 @@
-# بيئات المشروع والتوافق
+# سياسة توافق الأجهزة والأنظمة
 
-## القرارات المعتمدة
+Pi 4 وPi 5 متوفران للمدرب والمتدربين؛ لا نقسم الأجهزة حسب دور صاحبها. يستهدف كل تمرين الجهازين، وتكتب الفروقات كمسارات إعداد داخل التمرين نفسه.
 
-- بيئة المتدرب المستهدفة Raspberry Pi 4 مع Ubuntu 20.04 بنظام 64 بت.
-- جهاز التطوير المتوفر Raspberry Pi 5. لم يُسجل نظامه الحالي بعد.
-- دعم الجهازين يعني المحافظة على وظائف الدروس مع توثيق اختلاف الإعداد والمكتبات والتوصيل.
-- لا تُعمم نتيجة الاختبار على جهاز إلى الجهاز الآخر.
-
-## نظام التشغيل
-
-تذكر [ملاحظات Ubuntu 20.04](https://documentation.ubuntu.com/release-notes/20.04/) دعم Pi 4. وتذكر [Canonical](https://canonical.com/blog/canonical-releases-ubuntu-23-10-mantic-minotaur) بدء دعم Pi 5 مع Ubuntu 23.10. لذلك لا نعتمد تثبيت Ubuntu 20.04 مباشرة على Pi 5.
-
-اختيار نظام Pi 5 وطريقة تشغيل دروس ROS عليه قرار قادم. تشغيل بيئة قديمة داخل حاوية احتمال يحتاج تجربة، خصوصًا مع الصوت وGPIO، وليس مسارًا معتمدًا حاليًا.
-
-## ROS
-
-المقرر يتضمن Catkin. نجهز مسار ROS 1 متوافقًا مع المقرر، لكن تثبيت التوزيعة ونسخ الحزم وخطوات التشغيل يحتاج تحققًا قبل اعتماده. لا توجد حزم ROS منفذة في البنية الحالية.
-
-## سجل التحقق
-
-| الجزء | تحقق محلي | Pi 4 وUbuntu 20.04 | Pi 5 |
+| المسار | الجهاز والنظام | الاستخدام | الحالة |
 | --- | --- | --- | --- |
-| أوامر نصية ولمبة افتراضية | يسجل في سجل التغييرات | لم يختبر | لم يختبر |
-| الصوت العربي | لم ينفذ | لم يختبر | لم يختبر |
-| GPIO | لم ينفذ | لم يختبر | لم يختبر |
-| ROS والمحاكاة | لم ينفذ | لم يختبر | لم يختبر |
+| pi4-ubuntu2004 | Pi 4 وUbuntu 20.04 arm64 | مواءمة المنهج القديم | مستهدف، لم يختبر |
+| pi5-ubuntu2404 | Pi 5 وUbuntu 24.04 arm64 | مسار مقترح للجهاز الأحدث | مستهدف، لم يختبر |
 
-عند الاختبار نسجل الجهاز والنظام ومعمارية المعالج وإصدار Python وROS والمكتبات والأمر المستخدم والنتيجة.
+يدعم [Ubuntu 20.04 جهاز Pi 4](https://documentation.ubuntu.com/release-notes/20.04/). يظهر دعم Ubuntu 24.04 للجهازين في [مصفوفة Canonical](https://ubuntu.com/hardware/docs/boards/how-to/ubuntu_supported/raspberry-pi/). لا يعتمد المشروع تثبيت Ubuntu 20.04 مباشرة على Pi 5.
+
+اختيار Ubuntu 24.04 هدف توثيقي مقترح لمسار Pi 5، وليس وصفًا لنظام الجهاز الحالي أو إثباتًا لتوافق البرامج. لا تتضمن البنية الحالية مثبّتًا للنظام أو أمرًا لتغييره.
+
+## ROS والمنهج
+
+Catkin وAIML جزء من المنهج. نحتفظ بمسار ROS 1 التعليمي المناسب لهما. انتهى الدعم الرسمي لـROS Noetic في 31 مايو 2025 حسب [إعلان ROS](https://discourse.openrobotics.org/t/ros-noetic-end-of-life-may-31-2025/43160)، لذلك يوثق كبيئة منهج قديمة وليس كخيار حديث مدعوم.
+
+مسار ROS 1 على Pi 5 لم يعتمد. فصل تشغيل ROS عن منفذ GPIO أو استخدام حاوية احتمالات تحتاج تجارب، خصوصًا للصوت والأجهزة. لا نعمم أوامر Catkin على نظام أحدث، ولا نستبدل المنهج تلقائيًا بـROS 2.
+
+## معنى التوافق
+
+- مستهدف: مطلوب تصميم التمرين للجهاز؛ لا يوجد سجل تشغيل مثبت.
+- تم التحقق: سجل فعلي يحدد الجهاز والنظام والقطع والإصدارات والنتيجة.
+- متعذر: عائق موثق مع السبب والخطوة اللازمة أو البديل.
+- غير منطبق: جزء لا يحتاج تلك الوظيفة؛ مثل غياب GPIO عن التمرين النصي.
+
+راجع [ملفات البيئات](../environments/README.md) و[مصفوفة التحقق](../validation/compatibility.md). قيم null في أمثلة الإعداد تعني أنها لم تحدد بعد.
 
 ## English
 
-The learner target is Raspberry Pi 4 with 64 bit Ubuntu 20.04. The available development board is Pi 5; its installed OS still needs to be confirmed. Equivalent lesson behavior is the goal, with separate setup and GPIO instructions when necessary. Results on one board do not establish compatibility with the other.
+Pi 4 and Pi 5 are both instructor and learner boards. Every lab targets both with separate setup paths where needed. Pi 4 uses the arm64 Ubuntu 20.04 course track; Pi 5 has a proposed arm64 Ubuntu 24.04 track. Both are untested with this project.
 
-[Ubuntu 20.04 release notes](https://documentation.ubuntu.com/release-notes/20.04/) describe Pi 4 support. [Canonical's Ubuntu 23.10 announcement](https://canonical.com/blog/canonical-releases-ubuntu-23-10-mantic-minotaur) describes the introduction of Pi 5 support. A native Ubuntu 20.04 installation is therefore not the Pi 5 path.
+The linked Ubuntu release notes establish Pi 4 support on 20.04; Canonical's matrix lists both boards on 24.04. Native Ubuntu 20.04 is not the Pi 5 path. The proposed OS is not a claim about the installed OS or application compatibility. No installer changes a board OS here.
 
-The Pi 5 OS and ROS setup remain open implementation decisions. A container for the older environment is a possibility requiring validation, especially for audio and GPIO; it is not an approved setup yet.
+Retain Catkin and AIML course coverage. Noetic reached official end of life on May 31, 2025, per the linked ROS announcement, and is a legacy course environment. A ROS 1 path on Pi 5 is not validated. Containers or separating ROS execution from GPIO remain possibilities to test. Do not assume Catkin works on a newer OS or silently substitute ROS 2.
 
-The course uses Catkin, so a ROS 1 learning path is planned. Distribution selection, dependency versions, and installation instructions require verification before adoption. No ROS package is implemented yet.
-
-| Component | Local validation | Pi 4 with Ubuntu 20.04 | Pi 5 |
-| --- | --- | --- | --- |
-| Text commands and simulated lamp | See changelog | Pending | Pending |
-| Arabic speech | Not implemented | Pending | Pending |
-| GPIO | Not implemented | Pending | Pending |
-| ROS and simulation | Not implemented | Pending | Pending |
-
-Record the date, board, OS, CPU architecture, Python and ROS versions, dependency versions, command, and result for each validation.
+Targeted means intended support without a recorded run. Verified requires actual hardware, OS, versions, and results. Blocked records a failure and next step. Not applicable means that function is not used, without implying GPIO support. JSON null values indicate unselected settings.

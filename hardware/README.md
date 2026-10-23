@@ -1,9 +1,39 @@
-# الأجهزة والتوصيلات
+# الأجهزة والقطع والتوصيل
 
-التطبيق الأول المستهدف LED صغيرة مع مقاومة مناسبة ولوحة تجارب وأسلاك. تحدد قائمة القطع وقيمة المقاومة وأطراف GPIO بعد معرفة القطع المتوفرة، وقبل تنفيذ التحكم الفعلي.
+كل تمرين فعلي يجب أن يحدد القطع وعددها وموديلها وقيمها والتوصيل قبل اعتباره جاهزًا للمتدربين. هذه احتياجات مبدئية؛ القطع غير المجربة لا توصف بأنها معتمدة.
 
-يوثق كل توصيل بمخطط ونوع ترقيم الأطراف والجهود المستخدمة. يبدأ المسار التعليمي بجهد منخفض؛ التحكم بلمبة منزلية يحتاج درسًا وتجهيزات مستقلة.
+| الاستخدام | الاحتياج لكل محطة | الحالة |
+| --- | --- | --- |
+| تشغيل اللوحة | Pi 4 أو Pi 5 واحدة، مزود طاقة مناسب لموديلها، تخزين بالنظام، شبكة | تسجل الموديلات والسعة الفعلية |
+| التجربة النصية | Python 3.8 أو أحدث على حاسب أو لوحة | لا تحتاج قطعًا إضافية |
+| الصوت العربي | مايك متوافق واحد؛ مخرج صوت وسماعة للرد المسموع | الموديلات والتعريف ومعدل التسجيل لم تحدد |
+| LED | لوحة تجارب، LED واحدة، مقاومة مناسبة واحدة، أسلاك | المقاومة وأطراف GPIO لم تعتمد |
+| Arduino وSTM32 | اللوحة المقصودة وكابل بيانات مناسب | الموديلات والبروتوكول لم تحدد |
+| Odroid | اللوحة ومزود الطاقة وكابل الربط | يحدد في درس الربط |
+| المحاكاة | جهاز يناسب المحاكاة المختارة | متطلبات الأداء تقاس عند التنفيذ |
+| WhatsApp والنموذج اللغوي | حساب وخدمة واتصال حسب المزود | المزود لم يعتمد؛ لا يحتاج GPIO بحد ذاته |
+
+## بيانات كل جهاز
+
+سجل موديل Pi والرام والنظام والنواة، ومواصفات مزود الطاقة والتخزين والتبريد، وموديل كل جهاز صوت وواجهته. لا تفترض أن مزود الطاقة أو مكتبة GPIO يتبادلان بين اللوحتين دون تحقق.
+
+لكل توصيل سجل الإشارة ورقم BCM والطرف الفيزيائي والأرضي والجهد وقيم المقاومة والمكونات الوسيطة ومخططًا واضحًا. لا تعطى أطراف تنفيذية قبل اعتماد الدائرة. يبدأ تمرين اللمبة بـLED منخفضة الجهد؛ اللمبة المنزلية تحتاج درسًا وتجهيزات مستقلة.
+
+أكمل [قالب القطع](inventory.example.json) واربط نسخته بسجل تشغيل التمرين. قيمة null تعني غير محدد.
 
 ## English
 
-The first physical experiment will use a small LED, an appropriate resistor, a breadboard, and jumper wires. Select the parts, resistor value, and GPIO pins based on available hardware before implementing control. Document a wiring diagram, pin numbering scheme, and voltage levels. Begin with low voltage; a household lamp requires a separate lesson and suitable equipment.
+Every physical lab must specify quantities, models, component values, and wiring before learner release. The list above is provisional, not validated product selection.
+
+| Use | Requirements per station | Status |
+| --- | --- | --- |
+| Board | One Pi 4 or Pi 5, suitable PSU, OS storage, network | Record actual models and capacity |
+| Text demo | Python 3.8 or newer on a computer or board | No extra parts |
+| Speech | One compatible microphone; output device and speaker for spoken replies | Models, drivers, and sample rate pending |
+| LED | Breadboard, one LED, one suitable resistor, wires | Resistance and GPIO pins pending |
+| Arduino and STM32 | Selected board and data cable | Model and protocol pending |
+| Odroid | Board, PSU, and link cable | Selected with its lab |
+| Simulation | Computer suitable for selected simulator | Performance requirements to be measured |
+| WhatsApp and model | Selected provider's account, service, connectivity | Provider pending; no inherent GPIO requirement |
+
+Record model, RAM, OS, kernel, PSU, storage, cooling, and audio devices and interfaces. Do not assume PSU or GPIO library interchangeability. Wiring guides specify signal, BCM number, physical pin, ground, voltage, resistor and interface components, and a diagram. No pin assignment is selected yet. Start with a low voltage LED; mains lamps require a separately equipped lab. Complete the inventory JSON template and attach it to the run record; null means unselected.

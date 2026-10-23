@@ -1,39 +1,35 @@
-# مراحل تنفيذ المشروع
+# خطة تطوير مستودع المقرر
 
 | المرحلة | المخرج | الحالة |
 | --- | --- | --- |
-| 0 | البنية والتوثيق وتجربة نصية للمبة افتراضية | متوفر مبدئيًا |
-| 1 | تحديد نظام Pi 5 وإعداد بيئة Pi 4 وإثبات التوافق | قادم |
-| 2 | تحويل كلام عربي إلى نص مع مثال تسجيل | قادم |
-| 3 | تشغيل LED فعلية مع توثيق التوصيل | قادم |
-| 4 | ربط تجربة الصوت والتحكم بعقد ROS | قادم |
-| 5 | تجارب RViz وGazebo والروبوت بعجلتين والذراع | قادم |
-| 6 | محادثة AIML ثم توسعة بنموذج لغوي | قادم |
-| 7 | تكامل WhatsApp اختياري | قادم |
-| 8 | اختبار دليل المتدرب والنشر على GitHub | قادم |
+| 0 | هوية المقرر وفهرس التمارين والتوثيق باللغتين | متوفر |
+| 1 | تحديد أنظمة الجهازين والقطع وإعدادات كل جهاز | قيد التخطيط |
+| 2 | التدرج من تحكم نصي إلى LED فعلية | نصي متوفر؛ الفعلي قادم |
+| 3 | الصوت العربي ومحادثة AIML | قادم |
+| 4 | أساسيات ROS والتواصل وربط الصوت بالتحكم | قادم |
+| 5 | محاكاة روبوت بعجلتين وذراع وRViz وGazebo | قادم |
+| 6 | Arduino وSTM32 وOdroid حسب توفر القطع | قادم |
+| 7 | نموذج لغوي وWhatsApp كتوسعات مستقلة | قادم |
+| 8 | تطبيق التحكم المنزلي بالصوت التجميعي | قادم |
+| 9 | اختبارات الجهازين وتجربة الدليل مع المتدربين | قادم |
 
-يُعدل ترتيب التنفيذ حسب الدروس وقطع الأجهزة المتوفرة.
+ترتيب التنفيذ حسب التدريس والقطع. ترتيب الفهرس ليس ادعاء اكتمال التطبيقات. المستودع منشور بصورة خاصة؛ إتاحته للمتدربين مرحلة لاحقة.
 
-## تعريف اكتمال التجربة
-
-- هدف مرتبط بالمقرر ومتطلبات واضحة.
-- خطوات تثبيت وتشغيل من نسخة جديدة للمشروع.
-- نتيجة متوقعة وأخطاء شائعة وتمرين.
-- تسجيل نتيجة التحقق على الأجهزة المستهدفة.
-- توثيق إعدادات ومفاتيح الخدمات دون نشر بيانات الدخول.
+اكتمال التمرين يتطلب العربية والإنجليزية، الارتباط بالمقرر، المتطلبات، قطعًا محددة بقيم وموديلات، إعداد الجهازين، أوامر ونتائج وأخطاء وتمرينًا إضافيًا، وسجلات تحقق فعلية. يسجل أي مسار متعذر بدل إعلان توافق غير مثبت.
 
 ## English
 
 | Stage | Deliverable | Status |
 | --- | --- | --- |
-| 0 | Structure, bilingual documentation, simulated text demo | Initial version available |
-| 1 | Confirm Pi 5 OS, prepare Pi 4 setup, validate compatibility | Planned |
-| 2 | Arabic speech to text and recording example | Planned |
-| 3 | Physical LED control and wiring guide | Planned |
-| 4 | ROS nodes connecting voice and control | Planned |
-| 5 | RViz, Gazebo, mobile robot, and arm lessons | Planned |
-| 6 | AIML conversation followed by a language model extension | Planned |
-| 7 | Optional WhatsApp integration | Planned |
-| 8 | Learner guide validation and GitHub publication | Planned |
+| 0 | Course identity, lab catalog, bilingual documentation | Available |
+| 1 | Confirm both board OS, hardware, and settings | Planning |
+| 2 | Text control to physical LED | Text available; hardware planned |
+| 3 | Arabic speech and AIML conversation | Planned |
+| 4 | ROS fundamentals, communication, voice and device integration | Planned |
+| 5 | Mobile robot, arm, RViz and Gazebo simulation | Planned |
+| 6 | Arduino, STM32 and Odroid as available | Planned |
+| 7 | Language models and WhatsApp extensions | Planned |
+| 8 | Integrated voice home automation | Planned |
+| 9 | Dual board validation and learner walkthrough | Planned |
 
-The sequence can change with teaching needs and available hardware. A lesson is complete when it has a course objective, prerequisites, setup and execution from a fresh checkout, expected results, troubleshooting, an exercise, and recorded validation on target boards. Document service configuration without publishing credentials. Provide Arabic and English explanations together with code changes.
+Development follows teaching needs and available hardware. Catalog order is not completion status. GitHub publication is private; learner access comes later. Completion requires both languages, course mapping, prerequisites, selected parts and values, per board setup, commands and results, troubleshooting, an exercise, and recorded runs. Document blocked paths instead of claiming unverified compatibility.

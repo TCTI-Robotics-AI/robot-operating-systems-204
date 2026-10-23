@@ -6,9 +6,13 @@ labels: bug
 assignees: ''
 ---
 
-## الدرس والخطوة / Lesson and step
+## رقم التمرين والخطوة / Lab ID and step
 
 ## الجهاز والنظام وإصدار Python وROS إن وجد / Board, OS, Python and ROS versions
+
+## القطع والموديلات والطاقة والتوصيل / Parts, models, power supply and wiring
+
+## إعدادات الصوت وGPIO والنتيجة على الجهاز الآخر / Audio and GPIO settings and other board result
 
 ## خطوات تكرار المشكلة / Steps to reproduce
 

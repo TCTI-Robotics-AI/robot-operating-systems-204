@@ -1,6 +1,21 @@
 # سجل التغييرات
 
+## 0.2.0 بتاريخ 2026-10-23
+
+- اعتماد هوية أنظمة تشغيل الروبوتات 204 روبوت واسم المستودع robot-operating-systems-204.
+- تقسيم المحتوى إلى 11 مجلد تمرين مستقل تحت labs، مع بقاء التحكم المنزلي بالصوت تطبيقًا تجميعيًا.
+- نقل كود اللمبة الافتراضية إلى تمرين GPIO وتحديث مسار بناء حزمة Python.
+- إضافة مسارات إعداد Pi 4 وPi 5 للمدرب والمتدربين، وقوالب القطع والإعدادات وسجلات التحقق ومصفوفة التوافق.
+- تحديث التوثيق العربي والإنجليزي وربط التمارين بخطة المقرر. اختبارات Raspberry Pi الفعلية ما زالت معلقة.
+- نجاح تثبيت الحزمة المعاد تنظيمها في بيئة Python نظيفة وتشغيل أوامر التشغيل والإطفاء ورفض أمر مجهول من خارج مجلد المشروع، وفحص روابط الشرح وملفات JSON واعتماد صياغة Python 3.8.
+
+### English
+
+Version 0.2.0 adopts the Robot Operating Systems course identity and repository name, organizes 11 independent labs, moves the simulated lamp source into its GPIO lab, and updates Python package discovery. Both boards are learner and instructor targets. Board environment examples, hardware inventory, validation records, and a compatibility matrix document actual settings and results. Arabic and English guides map labs to the course. A fresh package install and commands run outside the repository passed locally, including on, off, and unknown input checks. Documentation links, JSON examples, and Python 3.8 syntax were checked. Raspberry Pi hardware validation remains pending.
+
 ## 0.1.0 بتاريخ 2026-10-23
+
+سجل تاريخي للنسخة الأولى؛ توزيع الأجهزة وهيكل الملفات استبدلا في 0.2.0. Historical entry: the board roles and file layout below were superseded by 0.2.0.
 
 - إنشاء بنية المشروع والتوثيق العربي وربط الوحدات بخطة المقرر.
 - إضافة تجربة أوامر نصية عربية لعرض حالة لمبة افتراضية دون مكتبات تشغيل خارجية.
