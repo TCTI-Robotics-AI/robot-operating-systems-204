@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-24",
+  "device": "Raspberry Pi 5",
+  "os": "Ubuntu 24.04.5 LTS arm64",
+  "microphone": {
+    "name": "Apple EarPods USB-C",
+    "usb_id": "05ac:110b",
+    "alsa_input": "hw:CARD=EarPods,DEV=0",
+    "hardware_capture_control": "Headset",
+    "hardware_capture_value": 70,
+    "hardware_capture_percent": 100,
+    "hardware_capture_db": 32,
+    "additional_software_gain_db": 0,
+    "filter": "none"
+  },
+  "recording": {
+    "duration_seconds": 5,
+    "sample_rate_hz": 48000,
+    "channels": 1,
+    "pcm_bits": 16,
+    "rms_dbfs": -34.32,
+    "peak_dbfs": -13.69,
+    "full_scale_samples_percent": 0,
+    "played_before_transcription": true,
+    "audio_published": false
+  },
+  "transcription": {
+    "backend": "faster-whisper",
+    "model": "Systran/faster-whisper-small",
+    "model_revision": "536b0662742c02347bc0e980a01041f333bce120",
+    "compute_type": "int8",
+    "language": "ar",
+    "initial_prompt": null,
+    "expected_text": "شغل اللمبة",
+    "recognized_text": "شغل اللمبة",
+    "mean_word_probability": 0.7304,
+    "inference_seconds": 7.79,
+    "exact_match": true,
+    "ros_command_executed": false
+  },
+  "off_transcription": {
+    "duration_seconds": 5,
+    "sample_rate_hz": 48000,
+    "rms_dbfs": -36.14,
+    "peak_dbfs": -11.36,
+    "full_scale_samples_percent": 0,
+    "expected_text": "أطفئ اللمبة",
+    "baseline_recognized_text": "أطفئ اللنبة",
+    "baseline_beam_size": 3,
+    "same_recording_reprocessed": true,
+    "vocabulary_context": "اللمبة",
+    "beam_size": 5,
+    "recognized_text": "أطفئ اللمبة",
+    "mean_word_probability": 0.6941,
+    "inference_seconds": 8.05,
+    "exact_match": true,
+    "ros_command_executed": false
+  },
+  "limits": {
+    "successful_samples": 2,
+    "off_phrase_tested_with_this_profile": true,
+    "reboot_persistence_tested": false,
+    "general_arabic_accuracy_established": false
+  }
+}

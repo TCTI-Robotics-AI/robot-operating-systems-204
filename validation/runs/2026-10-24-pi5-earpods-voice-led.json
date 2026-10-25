@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-24",
+  "scope": "Two supervised fresh speech-to-text-to-ROS physical LED trials",
+  "host": {
+    "board": "Raspberry Pi 5 Model B",
+    "ram_gb": 2,
+    "os": "Ubuntu 24.04.5 LTS arm64",
+    "ros": "Noetic in course204-lamp container",
+    "gpio": "Native lgpio agent, gpiochip4, BCM17, physical pin 11"
+  },
+  "microphone": {
+    "name": "Apple EarPods USB-C",
+    "usb_id": "05ac:110b",
+    "alsa_input": "hw:CARD=EarPods,DEV=0",
+    "hardware_capture_control": "Headset",
+    "hardware_capture_value": 70,
+    "hardware_capture_percent": 100,
+    "hardware_capture_db": 32,
+    "additional_software_gain_db": 0,
+    "filter": "none",
+    "sample_rate_hz": 48000,
+    "channels": 1,
+    "pcm_bits": 16,
+    "duration_seconds": 5,
+    "startup_settling_discarded_ms": 100,
+    "playback_completed_before_transcription": true
+  },
+  "recognizer": {
+    "backend": "faster-whisper 1.2.1",
+    "model": "Systran/faster-whisper-small",
+    "revision": "536b0662742c02347bc0e980a01041f333bce120",
+    "compute_type": "int8",
+    "cpu_threads": 4,
+    "language": "ar",
+    "beam_size": 5,
+    "vocabulary_context": "اللمبة",
+    "resampling": "PyAV 48 kHz to 16 kHz in memory; source recording retained",
+    "minimum_confidence": 0,
+    "command_matching": "Exact normalized allowlist; rejects unknown, empty, negated, and combined commands"
+  },
+  "trials": [
+    {
+      "expected_text": "شغل اللمبة",
+      "recognized_text": "شغل اللمبة",
+      "recording_rms_dbfs": -34.38,
+      "recording_peak_dbfs": -13.99,
+      "full_scale_samples_percent": 0,
+      "mean_word_probability": 0.644,
+      "inference_seconds": 8.81,
+      "intent": "on",
+      "executed": true,
+      "ros_success": true,
+      "acknowledged_state": true,
+      "simulated": false,
+      "user_observed_led_on": true
+    },
+    {
+      "expected_text": "أطفئ اللمبة",
+      "recognized_text": "أطفئ اللمبة",
+      "recording_rms_dbfs": -40.2,
+      "recording_peak_dbfs": -14.18,
+      "full_scale_samples_percent": 0,
+      "mean_word_probability": 0.5811,
+      "inference_seconds": 8.04,
+      "intent": "off",
+      "executed": true,
+      "ros_success": true,
+      "acknowledged_state": false,
+      "simulated": false,
+      "user_observed_led_off": true
+    }
+  ],
+  "final_led_on": false,
+  "limits": [
+    "Two controlled trials do not establish general Arabic or dialect accuracy.",
+    "The demonstration used a zero confidence threshold; the CLI default remains 0.8.",
+    "Vocabulary context and a five-beam decoder were enabled for both trials.",
+    "Recognition takes about eight seconds after recording and playback; this is not continuous listening.",
+    "Pi 4 and persistence after reboot remain untested with this microphone profile.",
+    "Private audio and model files were not published."
+  ]
+}

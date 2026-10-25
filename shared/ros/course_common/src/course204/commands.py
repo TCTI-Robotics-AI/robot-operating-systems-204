@@ -14,7 +14,9 @@ def normalize(text):
 def intent(text):
     phrases = {
         "شغل اللمبة": "on", "شغل اللمبه": "on", "اشعل اللمبة": "on",
+        "تشغيل اللمبة": "on", "تشغيل اللمبه": "on",
         "طفي اللمبة": "off", "طفي اللمبه": "off", "طف اللمبة": "off",
         "اطفئ اللمبة": "off", "اطفي اللمبة": "off",
+        "اطفاء اللمبة": "off", "اطفاء اللمبه": "off",
     }
     return phrases.get(normalize(text))

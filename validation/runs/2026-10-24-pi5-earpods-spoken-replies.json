@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-24",
+  "scope": "Replay two existing user speech recordings, execute ROS lamp commands, then speak matching Arabic acknowledgements",
+  "host": "Raspberry Pi 5 2 GB, Ubuntu 24.04.5 arm64",
+  "playback_device": "plughw:CARD=EarPods,DEV=0",
+  "headset": "Apple EarPods USB-C, 05ac:110b",
+  "hardware_playback_percent": 87,
+  "hardware_playback_db": -8,
+  "tts": {
+    "engine": "piper-tts",
+    "version": "1.8.0",
+    "model": "ar_JO-kareem-medium.onnx",
+    "model_repository": "rhasspy/piper-voices",
+    "repository_revision": "5041a7a49ae5b3a0f30e6837769eb03fdbb231bd",
+    "model_sha256": "9e95cab07b679da603bba17c4dec7ab3111320571964ee95c0379603c086491e",
+    "generation_volume": 0.65,
+    "fixed_replies_generated_once": true,
+    "local_inference": true,
+    "reply_cache_manifest_checked": true
+  },
+  "recognition": {
+    "model": "faster-whisper-small",
+    "compute_type": "int8",
+    "beam_size": 5,
+    "vocabulary_context": "اللمبة",
+    "minimum_confidence": 0,
+    "new_microphone_recordings_during_this_test": false
+  },
+  "trials": [
+    {
+      "recognized_text": "شغل اللمبة",
+      "mean_word_probability": 0.644,
+      "recognition_seconds": 8.7,
+      "ros_success": true,
+      "acknowledged_state": true,
+      "simulated": false,
+      "reply_text": "تم تشغيل اللمبة",
+      "reply_file_sha256": "931306c0b06ae572c2828d46c83bf8bb6528965077f00b1167fb1f0c988a3bf2",
+      "reply_duration_seconds": 1.985,
+      "aplay_succeeded": true,
+      "user_heard_reply_clearly": true,
+      "user_observed_led_on": true
+    },
+    {
+      "recognized_text": "أطفئ اللمبة",
+      "mean_word_probability": 0.5811,
+      "recognition_seconds": 8.09,
+      "ros_success": true,
+      "acknowledged_state": false,
+      "simulated": false,
+      "reply_text": "تم إطفاء اللمبة",
+      "reply_file_sha256": "3a9f8a7dab9e6a19da6e691efe2cd9e5439d4884da1a3ab6ce0d624f2ae0f89c",
+      "reply_duration_seconds": 1.834,
+      "aplay_succeeded": true,
+      "user_heard_reply_clearly": true,
+      "user_observed_led_off": true
+    }
+  ],
+  "initial_failure_and_repair": {
+    "failure": "The first attempt stopped on ModuleNotFoundError for course204.spoken_replies before any ROS request or audio playback.",
+    "repair": "Registered the current project with --no-deps -e . in the recognition environment, verified cache and CLI imports, then repeated the announced ON/OFF tests."
+  },
+  "automated_checks": {
+    "python_tests_passed": 21,
+    "covered": [
+      "Reply follows a matching successful physical ROS acknowledgement",
+      "Failed, mismatched or simulated acknowledgement does not speak success",
+      "ROS exception does not trigger audio",
+      "Playback failure is reported separately from successful device control",
+      "Missing, corrupted or mismatched reply cache is rejected"
+    ]
+  },
+  "final_led_on": false,
+  "limits": [
+    "This test reused earlier recordings; fresh voice-to-ROS behavior was separately validated before adding replies.",
+    "Only the two fixed Arabic acknowledgement phrases were generated and tested.",
+    "Wake-word detection, continuous listening, weather and date replies are not implemented by this change.",
+    "Pi 4 and reboot persistence remain untested for this configuration.",
+    "No private speech recordings or model binaries were published."
+  ]
+}

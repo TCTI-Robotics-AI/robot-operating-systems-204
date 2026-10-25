@@ -43,9 +43,9 @@ roslaunch course_devices lamp.launch backend:=wifi host:=192.168.1.50 network_po
 
 ```bash
 # Another sourced terminal, for either transport
-rosservice call /lamp/set "on: true"
+rosservice call /lamp/set true
 rostopic echo -n 1 /lamp/state
-rosservice call /lamp/set "on: false"
+rosservice call /lamp/set false
 ```
 
 </div>
@@ -112,9 +112,9 @@ roslaunch course_devices lamp.launch backend:=wifi host:=192.168.1.50 network_po
 
 ```bash
 # Another sourced terminal, for either transport
-rosservice call /lamp/set "on: true"
+rosservice call /lamp/set true
 rostopic echo -n 1 /lamp/state
-rosservice call /lamp/set "on: false"
+rosservice call /lamp/set false
 ```
 
 ## Expected result and validation

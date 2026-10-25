@@ -2,6 +2,12 @@
 
 # سجل التغييرات
 
+## اكتمال المساعد الصوتي على الرازبيري 5 — 2026-10-25
+
+اعتمد المستخدم إكمال نطاق المساعد التعليمي: نداء «يا مساعد»، والتقاط طلب خمس ثوان، والتحكم الفعلي بالمؤشر عبر ROS مع الرد بعد تأكيد التنفيذ، والتاريخ الميلادي وحرارة جدة والرد العربي المتغير محليا. اجتازت 37 حالة اختبار محلية و7 حالات معلومات على الرازبيري، وأكد المستخدم مشاهدة المؤشر وسماع الردود. حفظت الإخفاقات وتصحيحها وحدود التحقق. أوقف الاستماع وأطفئ المؤشر في نهاية الجلسة. راجع [محضر الإكمال](extensions/voice-home-automation/completion.md).
+
+<span dir="ltr">English:</span> The agreed Pi 5 voice assistant milestone was accepted as complete: wake/readiness, five-second commands, acknowledged physical ROS LED control, Gregorian date, live Jeddah temperature and local Arabic speech. 37 local tests and seven Pi information tests passed; user observations and recognition failures/retry are documented. Final microphone stop and LED OFF were verified. Pi 4 and other future extensions remain separate. See the linked completion record.
+
 ## إعادة تنظيم المقرر بتاريخ 2026-10-23
 
 اعتماد ست وحدات، ومجلد مستقل لكل بند تفصيلي، وأربعة تمارين للأنظمة المدمجة. فصل التوسعات عن المنهج، ونقل كود اللمبة إلى تمرين الرازبيري، وإضافة فهرس يفرق بين التمرين والتقييم الأسبوعي. نجح فحص الروابط واللغتين وملفات الإعداد والتثبيت في بيئة نظيفة، وتشغيل التجربة من خارج مجلد المستودع. اختبارات أجهزة الرازبيري ما زالت غير منفذة. أقسام الإصدارات السابقة أدناه سجل تاريخي وقد استبدلت بنيتها بالتنظيم الحالي.

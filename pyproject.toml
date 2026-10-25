@@ -13,6 +13,8 @@ dependencies = []
 conversation = ["python-aiml==0.9.3"]
 serial = ["pyserial==3.5"]
 speech = ["vosk==0.3.45", "sounddevice==0.5.1"]
+speech-whisper = ["faster-whisper==1.2.1; python_version >= '3.9'", "ctranslate2==4.8.3; python_version >= '3.9'"]
+speech-reply = ["piper-tts==1.8.0; python_version >= '3.9'"]
 gpio = ["gpiozero==2.0; python_version < '3.9'", "gpiozero==2.0.1; python_version >= '3.9'"]
 
 [project.scripts]

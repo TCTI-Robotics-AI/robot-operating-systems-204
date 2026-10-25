@@ -2,7 +2,7 @@
 
 # مصفوفة تحقق البنود والتمارين
 
-الأرقام مراجع الخطة، وليست عدد الأسابيع. لم تختبر تجارب المستودع على اللوحتين بعد. نتائج الحاسب ومحاكاة ROS وGazebo وتجميع المتحكمات موثقة في [سجلات التشغيل](README.md)، ولا تستبدل تحقق الجهازين.
+الأرقام مراجع الخطة، وليست عدد الأسابيع. اختبر البند <code dir="ltr">15.2</code> على جهاز <span dir="ltr">Pi 5</span> فعلي، وأكد المستخدم قياس الجهد وإضاءة المؤشر وإطفاءه. نجحت لاحقا [تجربتا التحكم بالصوت](runs/2026-10-24-pi5-earpods-voice-led.json) كامتداد تجميعي. بقية المسارات تظل كما هو موضح في الجدول؛ نجاح امتداد الصوت لا يثبت بقية تمارين الصوت أو تحقق الجهازين.
 
 | بند الخطة | البند أو التمرين | المضيف أو المسار على <span dir="ltr">Pi 4</span> | المضيف أو المسار على <span dir="ltr">Pi 5</span> |
 | --- | --- | --- | --- |
@@ -32,7 +32,7 @@
 | <code dir="ltr">13.3</code> | [تحليل الصوت والتعرف عليه وتشغيل المحادثة](../labs/05-conversation-and-speech/06-speech-recognition/README.md) | لم يختبر | لم يختبر |
 | <code dir="ltr">14.2</code> | [الربط مع لوحة أردوينو](../labs/06-embedded-systems/01-arduino/README.md) | لم يختبر | لم يختبر |
 | <code dir="ltr">14.3</code> | [الربط مع لوحة المتحكم](../labs/06-embedded-systems/02-stm32/README.md) | لم يختبر | لم يختبر |
-| <code dir="ltr">15.2</code> | [الربط مع الرازبيري](../labs/06-embedded-systems/03-raspberry-pi/README.md) | لم يختبر | لم يختبر |
+| <code dir="ltr">15.2</code> | [الربط مع الرازبيري](../labs/06-embedded-systems/03-raspberry-pi/README.md) | لم يختبر | نجح الربط البرمجي؛ أكد المستخدم [قياس الجهد](runs/2026-10-24-pi5-gpio-meter.json) و[إضاءة المؤشر وإطفاءه](runs/2026-10-24-pi5-led.json) |
 | <code dir="ltr">16.2</code> | [الربط مع الحاسب المدمج](../labs/06-embedded-systems/04-odroid/README.md) | لم يختبر | لم يختبر |
 
 لا يعني العمود أن جميع البنود تحتاج الرازبيري. سجل غير منطبق مع السبب إن لم يستخدم الجهاز. عند ربط لوحة أخرى سجل المضيف والجهاز المستهدف والنظام وبروتوكول الربط والقطع والتاريخ والإصدارات والنتيجة. راجع [دليل التسجيل](README.md).
@@ -45,6 +45,6 @@
 
 # Syllabus item validation matrix
 
-Rows are syllabus references, not weekly counts. Neither board has recorded physical project runs. Desktop ROS/Gazebo and firmware compilation evidence is linked in the validation guide and does not substitute for device tests. The columns describe Pi execution paths or hosts when used; they do not imply every item requires a Pi. Record not applicable with a reason for unused hardware. For another connected board, capture host, target device, OS, link protocol, parts, date, versions and outcome. Use the linked run guide. Extension results are separate records and do not replace course lab validation.
+Rows are syllabus references, not weekly counts. Item 15.2 has a real Pi 5 bridge run, user-confirmed meter readings, and observed physical LED ON/OFF behavior. A subsequent [voice extension run](runs/2026-10-24-pi5-earpods-voice-led.json) passed two fresh EarPods speech-to-ROS LED trials. Pi 4 and the other Pi execution paths remain untested as shown. Extension results do not validate the separate speech/conversation course labs. The columns describe Pi execution paths or hosts, not a requirement that every item use a Pi. Record host, target, OS, protocol, components, versions, observations and failures in the linked validation guide.
 
 </div>

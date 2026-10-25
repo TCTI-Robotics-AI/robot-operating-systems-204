@@ -10,6 +10,8 @@
 
 ## Portable checks
 
+The current Python suite has 37 behavioral tests. Date/weather cases cover Saudi midnight, exact intent separation from ROS, confidence rejection, stale/future/invalid readings, network failure and Arabic number speech. They use fixed clock/API data; real network, sound output and voice observations are recorded separately in [the Pi 5 run](../validation/runs/2026-10-25-pi5-date-weather.json).
+
 ```bash
 python3 -m venv .venv-test
 .venv-test/bin/python -m pip install '.[conversation,serial,gpio]'

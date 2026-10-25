@@ -1,0 +1,36 @@
+{
+  "date_local": "2026-10-24",
+  "timezone": "Asia/Riyadh",
+  "test": "Dedicated amplified ALSA capture input for quiet USB microphone",
+  "status": "fresh_capture_measured_and_clarity_confirmed_by_user",
+  "board": "Raspberry Pi 5 Model B Rev 1.0",
+  "device": "Generic USB Audio, ALSA card ID Audio",
+  "hardware_capture_volume": "100%, 31.99 dB, capture enabled",
+  "alsa_configuration": "/etc/alsa/conf.d/99-course204-microphone.conf",
+  "repository_configuration": "environments/pi5-ubuntu2404/course204-microphone.conf",
+  "named_input": "course204_mic",
+  "software_capture_gain_db": 20,
+  "additional_python_gain_db": 0,
+  "persistence_mechanism": "ALSA configuration defines a softvol input and a ctl_elems hook which sets its gain each time the named input is configured",
+  "validation": {
+    "named_input_opens_as_non_root_user": true,
+    "five_second_capture_completed": true,
+    "duration_seconds": 5.0,
+    "rate_hz": 16000,
+    "channels": 1,
+    "format": "S16_LE",
+    "rms_dbfs": -19.9,
+    "peak_dbfs": 0.0,
+    "near_full_scale_sample_percent": 0.416,
+    "playback_started_in_local_browser": true,
+    "user_feedback_ar": "الان واضح",
+    "led_commands_sent": false
+  },
+  "limitations": [
+    "Some peaks reached full scale; future louder recordings may require lower gain.",
+    "Different utterances were used before and after the input change, so their level difference is not a calibrated same-source gain measurement.",
+    "Reboot persistence follows configuration hooks but was not verified by rebooting during this test.",
+    "Recognition accuracy with the new live input needs a separate test."
+  ],
+  "privacy": "Playback was local between the user's Pi and laptop. No WAV recording or personal speech is included in this record."
+}

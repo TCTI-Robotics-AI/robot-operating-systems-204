@@ -31,10 +31,10 @@ roslaunch course_devices lamp.launch backend:=serial port:=/dev/ttyACM0
 
 ```bash
 # Another sourced ROS terminal
-rosservice call /lamp/set "on: true"
+rosservice call /lamp/set true
 rostopic echo -n 1 /lamp/state
 rostopic echo -n 1 /lamp/simulated
-rosservice call /lamp/set "on: false"
+rosservice call /lamp/set false
 ```
 
 </div>
@@ -91,10 +91,10 @@ roslaunch course_devices lamp.launch backend:=serial port:=/dev/ttyACM0
 
 ```bash
 # Another sourced ROS terminal
-rosservice call /lamp/set "on: true"
+rosservice call /lamp/set true
 rostopic echo -n 1 /lamp/state
 rostopic echo -n 1 /lamp/simulated
-rosservice call /lamp/set "on: false"
+rosservice call /lamp/set false
 ```
 
 ## Expected result and validation

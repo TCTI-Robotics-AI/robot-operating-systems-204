@@ -1,0 +1,37 @@
+{
+  "date_local": "2026-10-24",
+  "timezone": "Asia/Riyadh",
+  "syllabus_reference": "15.2",
+  "test": "ROS service controlling real Pi 5 GPIO17, with user-confirmed multimeter observation",
+  "status": "passed_with_user_confirmation",
+  "software_setup_record": "2026-10-24-pi5-device-setup.json",
+  "board": "Raspberry Pi 5 Model B Rev 1.0",
+  "gpio_controller": "pinctrl-rp1",
+  "gpiochip": 4,
+  "bcm_pin": 17,
+  "physical_signal_pin": 11,
+  "physical_ground_pin": 6,
+  "backend": "native gpiozero/lgpio agent bridged to ROS Noetic container",
+  "simulated": false,
+  "commands": {
+    "on": "docker exec course204-lamp /course-entrypoint.sh rosservice call /lamp/set true",
+    "off": "docker exec course204-lamp /course-entrypoint.sh rosservice call /lamp/set false"
+  },
+  "software_observed": {
+    "on_service_success": true,
+    "on_reported_state": true,
+    "off_service_success": true,
+    "off_reported_state": false,
+    "final_output_state": "off"
+  },
+  "physical_observation": {
+    "instrument": "user multimeter, DC voltage",
+    "on_voltage_approx_v": 3.3,
+    "off_voltage_approx_v": 0,
+    "evidence": "User confirmed the explicit question asking whether readings were approximately 3.3 V on and 0 V off. Initial off reading was also explicitly reported as zero.",
+    "precision": "Approximate user confirmation; no meter display image or instrument data capture",
+    "physical_led_observed": false
+  },
+  "not_tested": ["Physical LED illumination", "Pi 4 GPIO", "Microphone or voice control"],
+  "privacy": "No network addresses, credentials or private device identifiers included"
+}

@@ -45,10 +45,10 @@ roslaunch course_devices lamp.launch backend:=network
 
 ```bash
 # Another sourced ROS terminal
-rosservice call /lamp/set "on: true"
+rosservice call /lamp/set true
 rostopic echo -n 1 /device/status
 rostopic echo -n 1 /lamp/simulated
-rosservice call /lamp/set "on: false"
+rosservice call /lamp/set false
 ```
 
 </div>
@@ -110,10 +110,10 @@ roslaunch course_devices lamp.launch backend:=network
 
 ```bash
 # Another sourced ROS terminal
-rosservice call /lamp/set "on: true"
+rosservice call /lamp/set true
 rostopic echo -n 1 /device/status
 rostopic echo -n 1 /lamp/simulated
-rosservice call /lamp/set "on: false"
+rosservice call /lamp/set false
 ```
 
 ## Expected result and validation

@@ -1,0 +1,38 @@
+{
+  "date_local": "2026-10-24",
+  "timezone": "Asia/Riyadh",
+  "syllabus_reference": "15.2",
+  "test": "ROS-controlled physical LED on Raspberry Pi 5",
+  "status": "passed_with_user_confirmation",
+  "software_setup_record": "2026-10-24-pi5-device-setup.json",
+  "meter_record": "2026-10-24-pi5-gpio-meter.json",
+  "board": "Raspberry Pi 5 Model B Rev 1.0",
+  "gpio_controller": "pinctrl-rp1",
+  "gpiochip": 4,
+  "bcm_pin": 17,
+  "physical_signal_pin": 11,
+  "physical_ground_pin": 6,
+  "simulated": false,
+  "procedure": {
+    "control": "ROS Noetic /lamp/set service via native gpiozero/lgpio agent",
+    "cycles": 3,
+    "on_seconds_per_cycle": 3,
+    "off_seconds_per_cycle": 2,
+    "on_command": "docker exec course204-lamp /course-entrypoint.sh rosservice call /lamp/set true",
+    "off_command": "docker exec course204-lamp /course-entrypoint.sh rosservice call /lamp/set false"
+  },
+  "software_observed": {
+    "all_six_service_requests_successful": true,
+    "reported_states_matched_commands": true,
+    "final_off_request_successful": true,
+    "final_output_state": "off"
+  },
+  "physical_observation": {
+    "physical_led_observed": true,
+    "evidence": "User confirmed seeing the LED work after being asked whether it illuminated and extinguished during the three-cycle test.",
+    "user_confirmation_ar": "تمام رايته يعمل",
+    "limitations": "User observation only; no captured video or independently inspected wiring. The instructed circuit uses a series 330-ohm resistor, but its installed value was not measured."
+  },
+  "not_tested": ["Pi 4 LED control", "Microphone or voice control"],
+  "privacy": "No credentials, network addresses or private device identifiers included"
+}

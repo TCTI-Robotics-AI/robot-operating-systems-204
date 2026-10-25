@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-25",
+  "milestone_status": "complete",
+  "acceptance": {"by": "user", "date": "2026-10-25", "instruction_ar": "وثق ويعتبر مكتمل", "scope": "Agreed Pi 5 voice assistant functions only", "record": "extensions/voice-home-automation/completion.md"},
+  "scope": "Arabic Gregorian date and current Jeddah temperature replies integrated with the two-stage wake assistant",
+  "base_revision": "98240b5",
+  "host": "Raspberry Pi 5 2 GB, Ubuntu 24.04.5 arm64",
+  "display": "Live tmux terminal mirrored to user's browser; connected UI and commands verified",
+  "audio": {"input": "hw:CARD=EarPods,DEV=0", "output": "plughw:CARD=EarPods,DEV=0", "capture_gain_percent": 100, "capture_gain_db": 32, "sample_rate_hz": 48000, "command_duration_seconds": 5},
+  "location": {"city": "Jeddah / جدة", "latitude": 21.49012, "longitude": 39.18624, "geocoding_id": 105343, "selected_by_user": true},
+  "date_check": {"clock_synchronized": true, "timezone": "Asia/Riyadh", "calendar": "Gregorian", "observed_date": "2026-10-25", "weekday_ar": "الأحد"},
+  "weather_check": {
+    "provider": "https://open-meteo.com/",
+    "request_url": "https://api.open-meteo.com/v1/forecast?latitude=21.49012&longitude=39.18624&current=temperature_2m&temperature_unit=celsius&timezone=Asia%2FRiyadh&timeformat=unixtime&forecast_days=1",
+    "temperature_c": 31.8,
+    "valid_at": "2026-10-25T20:00:00+03:00",
+    "meaning": "City weather model current conditions, not an indoor sensor or daily maximum",
+    "status": "passed: live HTTPS on Pi, validated units and freshness"
+  },
+  "dynamic_speech": {
+    "engine": "piper-tts 1.8.0", "model": "ar_JO-kareem-medium", "volume": 0.65,
+    "date_generation_seconds": 5.24, "date_audio_duration_seconds": 8.25,
+    "weather_generation_seconds": 5.78, "weather_audio_duration_seconds": 11.52,
+    "playback_status": "Both answers played through explicit EarPods output; user confirmed hearing both",
+    "microphone_during_text_only_playback": "not started"
+  },
+  "automated_tests": {
+    "windows_full_suite": {"passed": 37, "failed": 0},
+    "pi_new_information_suite": {"passed": 7, "failed": 0},
+    "coverage": "Saudi midnight date boundary, exact/negated/mixed routing, no ROS for information, confidence rejection, negative/decimal speech, invalid/stale/future/wrong-unit weather and network timeout"
+  },
+  "live_voice_trials": [
+    {"intent": "date", "wake_transcript": "يا مساعد", "wake_inference_seconds": 3.4,
+     "command_transcript": "كم التاريخ اليوم؟", "command_duration_seconds": 5.0,
+     "mean_word_confidence": 0.8639, "command_inference_seconds": 9.21,
+     "date": "2026-10-25", "spoken_reply_played": true, "user_confirmed_hearing": true,
+     "parent_max_rss_mb": 789.2, "ros_action": false},
+    {"intent": null, "expected_intent": "weather", "wake_transcript": "يا مساعد",
+     "wake_inference_seconds": 3.58, "command_transcript": "كم درجة الحرار اليوم؟",
+     "command_duration_seconds": 5.0, "mean_word_confidence": 0.6397,
+     "command_inference_seconds": 10.22, "spoken_reply_played": false,
+     "parent_max_rss_mb": 785.6, "ros_action": false,
+     "outcome": "Rejected non-matching transcription; no approximate alias added. Expanded vocabulary context to full date/weather questions before retry."},
+    {"intent": "weather", "wake_transcript": "يا مساعد", "wake_inference_seconds": 2.71,
+     "command_transcript": "كم درجة الحرارة اليوم", "command_duration_seconds": 5.0,
+     "vocabulary_context": "اللمبة، كم التاريخ اليوم، كم درجة الحرارة اليوم",
+     "mean_word_confidence": 0.9401, "command_inference_seconds": 9.4,
+     "temperature_c": 31.8, "valid_at": "2026-10-25T20:00:00+03:00",
+     "spoken_reply_played": true, "user_confirmed_hearing": true,
+     "dynamic_speech_generation_seconds": 5.92, "reply_duration_seconds": 11.49,
+     "parent_max_rss_mb": 786.6, "ros_action": false}
+  ],
+  "final_state": {"listening": false, "lamp_on": false, "private_command_archive_enabled": false, "code_saved_on": ["local workspace", "Raspberry Pi"], "github_published": false, "shutdown_verified": {"assistant_process_present": false, "arecord_process_present": false, "ros_off_success": true, "ros_off_state": false, "native_agent_on": false, "native_agent_simulated": false}},
+  "limitations": [
+    "One successful live date trial and one successful weather retry are limited evidence, not a general recognition benchmark",
+    "Reported RSS is the parent process high-water mark, not a combined peak including the short-lived TTS worker; live scopes limited total memory to 1400 MB",
+    "Threshold zero is an explicit supervised demo setting, not calibrated recognition accuracy",
+    "Gregorian only; Hijri not implemented",
+    "Physical Pi 4 not tested",
+    "No general Arabic/wake benchmark or boot-start service"
+  ]
+}

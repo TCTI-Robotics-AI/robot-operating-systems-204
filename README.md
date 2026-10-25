@@ -60,7 +60,9 @@ references/
 
 شروح عربية وإنجليزية للبنود الثمانية والعشرين، وست حزم <span dir="ltr">Catkin</span> قابلة للبناء: أساسيات الاتصال، وخدمات مشتركة، وروبوت متنقل، وذراع، ومحادثة، وربط أجهزة. تشمل ملفات <span dir="ltr">Gazebo</span> و<span dir="ltr">RViz</span> و<span dir="ltr">URDF</span> و<span dir="ltr">Xacro</span>، وبرامج <span dir="ltr">Arduino</span> و<span dir="ltr">STM32</span> عبر <span dir="ltr">USB</span> ومسار <span dir="ltr">STM32</span> عبر <span dir="ltr">Wi-Fi</span>، ومسار الصوت المحلي.
 
-ابدأ من [دليل التشغيل](course/getting-started.md)، ثم [فهرس التمارين](course/exercises-index.md). [سجلات التحقق](validation/README.md) تفصل اختبارات الحاسب وتجميع البرامج عن اختبارات <span dir="ltr">Pi</span> والقطع الفعلية التي لم تنفذ بعد.
+اكتملت [مرحلة المساعد الصوتي على الرازبيري 5](extensions/voice-home-automation/completion.md): النداء «يا مساعد»، وتشغيل المؤشر وإطفاؤه عبر ROS، والتاريخ، وحرارة جدة، والردود الصوتية بالعربية، مع توثيق التجارب بالعربي والإنجليزي.
+
+ابدأ من [دليل التشغيل](course/getting-started.md)، ثم [فهرس التمارين](course/exercises-index.md). [سجلات التحقق](validation/README.md) تفصل اختبارات الحاسب وتجميع البرامج عن تجارب الرازبيري والصوت والمؤشر التي نجحت فعليا، وتبين المسارات التي لم تختبر بعد.
 
 تبقى [التجربة النصية للمبة](labs/06-embedded-systems/03-raspberry-pi/01-text-lamp/README.md) متاحة دون تثبيت <span dir="ltr">ROS:</span>
 

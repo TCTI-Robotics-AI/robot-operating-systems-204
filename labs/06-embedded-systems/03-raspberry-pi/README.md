@@ -10,6 +10,8 @@
 
 ## المتطلبات والخطوات
 
+للبداية على الرازبيري الخامس بذاكرة محدودة، استخدم [دليل أول تشغيل](pi5-first-run.md) و[حاوية ربط الأجهزة الخفيفة](../../../environments/noetic-device/README.md). يبني هذا المسار حزمتين فقط، ثم يفصل اختبار الربط الافتراضي عن اختبار المؤشر الحقيقي.
+
 أكمل [دليل البدء](../../../course/getting-started.md) وابن الحزم أولا. نفذ الأوامر من جذر المستودع، وافتح طرفية جديدة لكل برنامج مستمر، ثم حمل بيئة منطقة العمل فيها. أوقف المحاكاة السابقة قبل تشغيل نموذج آخر.
 
 <div dir="ltr">
@@ -58,10 +60,10 @@ roslaunch course_devices lamp.launch backend:=network
 
 ```bash
 # Another ROS terminal
-rosservice call /lamp/set "on: true"
+rosservice call /lamp/set true
 rostopic echo -n 1 /lamp/state
 rostopic echo -n 1 /lamp/simulated
-rosservice call /lamp/set "on: false"
+rosservice call /lamp/set false
 ```
 
 </div>
@@ -102,6 +104,8 @@ Both Pi 4 and Pi 5 use the same exercise. Start with a mock driver, then wire ph
 
 ## Requirements and procedure
 
+For a low-memory Pi 5, use the [first-run guide](pi5-first-run.md) and [lightweight device container](../../../environments/noetic-device/README.md). This path builds only two packages and keeps the mock communication test separate from physical LED validation.
+
 Complete the [getting started guide](../../../course/getting-started.md) and build the packages first. Run repository-relative commands from the repository root. Use a separate terminal for each long-running process and source the workspace in every ROS terminal. Stop the previous simulation before launching another model.
 
 ```bash
@@ -132,10 +136,10 @@ roslaunch course_devices lamp.launch backend:=network
 
 ```bash
 # Another ROS terminal
-rosservice call /lamp/set "on: true"
+rosservice call /lamp/set true
 rostopic echo -n 1 /lamp/state
 rostopic echo -n 1 /lamp/simulated
-rosservice call /lamp/set "on: false"
+rosservice call /lamp/set false
 ```
 
 ## Expected result and validation

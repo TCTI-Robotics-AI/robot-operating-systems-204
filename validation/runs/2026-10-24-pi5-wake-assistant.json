@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-24",
+  "scope": "Live two-stage Arabic wake phrase, five-second command capture, physical ROS control and spoken reply",
+  "host": "Raspberry Pi 5 2 GB, Ubuntu 24.04.5 arm64",
+  "input": "hw:CARD=EarPods,DEV=0",
+  "output": "plughw:CARD=EarPods,DEV=0",
+  "native_capture_gain_percent": 100,
+  "native_capture_gain_db": 32,
+  "sample_rate_hz": 48000,
+  "command_duration_seconds": 5,
+  "wake": {
+    "phrase": "يا مساعد",
+    "implementation": "VAD-segmented local faster-whisper-base transcription followed by strict phrase matching; not a separately trained keyword model",
+    "revision": "ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66",
+    "compute_type": "int8",
+    "cpu_threads": 4,
+    "vocabulary_context": "يا مساعد",
+    "accepted": "Exact phrase or up to three repetitions after spelling normalization",
+    "readiness_reply": "تفضل",
+    "example_live_recognition_seconds": 2.52,
+    "vad_minimum_rms": 0.0032,
+    "adaptive_threshold_ceiling_rms": 0.01
+  },
+  "command_model": {
+    "name": "faster-whisper-small",
+    "revision": "536b0662742c02347bc0e980a01041f333bce120",
+    "compute_type": "int8",
+    "beam_size": 5,
+    "vocabulary_context": "اللمبة",
+    "minimum_confidence": 0
+  },
+  "trials": [
+    {
+      "wake_recognized": "يا مساعد",
+      "command_recognized": "شغل اللمبة",
+      "command_inference_seconds": 7.67,
+      "ros_success": true,
+      "acknowledged_state": true,
+      "simulated": false,
+      "reply": "تم تشغيل اللمبة",
+      "reply_played": true,
+      "observed_high_water_rss_mb": 773.3,
+      "user_confirmed_readiness_reply_and_on_reply_and_led": true
+    },
+    {
+      "wake_recognized": "يا مساعد",
+      "command_recognized": "أطفئ اللمبة",
+      "mean_word_probability": 0.6907,
+      "command_inference_seconds": 8.27,
+      "ros_success": true,
+      "acknowledged_state": false,
+      "simulated": false,
+      "reply": "تم إطفاء اللمبة",
+      "reply_played": true,
+      "observed_high_water_rss_mb": 855.5,
+      "user_confirmed_off_reply_and_led": true
+    }
+  ],
+  "negative_live_test": {
+    "spoken_phrase": "شغل اللمبة",
+    "wake_phrase_spoken": false,
+    "user_reported_ignored": true,
+    "individual_raw_transcript_not_correlated": true
+  },
+  "initial_attempts": [
+    "The existing Vosk Arabic model recognized only مساعد in the wake recording and was not used for the final assistant.",
+    "The small model with only مساعد as vocabulary context did not transcribe the wake phrase correctly.",
+    "The base model with full wake vocabulary context matched the wake recording and did not treat the existing ON/OFF recordings as wake phrases.",
+    "An initial live command did not match the lamp allowlist, so no ROS command was sent.",
+    "Initial adaptive calibration could become too high during speech; a lower percentile and a 0.01 ceiling fixed the tested path."
+  ],
+  "display": {
+    "target": "Raspberry Pi attached HDMI monitor",
+    "console": "tty2",
+    "session": "course204:voice",
+    "read_only_view": true,
+    "user_confirmed_visible": true
+  },
+  "automated_python_tests_passed": 30,
+  "end_of_session": {
+    "user_requested_save_and_continue_later": true,
+    "listening_stopped": true,
+    "lamp_off_requested": true,
+    "lamp_off_acknowledged": true,
+    "connection_lost_after_off_acknowledgement": true
+  },
+  "limits": [
+    "Only controlled wake/ON/OFF examples and a user-reported negative trial were checked; no general wake false-accept or false-reject rate was measured.",
+    "The microphone pauses during inference and success replies; this is not full-duplex interaction.",
+    "Wake recognition takes a few seconds; command recognition takes about eight seconds after the five-second command window.",
+    "No boot-start service, Pi 4 test, weather replies or date replies are included yet.",
+    "Debug command recordings stayed private; ambient transcripts and audio were not published."
+  ]
+}

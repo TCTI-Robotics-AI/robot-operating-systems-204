@@ -41,7 +41,9 @@ Keep each exercise's documentation, source, configuration, and ROS or simulation
 
 [Start with the runnable guide](course/getting-started.md). All 28 detailed syllabus items have bilingual explanations, commands and learner tasks. Six Catkin packages implement communication, custom services, mobile/arm simulation, conversation and embedded drivers. Firmware covers Arduino UNO R3, STM32 NUCLEO-F446RE USB and B-L475E-IOT01A Wi-Fi. Vosk provides a local speech path with a separately downloaded model.
 
-[Validation records](validation/README.md) distinguish actual software runs and compilation from physical board/microphone tests that remain pending.
+The [Pi 5 voice assistant milestone](extensions/voice-home-automation/completion.md) is complete: Arabic wake gating, physical ROS LED control, Gregorian date, Jeddah temperature and Arabic spoken replies, with bilingual documentation and user-confirmed trials.
+
+[Validation records](validation/README.md) distinguish actual software/build checks and successful Pi 5 audio/LED trials from paths that remain untested.
 
 For the ROS-free [text preparation](labs/06-embedded-systems/03-raspberry-pi/01-text-lamp/README.md):
 
@@ -57,7 +59,7 @@ This CLI reports a simulated state. Each invocation is independent; no device is
 
 ## Board paths
 
-Pi 4 targets arm64 Ubuntu 20.04 for course alignment. Pi 5 targets arm64 Ubuntu 24.04 with the legacy container or a separate ROS host. Neither has hardware validation yet. For other embedded labs, record a Pi execution host separately from its connected board. OS support alone does not establish audio, GPIO or ROS support; see the [environment decisions](docs/environments.md).
+Pi 4 targets arm64 Ubuntu 20.04 for course alignment and remains physically untested. Pi 5 was validated on arm64 Ubuntu 24.04.5 with a native GPIO/audio path and a Noetic device container. For other embedded labs, record a Pi execution host separately from its connected board. OS support alone does not establish audio, GPIO or ROS support; see the [environment decisions](docs/environments.md).
 
 Read the [architecture](docs/architecture.md), [roadmap](docs/roadmap.md), [contribution guide](CONTRIBUTING.md), [lab template](docs/lesson-template.md) and [text direction guide](docs/writing-style.md). The repository is public and its educational content is accessible to everyone. Reuse licensing remains a course owner decision. The original outline stays local due to contact details.
 

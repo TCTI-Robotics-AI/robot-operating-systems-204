@@ -1,0 +1,7 @@
+{
+  "city": "جدة",
+  "latitude": 21.49012,
+  "longitude": 39.18624,
+  "geocoding_id": 105343,
+  "source": "https://geocoding-api.open-meteo.com/v1/search?name=Jeddah&count=3&language=en&format=json&countryCode=SA"
+}

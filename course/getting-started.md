@@ -54,10 +54,10 @@ roslaunch course_devices lamp.launch backend:=mock
 ```bash
 # Terminal 2
 source ~/course204_ws/devel/setup.bash
-rosservice call /lamp/set "on: true"
+rosservice call /lamp/set true
 rostopic echo -n 1 /lamp/state
 rostopic echo -n 1 /lamp/simulated
-rosservice call /lamp/set "on: false"
+rosservice call /lamp/set false
 ```
 
 </div>
@@ -134,10 +134,10 @@ roslaunch course_devices lamp.launch backend:=mock
 ```bash
 # Terminal 2
 source ~/course204_ws/devel/setup.bash
-rosservice call /lamp/set "on: true"
+rosservice call /lamp/set true
 rostopic echo -n 1 /lamp/state
 rostopic echo -n 1 /lamp/simulated
-rosservice call /lamp/set "on: false"
+rosservice call /lamp/set false
 ```
 
 The simulated flag must remain explicit. Switch drivers only when using real hardware. A published command alone is not evidence of actuation.
